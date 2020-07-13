@@ -1,0 +1,106 @@
+
+<!DOCTYPE HTML>
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <title>Symbologie vecteur</title>
+  <link href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.1/styles/github.min.css" rel="stylesheet"/>
+  <link href="https://3liz.github.io/remarkable.css" rel="stylesheet"/>
+  <link href="logo.png" rel="icon" type="image/png" >
+ </head>
+ <body>
+ <header class="header-container" style="">
+    <h1>Symbologie vecteur</h1>
+ </header>
+ <article>
+ <p><a href="../">Up</a></p>
+<p><a href="index.html">Back</a></p>
+<div class="toc"><span class="toctitle">Table of content</span><ul>
+<li><a href="#la-symbologie-vecteur">La symbologie vecteur</a><ul>
+<li><a href="#les-differents-types-de-symobologie">Les différents types de symobologie</a></li>
+<li><a href="#les-differents-niveaux-dun-symbole">Les différents niveaux d'un symbole</a><ul>
+<li><a href="#jouer-avec-lordre-des-niveaux-des-symboles">Jouer avec l'ordre des niveaux des symboles</a></li>
+</ul>
+</li>
+<li><a href="#activer-un-effet-sur-un-symbole">Activer un effet sur un symbole</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<h1 id="la-symbologie-vecteur">La symbologie vecteur</h1>
+<h2 id="les-differents-types-de-symobologie">Les différents types de symobologie</h2>
+<p>QGIS propose plusieurs modes pour appliquer une symbologie sur une couche vectorielle, suivant la géométrie :</p>
+<ul>
+<li>
+<p><strong>Symbole unique</strong> : tous les objets de la couche seront représentés de la même manière</p>
+</li>
+<li>
+<p><strong>Catégorisé</strong> : Un champ ou une expression sert de catégorie. On aura autant de classes de symbole que de valeurs distinctes
+dans cette colonne. Exemple la catégorie d'une route, on a un ensemble déterminé de valeurs : autoroute, départementale, piste forestière...</p>
+</li>
+<li>
+<p><strong>Graduée</strong> : on crée des classes avec des bornes min et max sur un champ ou une expression. Tous les objets dont la valeur
+est comprise entre ces bornes auront le même symbole. Exemple la population d'une commune, il y a autant de valeurs possibles que de communes.
+On ne peut pas connaître à l'avance les différentes valeurs du champ. Pour la réalisation de ces bornes, il existe plusieurs modes : </p>
+<ul>
+<li>Intervalle égale</li>
+<li>Quantile (nombre égale)</li>
+<li>Ruptures naturelles (jenks). Les bornes de classes sont identifiées parmi celles qui regroupent le mieux des valeurs similaires et optimisent les différences entre les classes. Les entités sont réparties en classes dont les limites sont définies aux endroits où se trouvent de grandes différences dans les valeurs de données. </li>
+<li>Écart-type</li>
+<li>Jolies ruptures</li>
+<li>Documentation : <a href="http://www.geoinformations.developpement-durable.gouv.fr/fichier/pdf/m02_analyses_thematiques_papier_cle69c733.pdf?arg=177831151&amp;cle=789472d4c4713fd4bf639930749a8c14a501ee5e&amp;file=pdf%2Fm02_analyses_thematiques_papier_cle69c733.pdf">http://www.geoinformations.developpement-durable.gouv.fr/fichier/pdf/m02_analyses_thematiques_papier_cle69c733.pdf?arg=177831151&amp;cle=789472d4c4713fd4bf639930749a8c14a501ee5e&amp;file=pdf%2Fm02_analyses_thematiques_papier_cle69c733.pdf</a></li>
+</ul>
+</li>
+<li>
+<p><strong>Ensemble de règles</strong> : on crée un arbre de règles en utilisant des filtres sur les champs et/ou des seuils d'échelles.</p>
+</li>
+<li>
+<p><strong>Déplacement de points</strong> : QGIS déplace les symboles dans un cercle ou une grille autour des points superposés</p>
+</li>
+<li>
+<p><strong>Groupes de points</strong> on groupe les points dans des cercles dont l'affichage dépend du nombre de points ou d'une expresssion</p>
+</li>
+<li>
+<p><strong>Cartes de chaleur</strong> on crée un raster issu de l'interpolation des valeurs des points</p>
+</li>
+<li>
+<p><strong>Polygones inversés</strong>: On représente le remplissage du polygone à son extérieur (effet de masque)</p>
+</li>
+<li>
+<p><strong>2.5D</strong>: Rendu pseudo-3D avec effet de perspective</p>
+</li>
+</ul>
+<p>Groupe de points : </p>
+<p><img alt="" src="media/08_rendu_cluster.png" title="Rendu groupe de points"></p>
+<p>Carte de chaleur :</p>
+<p><img alt="" src="media/carte_chaleur.png" title="Carte de chaleur"></p>
+<p>Rendu 2.5D :</p>
+<p><img alt="" src="media/2_5d_rendering.jpg" title="Rendu groupe de points"></p>
+<h2 id="les-differents-niveaux-dun-symbole">Les différents niveaux d'un symbole</h2>
+<p>QGIS permet de dessiner plusieurs niveaux de "dessin" pour un même symbole.</p>
+<p><img alt="" src="media/decomposition_symbole.png" title="Les niveaux de symboles"></p>
+<h3 id="jouer-avec-lordre-des-niveaux-des-symboles">Jouer avec l'ordre des niveaux des symboles</h3>
+<p>En affectant un style, aux routes secondaires et tertiaires, on s'aperçoit que le rendu n'est pas optimal : </p>
+<p><img alt="" src="media/rendu_controle_niveau_absent.png" title="Les niveaux de symboles"></p>
+<p>Il faut pour cela changer l'ordre de rendu des niveaux de symbole.</p>
+<p>Retourner dans l'onglet <code>Symbologie</code>, en bas à droite, <code>Avancé</code>, <code>Niveaux de symbole</code>.</p>
+<p><img alt="" src="media/controle_niveau_rendu.png" title="Les niveaux de symboles"></p>
+<p>Le résultat est bien meilleur :</p>
+<p><img alt="" src="media/rendu_controle_niveau.png" title="Les niveaux de symboles"></p>
+<h2 id="activer-un-effet-sur-un-symbole">Activer un effet sur un symbole</h2>
+<p>QGIS permet d'activer des effets qui sont appliqués pour modifier le symbole finale.
+On peut par exemple appliquer un ombrage sur les symboles ponctuels.</p>
+<p><img alt="" src="media/activer_effets.png" title="Rendu groupe de points"></p>
+  </article>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.1/highlight.min.js">
+  </script>
+  <script>
+   hljs.initHighlightingOnLoad();
+  </script>
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript">
+  </script>
+  <script type="text/javascript">
+   MathJax.Hub.Config({"showProcessingMessages" : false,"messageStyle" : "none","tex2jax": { inlineMath: [ [ "$", "$" ] ] }});
+  </script>
+ </body>
+</html>

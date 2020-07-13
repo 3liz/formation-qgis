@@ -1,0 +1,46 @@
+---
+Title: Interface
+Favicon: logo.png
+Sibling: yes
+...
+
+[TOC]
+
+# Interface de QGIS
+
+## Documentation officielle
+
+* https://docs.qgis.org/3.10/fr/docs/user_manual/introduction/qgis_gui.html
+
+## Fenêtre principale
+
+L'interface de QGIS se compose de plusieurs :
+
+* barre d'outils : `Vue` ▶ `Barre d'outils`
+* panneaux : `Vue` ▶ `Panneaux`
+
+On peut aussi y accèder depuis un clic droit sur un emplacement vide dans une barre d'outils.
+
+![Interface de QGIS](./media/interface.png)
+
+
+## Astuces
+
+* La couleur jaune implique la notion de sélection
+
+![Sélection](./media/vector_toolbar.png)
+
+* Une petite étoile blanche sur fond jaune implique la création d'une nouvelle entité
+* Un petit plus blanc sur fond vert implique la notion d'ajout
+
+![Sélection](./media/layer_toolbar.png)
+
+* N'oubliez pas les infobulles avec la souris
+
+## Propriétés
+
+Dans QGIS, il existe plusieurs niveaux pour définir les propriétés:
+
+* au niveau général de QGIS
+* du projet en cours
+* d'une couche spécifique

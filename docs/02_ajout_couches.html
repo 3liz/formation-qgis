@@ -1,0 +1,178 @@
+
+<!DOCTYPE HTML>
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <title>Les couches</title>
+  <link href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.1/styles/github.min.css" rel="stylesheet"/>
+  <link href="https://3liz.github.io/remarkable.css" rel="stylesheet"/>
+  <link href="logo.png" rel="icon" type="image/png" >
+ </head>
+ <body>
+ <header class="header-container" style="">
+    <h1>Les couches</h1>
+ </header>
+ <article>
+ <p><a href="../">Up</a></p>
+<p><a href="index.html">Back</a></p>
+<div class="toc"><span class="toctitle">Table of content</span><ul>
+<li><a href="#ajout-de-couches-et-organisation-de-la-legende">Ajout de couches et organisation de la légende</a><ul>
+<li><a href="#documentation-officielle">Documentation officielle</a></li>
+<li><a href="#vecteurs">Vecteurs</a></li>
+<li><a href="#rasters">Rasters</a><ul>
+<li><a href="#fichier-mnt">Fichier MNT</a></li>
+<li><a href="#wms-de-lign">WMS de l'IGN</a></li>
+<li><a href="#a-laide-dun-plugin">À l'aide d'un plugin</a></li>
+<li><a href="#a-laide-du-panneau-explorateur">À l'aide du panneau explorateur</a></li>
+</ul>
+</li>
+<li><a href="#manipulation-de-la-legende">Manipulation de la légende</a><ul>
+<li><a href="#utiliser-les-themes-de-couches">Utiliser les thèmes de couches</a></li>
+<li><a href="#les-vues-cartes">Les vues cartes</a></li>
+</ul>
+</li>
+<li><a href="#la-vue-3d">La vue 3D</a></li>
+<li><a href="#le-plugin-layerboard">Le plugin Layerboard</a></li>
+<li><a href="#enregistrer-le-projet">Enregistrer le projet</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<h1 id="ajout-de-couches-et-organisation-de-la-legende">Ajout de couches et organisation de la légende</h1>
+<h2 id="documentation-officielle">Documentation officielle</h2>
+<ul>
+<li><a href="https://docs.qgis.org/3.10/fr/docs/user_manual/managing_data_source/index.html">https://docs.qgis.org/3.10/fr/docs/user_manual/managing_data_source/index.html</a></li>
+<li><a href="https://docs.qgis.org/3.10/fr/docs/user_manual/introduction/general_tools.html#label-legend">https://docs.qgis.org/3.10/fr/docs/user_manual/introduction/general_tools.html#label-legend</a></li>
+</ul>
+<h2 id="vecteurs">Vecteurs</h2>
+<p><img alt="Ouverture couche vecteur" src="./media/layer_toolbar.png"></p>
+<ul>
+<li>À l'aide de l'icône <code>plus</code> dans la barre d'outil ci-dessus <code>Source de données</code>, ajoutons une couche <code>Vecteur</code> de type
+<code>Fichier</code>. <ul>
+<li><code>H_OSM_ADMINISTRATIF / COMMUNE.shp</code></li>
+</ul>
+</li>
+<li><em>Pour info</em>, dans les barres d'outils, les étoiles jaunes signifient la création de nouvelle couche. 
+Dans notre cas, nous souhaitons donc bien l'ajout d'une couche existante.</li>
+<li>Enregistrer le projet <code>Projet</code> -&gt; <code>Enregistrer sous...</code> et mettez le <strong>dans</strong> le dossier <code>data</code> contenant les données. 
+au format <code>QGIS</code> (extension <code>.qgs</code>).</li>
+<li>Désormais, l'aide du panneau <code>Explorateur</code>, dans <code>Dossier du projet</code> :<ul>
+<li>Charger <code>A_OSM_RESEAU_ROUTIER / ROUTE.shp</code></li>
+<li>Charger <code>F_OSM_VEGETATION / ZONE_VEGETATION.shp</code></li>
+<li>Charger <code>H_OSM_ADMINISTRATIF / CHEF_LIEU.shp</code></li>
+<li>Charger <code>I_OSM_ZONE_ACTIVITE / PAI_INDUSTRIEL_COMMERCIAL.shp</code></li>
+</ul>
+</li>
+<li>Notons que le glisser/déposer fonctionne aussi.</li>
+<li>
+<p>Nous pouvons faire un clic droit puis <code>Propriétés</code> pour ouvrir la configuration de la couche.</p>
+</li>
+<li>
+<p>Si il y a des problèmes d'accents, dans l'onglet <code>Source</code>, essayer :</p>
+<ul>
+<li><code>System</code>, <code>latin1</code>, <code>ISO 8859-1</code>, <code>CP-1252</code></li>
+</ul>
+</li>
+<li>
+<p>Petites explications sur les encodages : </p>
+<ul>
+<li><code>Unicode</code> :  jeu de caractères codés dit « universel » qui permet de remplacer les pages de codes nationales. 
+Comprend un répertoire très étendu de caractères compatible avec tous les alphabets. 
+Il est en évolution constante (une version en juin 2014) avec plus de 100 000 caractères.</li>
+<li><code>UTF-8</code> est le codage international le plus utilisé (en particulier sur le web) compatible avec Unicode.
+Il est supporté par tous les navigateurs web et par tous les systèmes d’exploitation récents. L’internationalisation
+et la portabilité 
+font naturellement recommander ce codage (Permet de représenter des caractères qui n’existent pas en latin-1). </li>
+<li><code>ISO 8859-1</code> ou <code>Latin-1</code> : principalement utilisé par Windows pour les pays occidentaux, il intègre de nombreux 
+caractères spéciaux comme é, è, à, ç, É, etc, mais pas €,œ.</li>
+<li><code>CP-1252</code>  ou <code>WIN 1252</code> : extension d’ISO 8859-1 ; initié dans les années 1990, il ajoute quelques caractères 
+particuliers à Latin-1 comme €,œ, etc.</li>
+<li><code>ISO-8859-15</code> (ou latin9) est également très proche. Il ajoute au 88959-1 entre autres le caractère de l'euro (€) 
+et les caractères Œ, œ et Ÿ qui manquaient pour l'écriture du français, les caractères Š et š qui manquaient pour 
+l'écriture du tchèque. Il enlève en échange quelques caractères peu utilisés. </li>
+</ul>
+</li>
+<li>
+<p>Source : <a href="http://www.geoinformations.developpement-durable.gouv.fr/qgis-encodage-des-fichiers-shp-et-recommandations-a2908.html">http://www.geoinformations.developpement-durable.gouv.fr/qgis-encodage-des-fichiers-shp-et-recommandations-a2908.html</a></p>
+</li>
+</ul>
+<h2 id="rasters">Rasters</h2>
+<h3 id="fichier-mnt">Fichier MNT</h3>
+<p><strong>Pour rappel</strong>, un fichier MNT veut dire Modèle Numérique de Terrain, c'est à dire un fichier comportant des informations
+sur l'altitude.</p>
+<ul>
+<li>À l'aide du bouton <code>Source de données</code>,  ajouter la couche de type <code>Raster</code> contenu dans le dossier <code>srtm</code>.</li>
+</ul>
+<h3 id="wms-de-lign">WMS de l'IGN</h3>
+<ul>
+<li>À l'aide du bouton <code>Source de données</code>,  ajouter une connexion <code>WMS</code>:<ul>
+<li>Nom : <code>IGN WMTS</code></li>
+<li>URL : <code>https://wxs.ign.fr/choisirgeoportail/geoportail/wmts?SERVICE=WMTS&amp;REQUEST=GETCAPABILITIES</code>
+Ajouter des flux provenant de l'IGN en utilisant cette clé gratuite <code>choisirgeoportail</code>.</li>
+<li>Pour votre information : <a href="https://geoservices.ign.fr/blog/2018/09/06/acces_geoportail_sans_compte.html">https://geoservices.ign.fr/blog/2018/09/06/acces_geoportail_sans_compte.html</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="a-laide-dun-plugin">À l'aide d'un plugin</h3>
+<ul>
+<li>À l'aide de l'extension <code>QuickMapServices</code> dans le gestionnaire des extensions Python.</li>
+<li>L'autre extension historique <code>OpenLayers</code> n'est pas forcément recommandée, surtout lors de l'impression.</li>
+<li>Dans sa configuration, cliquer sur le bouton <code>Obtenir le pack des contributeurs</code>.</li>
+</ul>
+<h3 id="a-laide-du-panneau-explorateur">À l'aide du panneau explorateur</h3>
+<ul>
+<li>Une couche de l'IGN</li>
+<li>Une couche XYZ</li>
+</ul>
+<h2 id="manipulation-de-la-legende">Manipulation de la légende</h2>
+<p>Dans le panneau à gauche, vous remarquez la légende, avec sa barre d'outils.</p>
+<h3 id="utiliser-les-themes-de-couches">Utiliser les thèmes de couches</h3>
+<p>Un <strong>thème de couche</strong> est caractérisé par un <strong>nom</strong> et permet de sauvegarder:</p>
+<ul>
+<li>l'<strong>état des couches cochées</strong> dans la légende</li>
+<li>les <strong>styles actifs</strong> de chaque couche</li>
+</ul>
+<p><strong>Étapes</strong>:</p>
+<ul>
+<li><strong>Cocher/décocher</strong> les couches pour obtenir le réglage souhaité</li>
+<li>Cliquer sur le bouton <strong>oeil</strong> de la barre d'outil au-dessus du panneau <strong>Couches</strong></li>
+<li>Choisir l'item <strong>Ajouter un thème</strong></li>
+<li>Choisir <strong>un nom</strong> et valider</li>
+</ul>
+<p><img alt="" src="media/06_ajouter_un_theme.png" title="Ajouter un thème"></p>
+<p>Une fois un ou plusieurs thèmes enregistrés, on peut basculer facilement de l'un à autre thème via le bouton <strong>oeil</strong>.</p>
+<p>Les thèmes peuvent être utilisés pour gérer les couches affichées <strong>dans chaque vue</strong>, ainsi que dans chaque carte de 
+<strong>chaque composeur d'impression</strong>.</p>
+<h3 id="les-vues-cartes">Les vues cartes</h3>
+<p>QGIS3 propose d'afficher plusieurs canevas, appelés <strong>vues carte</strong>, au lieu d'une seule carte centrale.</p>
+<ul>
+<li>Menu <strong>Vue / Nouvelle vue cartographique</strong></li>
+<li>On peut la faire <strong>glisser dans l'interface</strong>, par exemple dans le panneau de droite</li>
+<li>Par défaut, elle se comporte comme la carte principale: les <strong>mêmes couches sont visibles</strong></li>
+</ul>
+<p><img alt="" src="media/05_nouvelle_vue_carte.png" title="Nouvelle vue carte"></p>
+<h2 id="la-vue-3d">La vue 3D</h2>
+<p>La <strong>vue 3D</strong> permet de draper des données vectorielles ou raster par dessus un <strong>modèle numérique de terrain</strong> (MNT)</p>
+<p>Elle peut aussi représenter des données qui ont une composante d'altitude (Z).</p>
+<p><img alt="" src="media/07_vue_3D.png" title="Vue 3D"></p>
+<h2 id="le-plugin-layerboard">Le plugin Layerboard</h2>
+<p>La plugin LayerBoard permet d'obtenir un tableau récapitulatif des couches qui sont chargées.</p>
+<p><img alt="" src="media/layer_board.png" title="Options localisateur"></p>
+<h2 id="enregistrer-le-projet">Enregistrer le projet</h2>
+<ul>
+<li>Faire un enregistrement du projet au format QGS (QGIS) et non QGZ</li>
+<li>Vérifier le contenu du fichier, un projet ne content aucune données géographiques.</li>
+</ul>
+  </article>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.1/highlight.min.js">
+  </script>
+  <script>
+   hljs.initHighlightingOnLoad();
+  </script>
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript">
+  </script>
+  <script type="text/javascript">
+   MathJax.Hub.Config({"showProcessingMessages" : false,"messageStyle" : "none","tex2jax": { inlineMath: [ [ "$", "$" ] ] }});
+  </script>
+ </body>
+</html>

@@ -1,0 +1,142 @@
+
+<!DOCTYPE HTML>
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <title>Expression</title>
+  <link href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.1/styles/github.min.css" rel="stylesheet"/>
+  <link href="https://3liz.github.io/remarkable.css" rel="stylesheet"/>
+  <link href="logo.png" rel="icon" type="image/png" >
+ </head>
+ <body>
+ <header class="header-container" style="">
+    <h1>Expression</h1>
+ </header>
+ <article>
+ <p><a href="../">Up</a></p>
+<p><a href="index.html">Back</a></p>
+<div class="toc"><span class="toctitle">Table of content</span><ul>
+<li><a href="#les-expressions">Les expressions</a><ul>
+<li><a href="#les-infobulles">Les infobulles</a></li>
+<li><a href="#requetage-sur-une-couche-vecteur">Requêtage sur une couche vecteur</a></li>
+<li><a href="#enregistrer-le-resultat-dune-selection-en-tant-que-nouvelle-couche">Enregistrer le résultat d'une sélection en tant que nouvelle couche</a></li>
+<li><a href="#outil-danalyse-vecteur">Outil d'analyse vecteur</a><ul>
+<li><a href="#la-modification-par-algorithme-de-traitement">La modification par algorithme de traitement</a></li>
+</ul>
+</li>
+<li><a href="#la-table-attributaire-mise-en-forme-conditionnelle">La table attributaire : mise en forme conditionnelle</a></li>
+<li><a href="#calculatrice-de-champ">Calculatrice de champ</a></li>
+<li><a href="#panneau-statistique">Panneau statistique</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<h1 id="les-expressions">Les expressions</h1>
+<h2 id="les-infobulles">Les infobulles</h2>
+<p>TODO</p>
+<h2 id="requetage-sur-une-couche-vecteur">Requêtage sur une couche vecteur</h2>
+<ul>
+<li>La couche commune comportent de nombreuses entités. On peut le voir graphiquement sur le canevas de la carte, 
+mais aussi en ouvrant sa table attributaire.</li>
+</ul>
+<p><img alt="Barre outil vecteur" src="./media/vector_toolbar.png"></p>
+<ul>
+<li>Pensez-bien à sélectionner votre couche dans la légende. Cela active ou non les actions dans la barre d'outils ci-dessus.</li>
+<li>À l'aide de l'outil <code>Identifier les entités</code> dans la barre d'outils, faire un clic sur une entité.<ul>
+<li>Un nouveau panneau s'ouvre présentant les résultats.</li>
+</ul>
+</li>
+<li>Depuis cette barre d'outils, ouvrir la <code>table attributaire</code>.<ul>
+<li>Comme dans un tableur, les données textes sont à gauche, les données numériques sont à droite.</li>
+<li>Faire le tour de cette nouvelles boîte de dialogue.</li>
+</ul>
+</li>
+<li><em>Pour info</em>, le jaune dans les icônes représentent très souvent la notion de sélection dans QGIS.</li>
+<li>Utilisons l'outil de sélection à l'aide de la souris et affichons les entités sélectionnées dans la table.</li>
+<li>
+<p>Utilisons l'icône avec un carré jaune et un epsilon (le <code>ε</code>) afin de construire une expression de sélection.</p>
+<ul>
+<li>Cette icône se trouve dans la barre d'outils ci-dessus de la fenêtre principale</li>
+<li>ou dans la nouvelle fenêtre de la table attributaire.</li>
+</ul>
+</li>
+<li>
+<p>On souhaite pouvoir sélectionner le(s) entité(s) qui répondent au critère <code>"CODE_INSEE" = '70550'</code>, pour cela utiliser 
+l'interface graphique afin de construire la requête. Que remarquons-nous sur la structure de l'expression ?</p>
+<ul>
+<li>Les nom des champs sont entre <code>""</code></li>
+<li>Les chaînes de caractères dans les cellules sont entre <code>''</code>.</li>
+</ul>
+</li>
+<li>On souhaite désormais toutes les communes dont :<ul>
+<li>le code INSEE commence par <code>70</code> à l'aide de l'opérateur <code>like</code> :<ul>
+<li>Le pourcentage permet de faire un caractère "joker" remplacant n'importe quelle chaîne de caractères<ul>
+<li>Solution : <code>"CODE_INSEE" like '70%'</code></li>
+</ul>
+</li>
+<li>la population est inférieur à 1000 habitants : </li>
+<li>Les populations sont au format texte et non nombre entier : <code>to_int</code><ul>
+<li>Solution : <code>to_int( "POPUL" ) &lt; 1000</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>les communes du <code>70</code> et du <code>25</code></li>
+<li>les trois communes </li>
+</ul>
+</li>
+</ul>
+<h2 id="enregistrer-le-resultat-dune-selection-en-tant-que-nouvelle-couche">Enregistrer le résultat d'une sélection en tant que nouvelle couche</h2>
+<ul>
+<li>On peut enregistrer la sélection de la commune dans une nouvelle couche de données en faisant un clic-droit sur la couche puis <code>Exporter</code>.</li>
+<li>Choisir un format pour l'export, par exemple <code>ESRI Shapefile</code>. On peut aussi choisir de faire une reprojection des données.</li>
+</ul>
+<p><strong>Attention</strong>, dans la fenêtre pour exporter les entités, <strong>toujours</strong> utiliser les trois petits points lors de la saisie du nom de fichier !</p>
+<p><img alt="Exporter couche vecteur" src="./media/save_as.png"></p>
+<h2 id="outil-danalyse-vecteur">Outil d'analyse vecteur</h2>
+<ul>
+<li>QGIS propose de nombreux algorithmes d'analyse spatiale. <ul>
+<li>Nous allons utiliser l'algorithme <code>Extraire par localisation</code>/<code>Sélection par localisation</code> afin de récupérer seulement les troncons de route qui <code>intersectent</code> la commune.</li>
+<li>Nous souhaitons obtenir une couche des départements Français à l'aide de la couche des communes. Il s'agit d'un regroupement.<ul>
+<li>Que remarque-t-on sur la table attributaire ?</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="la-modification-par-algorithme-de-traitement">La modification par algorithme de traitement</h3>
+<p>QGIS permet maintenant de <strong>modifier directement des géométries</strong> sélectionnées à partir d'un <strong>algorithme de traitement.</strong>. Pour cela:</p>
+<ul>
+<li>Ouvrir la boîte à outils via le menu <strong>Traitement / Boîte à outils</strong></li>
+<li><strong>Sélectionner</strong> un ou plusieurs objets</li>
+<li>Chercher un algorithme dans le panneau <strong>Boîte à outils de traitement</strong> , par exemple <strong>Accrochage de points à la grille</strong></li>
+<li>Activer le bouton jaune <strong>Editer les entités sur place</strong></li>
+<li>Lancer l'algorithme avec valeur <code>500</code> en X et Y et lancer pour tester le traitement.</li>
+<li>On peut toujours revenir en arrière via <strong>CTRL+Z</strong></li>
+</ul>
+<p><img alt="" src="media/23_numerisation_processing.png" title="Numérisation via outil de traitement"></p>
+<h2 id="la-table-attributaire-mise-en-forme-conditionnelle">La table attributaire : mise en forme conditionnelle</h2>
+<p>Pour retrouver plus facilement des objets dans une grande table attributaire, on peut utiliser la fonctionnalité de QGIS de <strong>mise en forme conditionnelle</strong> des champs ou des lignes de la table.</p>
+<p>Le principe est de fournir une ou plusieurs <strong>règles</strong>, via une <strong>expression QGIS</strong>, et d'y associer un <strong>style</strong> de champ ou de ligne. Par exemple <code>@value LIKE 'A%'</code></p>
+<p><img alt="" src="media/25_table_attributaire_mise_en_forme.png" title="Table attributaire, mise en forme conditionnelle"></p>
+<h2 id="calculatrice-de-champ">Calculatrice de champ</h2>
+<p>La calculatrice de champ est un outil accessible avec le <code>boulier</code> dans la fenêtre de la table attributaire. 
+Il permet la mise à jour d'un champ existant ou alors de créer un nouveau champ.</p>
+<p><strong>Pour toutes modifications d'une couche vecteur</strong>, on doit se placer dans une session d'édition, à l'aide du petit stylo dans la barre d'outils <code>Numérisation</code> ou dans la fenêtre de la table attributaire.</p>
+<h2 id="panneau-statistique">Panneau statistique</h2>
+<p>Dans la barre d'outils <code>Attributs</code>, il existe un outil de statistiques sur un champ. </p>
+<p>Il fonctionne à l'aide d'une couche vecteur en entrée ainsi que d'un champ de cette couche ou une expression.</p>
+<p><img alt="" src="media/statistique.png" title="Les statistiques sur une table"></p>
+  </article>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.1/highlight.min.js">
+  </script>
+  <script>
+   hljs.initHighlightingOnLoad();
+  </script>
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript">
+  </script>
+  <script type="text/javascript">
+   MathJax.Hub.Config({"showProcessingMessages" : false,"messageStyle" : "none","tex2jax": { inlineMath: [ [ "$", "$" ] ] }});
+  </script>
+ </body>
+</html>

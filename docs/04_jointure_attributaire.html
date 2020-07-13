@@ -1,0 +1,58 @@
+
+<!DOCTYPE HTML>
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <title>Jointure</title>
+  <link href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.1/styles/github.min.css" rel="stylesheet"/>
+  <link href="https://3liz.github.io/remarkable.css" rel="stylesheet"/>
+  <link href="logo.png" rel="icon" type="image/png" >
+ </head>
+ <body>
+ <header class="header-container" style="">
+    <h1>Jointure</h1>
+ </header>
+ <article>
+ <p><a href="../">Up</a></p>
+<p><a href="index.html">Back</a></p>
+<div class="toc"><span class="toctitle">Table of content</span><ul>
+<li><a href="#faire-une-jointure-attributaire">Faire une jointure attributaire</a></li>
+</ul>
+</div>
+<h1 id="faire-une-jointure-attributaire">Faire une jointure attributaire</h1>
+<p>Il est courant d'avoir une couche spatiale et d'avoir un autre fichier type tableur avec
+des informations complémentaires à propos de cette couche spatiale. Nous souhaiterions donc ajouter ces informations 
+du tableur à notre couche spatiale.</p>
+<p>Lien vers la documentation : <a href="https://docs.qgis.org/3.4/fr/docs/user_manual/working_with_vector/vector_properties.html#joins-properties">https://docs.qgis.org/3.4/fr/docs/user_manual/working_with_vector/vector_properties.html#joins-properties</a></p>
+<p>Les étapes : </p>
+<ul>
+<li>Préparer un fichier tableur "simple" avec les entêtes des colonnes et les données. Il peut y avoir plusieurs feuilles.</li>
+<li>Charger la table dans QGIS : <ul>
+<li>à l'aide de l'outil <code>Texte délimité</code> si fichier CSV dans le <code>gestionnaire des sources de données</code></li>
+<li>à l'aide du panneau explorateur</li>
+<li>à l'aide de l'outil <code>Vecteur</code> (!) dans le <code>gestionnaire des sources de données</code></li>
+</ul>
+</li>
+<li>Vérifier qu'il existe bien un champ commun aux deux couches avant de faire la jointure et qu'il peut y avoir une correspondance.</li>
+<li>Si ce n'est pas le cas, faire les modifications nécessaires à l'aide de la calculatrice de champ.</li>
+<li>Se rendre dans les propriétés de la couche vecteur "parente" dans l'onglet <code>jointure</code>.</li>
+<li>Ajouter une nouvelle jointure :</li>
+</ul>
+<p><img alt="" src="media/jointure_attributaire.png" title="Les statistiques sur une table"></p>
+<ul>
+<li>Afin de conserver définitivement ces données supplémentaires dans la table attributaire, on peut exporter la table (clic droit sur la couche).</li>
+</ul>
+<p><em>Note</em>, afin de conserver ces champs qui peuvent être très long, on peut utiliser un geopackage.</p>
+  </article>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.1/highlight.min.js">
+  </script>
+  <script>
+   hljs.initHighlightingOnLoad();
+  </script>
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript">
+  </script>
+  <script type="text/javascript">
+   MathJax.Hub.Config({"showProcessingMessages" : false,"messageStyle" : "none","tex2jax": { inlineMath: [ [ "$", "$" ] ] }});
+  </script>
+ </body>
+</html>
