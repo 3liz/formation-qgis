@@ -1,17 +1,81 @@
 ---
 Title: Expression
 Favicon: logo.png
+Sibling: yes
 ...
-
-[Back](index.md)
 
 [TOC]
 
-# Les expressions
+Les expressions sont omniprésentes dans QGIS. Il est important de les maîtriser un minimum si vous voulez pleinement
+exploiter QGIS.
+
+## Nommage d'une entité
+
+Dans les propriétés de la couche vecteur, onglet `Infobulle`, il est bon de paramétrer comme QGIS doit composer
+le nom d'une entité.
+
+Par exemple, sur une couche commune, on peut mettre le nom du champ : 
+
+* à l'aide du menu déroulant, on peut choisir le nom d'un champ, `NOM_COM`.
+* en cliquant sur l'epsilon violet, on arrive dans la fenêtre des expressions de QGIS : 
+    1. Effacer le contenu à gauche
+    1. Dans le panneau du milieu, aller dans `Champs et Valeurs` et double-cliquer sur le nom du champ `NOM_COM`.
+    1. Remarquer l'ajout dans le panneau à gauche de l'expression suivante `"NOM_COM"`.
+    1. Cliquer sur OK
+    1. Cette expression est équivalente à la première, mais elle est plus correct syntaxiquement.
+    
+**Il faut retenir** que le nom des champs sont entre guillemet double `""`.
+
+* retournons dans la fenêtre des expressions. Nous souhaitons dorénavant afficher le nom de la commune, la chaîne de
+caractère ` : ` et le code INSEE de la commune.
+    * Effacer le contenu à gauche
+    * Dans le panneau du milieu, aller dans `Champs et Valeurs` et double-cliquer sur le nom du champ `NOM_COM`.
+    * Contrairement aux noms des champs qui sont entre guillement double `""`, les chaînes de caractères sont entre guillement simple `''`
+    * Pour concaténer, on peut utiliser `||`, `+` ou la fonction `concat()`
+    * Une solution possible `concat("NOM_COM", ' : ', "INSEE_COM")`
 
 ## Les infobulles
 
-TODO
+Similaire à la section précédente, on peut définir l'infobulle. On utilise cette fois-ci du HTML pour la mise en forme.
+
+* Pour activer les infobulles sur la carte, menu `Vue` ▶ `Afficher les infobulles`.
+* Puis retourner dans les propriétés de la couche vecteur, onglet `Infobulle`.
+
+**Rappel basique** sur du HTML pour faire une liste à puce:
+
+```html
+<h3>Titre</h3>
+<p>Paragraphe</p>
+<ul>
+    <li>Une</li>
+    <li>liste</li>
+    <li>à</li>
+    <li>puce</li>
+</ul>
+```
+
+* Les balises `<h1></h1>`, `<h2></h2>`, `<hX></hX>` représentent des titres, en commençant par le plus important. En anglais **header**.
+* `<p></p>` est un paragraphe
+* `<ul></ul>` est une liste à puce non ordonnée. En anglais **unordered list**.
+* `<ol></ol>` est une liste ordonnée. En anglais **ordered list**.
+* `<li></li>` est un élément dans une liste. En anglais **list item**.
+
+Il est possible de personnaliser l'afffichage de l'infobulle à l'aide de CSS.
+
+Exemple d'une infobulle QGIS : 
+
+```html
+<ul>
+    <li>[% "NOM_COM" %]</li>
+    <li>[% "INSEE_COM" %]</li>
+    <li>[% "NOM_DEP" %]</li>
+</ul>
+```
+
+`[% ... %]` permet à QGIS de reconnaître qu'il s'agit d'une expression qu'il faut évaluer au sein d'un autre bloc de texte.
+
+![Info bulle](./media/maptip.png)
+
 
 ## Requêtage sur une couche vecteur
 

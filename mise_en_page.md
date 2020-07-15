@@ -1,9 +1,8 @@
 ---
 Title: Mise en page
 Favicon: logo.png
+Sibling: yes
 ...
-
-[Back](index.md)
 
 [TOC]
 

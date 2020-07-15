@@ -1,15 +1,14 @@
 ---
 Title: Symbologie vecteur
 Favicon: logo.png
+Sibling: yes
 ...
-
-[Back](index.md)
 
 [TOC]
 
 # La symbologie vecteur
 
-## Les différents types de symobologie
+## Les différents types de symbologie
 
 QGIS propose plusieurs modes pour appliquer une symbologie sur une couche vectorielle, suivant la géométrie :
 

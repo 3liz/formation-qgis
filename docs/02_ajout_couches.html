@@ -14,10 +14,10 @@
  </header>
  <article>
  <p><a href="../">Up</a></p>
-<p><a href="index.html">Back</a></p>
-<div class="toc"><span class="toctitle">Table of content</span><ul>
+<p><a href="./index.html">Back</a></p><div class="toc"><span class="toctitle">Table of content</span><ul>
 <li><a href="#ajout-de-couches-et-organisation-de-la-legende">Ajout de couches et organisation de la légende</a><ul>
-<li><a href="#documentation-officielle">Documentation officielle</a></li>
+<li><a href="#documentation">Documentation</a></li>
+<li><a href="#paques-avant-lheure">Pâques avant l'heure</a></li>
 <li><a href="#vecteurs">Vecteurs</a></li>
 <li><a href="#rasters">Rasters</a><ul>
 <li><a href="#fichier-mnt">Fichier MNT</a></li>
@@ -28,22 +28,36 @@
 </li>
 <li><a href="#manipulation-de-la-legende">Manipulation de la légende</a><ul>
 <li><a href="#utiliser-les-themes-de-couches">Utiliser les thèmes de couches</a></li>
-<li><a href="#les-vues-cartes">Les vues cartes</a></li>
 </ul>
 </li>
+<li><a href="#les-vues-cartes">Les vues cartes</a></li>
 <li><a href="#la-vue-3d">La vue 3D</a></li>
 <li><a href="#le-plugin-layerboard">Le plugin Layerboard</a></li>
+<li><a href="#reprojection-dune-couche">Reprojection d'une couche</a></li>
 <li><a href="#enregistrer-le-projet">Enregistrer le projet</a></li>
+<li><a href="#utilisation-des-outils">Utilisation des outils</a><ul>
+<li><a href="#mesure">Mesure</a></li>
+<li><a href="#identification">Identification</a></li>
+<li><a href="#table-attributaire">Table attributaire</a></li>
+<li><a href="#selection-graphique">Sélection graphique</a></li>
+<li><a href="#selection-par-valeur">Sélection par valeur</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
 </div>
 <h1 id="ajout-de-couches-et-organisation-de-la-legende">Ajout de couches et organisation de la légende</h1>
-<h2 id="documentation-officielle">Documentation officielle</h2>
+<h2 id="documentation">Documentation</h2>
 <ul>
 <li><a href="https://docs.qgis.org/3.10/fr/docs/user_manual/managing_data_source/index.html">https://docs.qgis.org/3.10/fr/docs/user_manual/managing_data_source/index.html</a></li>
 <li><a href="https://docs.qgis.org/3.10/fr/docs/user_manual/introduction/general_tools.html#label-legend">https://docs.qgis.org/3.10/fr/docs/user_manual/introduction/general_tools.html#label-legend</a></li>
 </ul>
+<h2 id="paques-avant-lheure">Pâques avant l'heure</h2>
+<p>Dans certains logiciels, il existe des oeufs de Pâques (Easter Egg).
+Nous allons utiliser l'un d'entre eux pour ajouter notre première couche dans QGIS.
+Taper <code>world</code> dans la barre des coordonnées en bas et regardons l'utilisation de la barre d'outils de navigation.</p>
+<p><img alt="Navigation" src="./media/navigation_toolbar.png"></p>
 <h2 id="vecteurs">Vecteurs</h2>
 <p><img alt="Ouverture couche vecteur" src="./media/layer_toolbar.png"></p>
 <ul>
@@ -124,8 +138,14 @@ Ajouter des flux provenant de l'IGN en utilisant cette clé gratuite <code>chois
 <li>Une couche de l'IGN</li>
 <li>Une couche XYZ</li>
 </ul>
+<p><img alt="Panneau explorateur" src="media/panneau_explorateur.png"></p>
 <h2 id="manipulation-de-la-legende">Manipulation de la légende</h2>
 <p>Dans le panneau à gauche, vous remarquez la légende, avec sa barre d'outils.</p>
+<p><img alt="Panneau explorateur" src="media/panneau_legende.png"></p>
+<p>Ce panneau nous permet de faire plusieurs actions:
+* ré-ordonner les couches avec une ordre logique : ponctuel, linéaire, polygone, raster
+* masquer/afficher des couches
+* faire des groupes</p>
 <h3 id="utiliser-les-themes-de-couches">Utiliser les thèmes de couches</h3>
 <p>Un <strong>thème de couche</strong> est caractérisé par un <strong>nom</strong> et permet de sauvegarder:</p>
 <ul>
@@ -143,7 +163,7 @@ Ajouter des flux provenant de l'IGN en utilisant cette clé gratuite <code>chois
 <p>Une fois un ou plusieurs thèmes enregistrés, on peut basculer facilement de l'un à autre thème via le bouton <strong>oeil</strong>.</p>
 <p>Les thèmes peuvent être utilisés pour gérer les couches affichées <strong>dans chaque vue</strong>, ainsi que dans chaque carte de 
 <strong>chaque composeur d'impression</strong>.</p>
-<h3 id="les-vues-cartes">Les vues cartes</h3>
+<h2 id="les-vues-cartes">Les vues cartes</h2>
 <p>QGIS3 propose d'afficher plusieurs canevas, appelés <strong>vues carte</strong>, au lieu d'une seule carte centrale.</p>
 <ul>
 <li>Menu <strong>Vue / Nouvelle vue cartographique</strong></li>
@@ -158,11 +178,32 @@ Ajouter des flux provenant de l'IGN en utilisant cette clé gratuite <code>chois
 <h2 id="le-plugin-layerboard">Le plugin Layerboard</h2>
 <p>La plugin LayerBoard permet d'obtenir un tableau récapitulatif des couches qui sont chargées.</p>
 <p><img alt="" src="media/layer_board.png" title="Options localisateur"></p>
+<p>Observez les différentes projections.</p>
+<h2 id="reprojection-dune-couche">Reprojection d'une couche</h2>
+<p>Note : SCR : Système de Coordonnées de Référence</p>
+<p>Pour faire une reprojection de couche, <strong>ne jamais modifier</strong> le SCR dans les propriétés de la couche, onglet <code>Source</code>.
+Ceci ne <strong>reprojettera pas</strong> les données dans une autre projection. Ceci <strong>redéfinira</strong> uniquement la projection i.e. 
+ceci indiquera de façon erronée au jeu de données qu'il s'agit d'un autre SCR. 
+Ainsi, n'utilisez cette manipulation <strong>que</strong> pour corriger un jeu de données dont la projection est fausse.</p>
+<p>Pour faire une reprojection, faire un clic droit sur la couche puis aller dans le mnu <code>Exporter</code>. Dans cette fenêtre,
+vous aller pouvoir définir le SCR de destination.</p>
+<p><strong>Attention</strong>, dans la fenêtre pour exporter les entités, <strong>toujours</strong> utiliser les trois petits points lors de la 
+saisie du nom de fichier !</p>
+<p><img alt="Exporter couche vecteur" src="./media/save_as.png"></p>
 <h2 id="enregistrer-le-projet">Enregistrer le projet</h2>
 <ul>
-<li>Faire un enregistrement du projet au format QGS (QGIS) et non QGZ</li>
-<li>Vérifier le contenu du fichier, un projet ne content aucune données géographiques.</li>
+<li>Faire un enregistrement du projet et regarder la taille du fichier.</li>
+<li>Si le fichier comporte l'extension <code>QGS</code>, vérifiez le contenu du fichier. 
+Un projet ne contient aucune données géographiques. <strong>Les données géographiques</strong> ne sont pas incluses dans 
+le projet en lui même. Ce ne sont que des liens.</li>
 </ul>
+<h2 id="utilisation-des-outils">Utilisation des outils</h2>
+<h3 id="mesure">Mesure</h3>
+<h3 id="identification">Identification</h3>
+<h3 id="table-attributaire">Table attributaire</h3>
+<h3 id="selection-graphique">Sélection graphique</h3>
+<h3 id="selection-par-valeur">Sélection par valeur</h3>
+<p>TODO</p>
   </article>
   <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.1/highlight.min.js">
   </script>

@@ -6,43 +6,61 @@ Favicon: logo.png
 # Formation QGIS
 
 ## Liens
-* Manuel d'utilisation QGIS https://docs.qgis.org/3.10/fr/docs/user_manual/
+
+* Manuel d'utilisation officiel QGIS https://docs.qgis.org/3.10/fr/docs/user_manual/
+* http://www.geoinformations.developpement-durable.gouv.fr/
+
+## Données
+
+Dans le dossier `data`, vous pouvez avoir des données comme :
+ 
+* IGN:
+    * AdminExpress
+    * OCS-GE si disponible
+* Osm2Igeo de la région concernée
+* SRTM de la région concernée
+* Base comparateur de l'INSEE
+
+Ces données sont gratuites et téléchargeables, selon une licence. [Lire ici.](./source_de_donnees.md)
 
 ## Contenu
 
 * Présentation des SIG et de QGIS
-  1. Rappel de base sur le SIG
-  1. Le projet QGIS
-    * [Projet des sorties de QGIS](https://github.com/Gustry/qgis-roadmap-project)
-  1. Rappel cartographique
-  1. Rappel sur les projections
-  1. Rappel sur les formats
+    * Rappel de base sur le SIG
+    * Le projet QGIS
+        * [Association QGIS](https://www.qgis.org/fr/site/getinvolved/governance/index.html) 
+        * [Changelog des versions](https://changelog.qgis.org/en/qgis/)
+        * [Calendrier des versions](https://www.qgis.org/fr/site/getinvolved/development/roadmap.html#release-schedule)
+        * [Projet QGIS du calendrier](https://github.com/Gustry/qgis-roadmap-project)
+    * Rappel cartographique
+        * 
+    * Rappel sur les projections
+        * https://www.youtube.com/watch?v=kIID5FDi2JQ
+        * https://thetruesize.com
+    * Rappel sur les formats en SIG
+* [Source de données](./source_de_donnees.md)
 * Prise en main de QGIS
-  1. [Interface de QGIS](./01_interface.md)
-  1. [Ajouter des couches](./02_ajout_couches.md)
-  1. [Ajout d'un fichier CSV avec jointure](./04_jointure_attributaire.md)
-* Utiliser les outils
-  * Mesure
-  * Identification
-  * Sélection graphique
-  * Sélection par valeur
-* [La symbologie vecteur](./symbologie_vecteur.md)
-  1. Ponctuelle
-  1. Polygonale
-  1. Linéaire
-  1. Graduée, catégorisée, règles, discrétisation
-  1. Les niveaux de dessins pour un même symbole
+    * [Interface de QGIS](./01_interface.md)
+    * [Les extensions QGIS](./extensions.md)
+    * [Ajouter des couches](./02_ajout_couches.md)
+    * [Ajout d'un fichier CSV avec jointure](./04_jointure_attributaire.md)
 * [Les expressions](./03_expressions.md)
-  1. Infobulle
-  1. Requête attributaire (sélection par expression)
-  1. Mise en forme conditionnelle
+    * Infobulle
+    * Requête attributaire (sélection par expression)
+    * Mise en forme conditionnelle
+* [La symbologie vecteur](./symbologie_vecteur.md)
+    * Ponctuelle
+    * Polygonale
+    * Linéaire
+    * Graduée, catégorisée, règles, discrétisation
+    * Les niveaux de dessins pour un même symbole
 * [Étiquettes](./etiquettes.md)
 * [Mise en page](./mise_en_page.md)
-  * Faire une carte statique
-  * Utilisation des variables
-  * Faire un atlas
-  * Faire un rapport
+    * Faire une carte statique
+    * Utilisation des variables
+    * Faire un atlas
+    * Faire un rapport
 * [Création de données](./formulaire.md)
-  * Formulaire
+    * Formulaire
 * DataPlotly
   

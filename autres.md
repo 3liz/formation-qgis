@@ -1,9 +1,8 @@
 ---
 Title: Autres
 Favicon: logo.png
+Sibling: yes
 ...
-
-[Back](index.md)
 
 [TOC]
 

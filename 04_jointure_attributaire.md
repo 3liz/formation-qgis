@@ -1,9 +1,8 @@
 ---
 Title: Jointure
 Favicon: logo.png
+Sibling: yes
 ...
-
-[Back](index.md)
 
 [TOC]
 
@@ -13,11 +12,13 @@ Il est courant d'avoir une couche spatiale et d'avoir un autre fichier type tabl
 des informations complémentaires à propos de cette couche spatiale. Nous souhaiterions donc ajouter ces informations 
 du tableur à notre couche spatiale.
 
-Lien vers la documentation : https://docs.qgis.org/3.4/fr/docs/user_manual/working_with_vector/vector_properties.html#joins-properties
+Lien vers la documentation : https://docs.qgis.org/3.10/fr/docs/user_manual/working_with_vector/vector_properties.html#joins-properties
 
 Les étapes : 
 
-* Préparer un fichier tableur "simple" avec les entêtes des colonnes et les données. Il peut y avoir plusieurs feuilles.
+* Préparer un fichier tableur "simple" avec les entêtes des colonnes et les données.
+    * Pas d'autres entêtes ou autre texte.
+    * Il peut y avoir plusieurs feuilles.
 * Charger la table dans QGIS : 
     * à l'aide de l'outil `Texte délimité` si fichier CSV dans le `gestionnaire des sources de données`
     * à l'aide du panneau explorateur

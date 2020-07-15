@@ -3,40 +3,55 @@
 <html>
  <head>
   <meta charset="utf-8"/>
-  <title>Étiquettes</title>
+  <title>Formulaire</title>
   <link href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.1/styles/github.min.css" rel="stylesheet"/>
   <link href="https://3liz.github.io/remarkable.css" rel="stylesheet"/>
   <link href="logo.png" rel="icon" type="image/png" >
  </head>
  <body>
  <header class="header-container" style="">
-    <h1>Étiquettes</h1>
+    <h1>Formulaire</h1>
  </header>
  <article>
  <p><a href="../">Up</a></p>
-<p><a href="index.html">Back</a></p>
-<div class="toc"><span class="toctitle">Table of content</span><ul>
-<li><a href="#formulaires">Formulaires</a></li>
+<p><a href="./index.html">Back</a></p><div class="toc"><span class="toctitle">Table of content</span><ul>
+<li><a href="#documentation-officielle">Documentation officielle</a></li>
+<li><a href="#objectif">Objectif</a></li>
+<li><a href="#exercice">Exercice</a><ul>
+<li><a href="#creation-des-tables">Création des tables</a></li>
+<li><a href="#creation-des-formulaires">Création des formulaires</a></li>
+</ul>
+</li>
 </ul>
 </div>
-<h2 id="formulaires">Formulaires</h2>
+<h2 id="documentation-officielle">Documentation officielle</h2>
+<ul>
+<li><a href="https://docs.qgis.org/3.10/fr/docs/user_manual/working_with_vector/vector_properties.html#attributes-form-properties">https://docs.qgis.org/3.10/fr/docs/user_manual/working_with_vector/vector_properties.html#attributes-form-properties</a></li>
+</ul>
+<h2 id="objectif">Objectif</h2>
 <p>QGIS permet de faire de masques de saisie lors de la création ou l'édition des données : avoir des menus déroulants, des
 cases à cocher, des zones de textes en lecture seule...</p>
 <p>Pour cela, nous allons réaliser une petite base de données pour de la saisie d'observations faunistiques. Nous pouvons
-utiliser PostgreSQL ou alors une base de données fichier comme Geopackage.
-Nous allons utiliser le modèle de données suivant:</p>
+utiliser PostgreSQL ou alors une base de données fichier comme Geopackage.</p>
+<h2 id="exercice">Exercice</h2>
+<h3 id="creation-des-tables">Création des tables</h3>
+<p>Nous allons utiliser le modèle de données suivant:</p>
 <ul>
-<li>Table <code>especes</code>, non spatiale</li>
+<li>Table <code>especes</code>, non spatiale<ul>
 <li>ID</li>
 <li>Nom commun : <code>nom_commun</code></li>
 <li>Nom scientifique : <code>nom_scientifique</code></li>
 <li>Autres champs métiers possibles : Taxref, page Wikipédia, photo etc</li>
-<li>Table <code>observateurs</code>, non spatiale</li>
+</ul>
+</li>
+<li>Table <code>observateurs</code>, non spatiale<ul>
 <li>ID</li>
 <li>Nom : <code>nom</code></li>
 <li>Prénom  : <code>prenom</code></li>
+</ul>
+</li>
 <li>Une table des communes ou département avec un code INSEE, polygonale</li>
-<li>Table <code>observations</code>, géométrie ponctuelle</li>
+<li>Table <code>observations</code>, géométrie ponctuelle<ul>
 <li>ID</li>
 <li>Date : <code>date</code></li>
 <li>Espèce : <code>espece_id</code>, pour stocker l'identifiant de l'espèce</li>
@@ -47,11 +62,28 @@ Nous allons utiliser le modèle de données suivant:</p>
 <li>Photo : <code>photo</code></li>
 <li>Remarque : <code>remarque</code></li>
 </ul>
+</li>
+</ul>
 <p><strong>Dans le cas d'un Geopackage</strong>, il y a déjà le champ <code>fid</code> qui fait office de clé primaire.</p>
 <p><strong>Astuce pour créer les champs</strong>:
 * créer juste le premier champ dans la boite de dialogue de création de couche. Nous utiliserons les outils dans le 
 panneau <code>Table attributaire</code> pour ajouter les autres attributs. Il y a plus de choix.
 * la longueur d'un champ texte correspond à sa limite pour stocker des caractères</p>
+<h3 id="creation-des-formulaires">Création des formulaires</h3>
+<p>Dans les propriétés de la couche vecteur en question, onglet <code>Formulaire d'attributs</code>:
+* Couche <code>observateurs</code> : 
+    * Mode formulaire : <code>Génération automatique</code>
+    * Mettre un alias sur les champs, language humain
+    * Mettre le bon outil d'édition pour les champs : <code>cachée</code> ou <code>texte</code>
+    * Mettre les contraintes et les renforcer
+* Couche <code>especes</code> : 
+    * Même mode de formulaire
+    * Alias
+    * Configurer aussi l'outil d'édition, avec l'unicité sur le nom de l'espèce
+    * Bonus : utiliser une expression pour vérifier que la première lettre est bien une majuscule.
+    <code>regexp_match( left("nom_commun", 1), '[A-Z]')</code>
+* Couche <code>observations</code> : 
+    * Bonus : une expression pour la date pour éviter une saisie dans le futur</p>
   </article>
   <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.1/highlight.min.js">
   </script>

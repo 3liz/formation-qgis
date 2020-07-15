@@ -1,18 +1,25 @@
 ---
 Title: Les couches
 Favicon: logo.png
+Sibling: yes
 ...
-
-[Back](index.md)
 
 [TOC]
 
 # Ajout de couches et organisation de la légende
 
-## Documentation officielle
+## Documentation
 
 * https://docs.qgis.org/3.10/fr/docs/user_manual/managing_data_source/index.html
 * https://docs.qgis.org/3.10/fr/docs/user_manual/introduction/general_tools.html#label-legend
+
+## Pâques avant l'heure
+
+Dans certains logiciels, il existe des oeufs de Pâques (Easter Egg).
+Nous allons utiliser l'un d'entre eux pour ajouter notre première couche dans QGIS.
+Taper `world` dans la barre des coordonnées en bas et regardons l'utilisation de la barre d'outils de navigation.
+
+![Navigation](./media/navigation_toolbar.png)
 
 ## Vecteurs
 
@@ -81,9 +88,18 @@ sur l'altitude.
 * Une couche de l'IGN
 * Une couche XYZ
 
+![Panneau explorateur](media/panneau_explorateur.png)
+
 ## Manipulation de la légende
 
 Dans le panneau à gauche, vous remarquez la légende, avec sa barre d'outils.
+
+![Panneau explorateur](media/panneau_legende.png)
+
+Ce panneau nous permet de faire plusieurs actions:
+* ré-ordonner les couches avec une ordre logique : ponctuel, linéaire, polygone, raster
+* masquer/afficher des couches
+* faire des groupes
 
 ### Utiliser les thèmes de couches
 
@@ -106,7 +122,7 @@ Une fois un ou plusieurs thèmes enregistrés, on peut basculer facilement de l'
 Les thèmes peuvent être utilisés pour gérer les couches affichées **dans chaque vue**, ainsi que dans chaque carte de 
 **chaque composeur d'impression**.
 
-### Les vues cartes
+## Les vues cartes
 
 QGIS3 propose d'afficher plusieurs canevas, appelés **vues carte**, au lieu d'une seule carte centrale.
 
@@ -131,7 +147,54 @@ La plugin LayerBoard permet d'obtenir un tableau récapitulatif des couches qui 
 
 ![](media/layer_board.png "Options localisateur")
 
+Observez les différentes projections.
+
+## Reprojection d'une couche
+
+Note : SCR : Système de Coordonnées de Référence
+
+Pour faire une reprojection de couche, **ne jamais modifier** le SCR dans les propriétés de la couche, onglet `Source`.
+Ceci ne **reprojettera pas** les données dans une autre projection. Ceci **redéfinira** uniquement la projection i.e. 
+ceci indiquera de façon erronée au jeu de données qu'il s'agit d'un autre SCR. 
+Ainsi, n'utilisez cette manipulation **que** pour corriger un jeu de données dont la projection est fausse.
+
+Pour faire une reprojection, faire un clic droit sur la couche puis aller dans le mnu `Exporter`. Dans cette fenêtre,
+vous aller pouvoir définir le SCR de destination.
+
+**Attention**, dans la fenêtre pour exporter les entités, **toujours** utiliser les trois petits points lors de la 
+saisie du nom de fichier !
+
+![Exporter couche vecteur](./media/save_as.png)
+
 ## Enregistrer le projet
 
-* Faire un enregistrement du projet au format QGS (QGIS) et non QGZ
-* Vérifier le contenu du fichier, un projet ne content aucune données géographiques.
+* Faire un enregistrement du projet et regarder la taille du fichier.
+* Si le fichier comporte l'extension `QGS`, vérifiez le contenu du fichier. 
+Un projet ne contient aucune données géographiques. **Les données géographiques** ne sont pas incluses dans 
+le projet en lui même. Ce ne sont que des liens.
+
+## Utilisation des outils
+
+![Sélection](./media/vector_toolbar.png)
+
+Dans les barres d'outils, chercher les outils suivants :
+
+* de `mesure` (longueur, aire, angle) dont l'icône comporte une petite regle.
+    * Notons pour la mesure de longueur et d'aire la possibilité de choisir entre deux options:
+        * `Cartésien`, mesure dans le plan X,Y
+        *  `Ellipsoïdale`, mesure en tenant compte de la rotondité de la Terre
+    
+* d'`identification` (d'information) afin d'obtenir des informations sur une entité
+
+* `table attributaire` : 
+    * Remarquons que comme dans un tableur, le contenu des cellules est aligné sur la droite ou sur la gauche :
+        * À droite, il s'agit des champs numérique
+        * À gauche, les champs qui sont des chaînes de caractères
+
+* sélection graphique sur la carte : 
+    * au clic-clic, polygone, main levé, rayon
+
+* sélection par valeur qui permet de faire de sélections selon des critères dans la table attributaire,
+**de manière interactive**. Plusieurs modes de sélections sont possibles.
+
+![Sélection par valeur](./media/select_by_value.png)
