@@ -15,6 +15,7 @@
  <article>
  <p><a href="../">Up</a></p>
 <p><a href="./index.html">Back</a></p><div class="toc"><span class="toctitle">Table of content</span><ul>
+<li><a href="#nommage-dune-entite">Nommage d'une entité</a></li>
 <li><a href="#les-infobulles">Les infobulles</a></li>
 <li><a href="#requetage-sur-une-couche-vecteur">Requêtage sur une couche vecteur</a></li>
 <li><a href="#enregistrer-le-resultat-dune-selection-en-tant-que-nouvelle-couche">Enregistrer le résultat d'une sélection en tant que nouvelle couche</a></li>
@@ -29,8 +30,66 @@
 </div>
 <p>Les expressions sont omniprésentes dans QGIS. Il est important de les maîtriser un minimum si vous voulez pleinement
 exploiter QGIS.</p>
+<h2 id="nommage-dune-entite">Nommage d'une entité</h2>
+<p>Dans les propriétés de la couche vecteur, onglet <code>Infobulle</code>, il est bon de paramétrer comme QGIS doit composer
+le nom d'une entité.</p>
+<p>Par exemple, sur une couche commune, on peut mettre le nom du champ : </p>
+<ul>
+<li>à l'aide du menu déroulant, on peut choisir le nom d'un champ, <code>NOM_COM</code>.</li>
+<li>en cliquant sur l'epsilon violet, on arrive dans la fenêtre des expressions de QGIS : <ol>
+<li>Effacer le contenu à gauche</li>
+<li>Dans le panneau du milieu, aller dans <code>Champs et Valeurs</code> et double-cliquer sur le nom du champ <code>NOM_COM</code>.</li>
+<li>Remarquer l'ajout dans le panneau à gauche de l'expression suivante <code>"NOM_COM"</code>.</li>
+<li>Cliquer sur OK</li>
+<li>Cette expression est équivalente à la première, mais elle est plus correct syntaxiquement.</li>
+</ol>
+</li>
+</ul>
+<p><strong>Il faut retenir</strong> que le nom des champs sont entre guillemet double <code>""</code>.</p>
+<ul>
+<li>retournons dans la fenêtre des expressions. Nous souhaitons dorénavant afficher le nom de la commune, la chaîne de
+caractère <code>:</code> et le code INSEE de la commune.<ul>
+<li>Effacer le contenu à gauche</li>
+<li>Dans le panneau du milieu, aller dans <code>Champs et Valeurs</code> et double-cliquer sur le nom du champ <code>NOM_COM</code>.</li>
+<li>Contrairement aux noms des champs qui sont entre guillement double <code>""</code>, les chaînes de caractères sont entre guillement simple <code>''</code></li>
+<li>Pour concaténer, on peut utiliser <code>||</code>, <code>+</code> ou la fonction <code>concat()</code></li>
+<li>Une solution possible <code>concat("NOM_COM", ' : ', "INSEE_COM")</code></li>
+</ul>
+</li>
+</ul>
 <h2 id="les-infobulles">Les infobulles</h2>
-<p>TODO</p>
+<p>Similaire à la section précédente, on peut définir l'infobulle. On utilise cette fois-ci du HTML pour la mise en forme.</p>
+<ul>
+<li>Pour activer les infobulles sur la carte, menu <code>Vue</code> ▶ <code>Afficher les infobulles</code>.</li>
+<li>Puis retourner dans les propriétés de la couche vecteur, onglet <code>Infobulle</code>.</li>
+</ul>
+<p><strong>Rappel basique</strong> sur du HTML pour faire une liste à puce:</p>
+<p><code>html
+&lt;h3&gt;Titre&lt;/h3&gt;
+&lt;p&gt;Paragraphe&lt;/p&gt;
+&lt;ul&gt;
+    &lt;li&gt;Une&lt;/li&gt;
+    &lt;li&gt;liste&lt;/li&gt;
+    &lt;li&gt;à&lt;/li&gt;
+    &lt;li&gt;puce&lt;/li&gt;
+&lt;/ul&gt;</code></p>
+<ul>
+<li>Les balises <code>&lt;h1&gt;&lt;/h1&gt;</code>, <code>&lt;h2&gt;&lt;/h2&gt;</code>, <code>&lt;hX&gt;&lt;/hX&gt;</code> représentent des titres, en commençant par le plus important. En anglais <strong>header</strong>.</li>
+<li><code>&lt;p&gt;&lt;/p&gt;</code> est un paragraphe</li>
+<li><code>&lt;ul&gt;&lt;/ul&gt;</code> est une liste à puce non ordonnée. En anglais <strong>unordered list</strong>.</li>
+<li><code>&lt;ol&gt;&lt;/ol&gt;</code> est une liste ordonnée. En anglais <strong>ordered list</strong>.</li>
+<li><code>&lt;li&gt;&lt;/li&gt;</code> est un élément dans une liste. En anglais <strong>list item</strong>.</li>
+</ul>
+<p>Il est possible de personnaliser l'afffichage de l'infobulle à l'aide de CSS.</p>
+<p>Exemple d'une infobulle QGIS : </p>
+<p><code>html
+&lt;ul&gt;
+    &lt;li&gt;[% "NOM_COM" %]&lt;/li&gt;
+    &lt;li&gt;[% "INSEE_COM" %]&lt;/li&gt;
+    &lt;li&gt;[% "NOM_DEP" %]&lt;/li&gt;
+&lt;/ul&gt;</code></p>
+<p><code>[% ... %]</code> permet à QGIS de reconnaître qu'il s'agit d'une expression qu'il faut évaluer au sein d'un autre bloc de texte.</p>
+<p><img alt="Info bulle" src="./media/maptip.png"></p>
 <h2 id="requetage-sur-une-couche-vecteur">Requêtage sur une couche vecteur</h2>
 <ul>
 <li>La couche commune comportent de nombreuses entités. On peut le voir graphiquement sur le canevas de la carte, 
