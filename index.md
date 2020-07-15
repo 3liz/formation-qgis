@@ -18,8 +18,8 @@ Dans le dossier `data`, vous pouvez avoir des données comme :
     * AdminExpress
     * OCS-GE si disponible
 * Osm2Igeo de la région concernée
-* SRTM de la région concernée
 * Base comparateur de l'INSEE
+* SRTM de la région concernée, si besoin
 
 Ces données sont gratuites et téléchargeables, selon une licence. [Lire ici.](./source_de_donnees.md)
 
@@ -33,7 +33,6 @@ Ces données sont gratuites et téléchargeables, selon une licence. [Lire ici.]
         * [Calendrier des versions](https://www.qgis.org/fr/site/getinvolved/development/roadmap.html#release-schedule)
         * [Projet QGIS du calendrier](https://github.com/Gustry/qgis-roadmap-project)
     * Rappel cartographique
-        * 
     * Rappel sur les projections
         * https://www.youtube.com/watch?v=kIID5FDi2JQ
         * https://thetruesize.com
