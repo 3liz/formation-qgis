@@ -12,7 +12,8 @@ Il est courant d'avoir une couche spatiale et d'avoir un autre fichier type tabl
 des informations complémentaires à propos de cette couche spatiale. Nous souhaiterions donc ajouter ces informations 
 du tableur à notre couche spatiale.
 
-Lien vers la documentation : https://docs.qgis.org/3.10/fr/docs/user_manual/working_with_vector/vector_properties.html#joins-properties
+Lien vers la documentation : 
+https://docs.qgis.org/3.10/fr/docs/user_manual/working_with_vector/vector_properties.html#joins-properties
 
 Les étapes : 
 

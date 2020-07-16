@@ -30,6 +30,7 @@ On peut aussi y accèder depuis un clic droit sur un emplacement vide dans une b
 
 * Une petite étoile blanche sur fond jaune implique la création d'un nouveau élément : couche, entité, élément cartographique
 * Un petit plus blanc sur fond vert implique la notion d'ajout d'un élément existant
+* Un petit epsilon violet (comme le 4ème iĉone ci-dessus) indique l'utilisation d'une **Expression QGIS**. Elle est très importante.
 
 ![Sélection](./media/layer_toolbar.png)
 

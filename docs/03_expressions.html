@@ -19,10 +19,6 @@
 <li><a href="#les-infobulles">Les infobulles</a></li>
 <li><a href="#requetage-sur-une-couche-vecteur">Requêtage sur une couche vecteur</a></li>
 <li><a href="#enregistrer-le-resultat-dune-selection-en-tant-que-nouvelle-couche">Enregistrer le résultat d'une sélection en tant que nouvelle couche</a></li>
-<li><a href="#outil-danalyse-vecteur">Outil d'analyse vecteur</a><ul>
-<li><a href="#la-modification-par-algorithme-de-traitement">La modification par algorithme de traitement</a></li>
-</ul>
-</li>
 <li><a href="#la-table-attributaire-mise-en-forme-conditionnelle">La table attributaire : mise en forme conditionnelle</a></li>
 <li><a href="#calculatrice-de-champ">Calculatrice de champ</a></li>
 <li><a href="#panneau-statistique">Panneau statistique</a></li>
@@ -63,7 +59,7 @@ caractère <code>:</code> et le code INSEE de la commune.<ul>
 <li>Pour activer les infobulles sur la carte, menu <code>Vue</code> ▶ <code>Afficher les infobulles</code>.</li>
 <li>Puis retourner dans les propriétés de la couche vecteur, onglet <code>Infobulle</code>.</li>
 </ul>
-<p><strong>Rappel basique</strong> sur du HTML pour faire une liste à puce:</p>
+<p><strong>Rappel succinct</strong> sur du HTML pour faire une liste à puce:</p>
 <p><code>html
 &lt;h3&gt;Titre&lt;/h3&gt;
 &lt;p&gt;Paragraphe&lt;/p&gt;
@@ -149,28 +145,6 @@ l'interface graphique afin de construire la requête. Que remarquons-nous sur la
 </ul>
 <p><strong>Attention</strong>, dans la fenêtre pour exporter les entités, <strong>toujours</strong> utiliser les trois petits points lors de la saisie du nom de fichier !</p>
 <p><img alt="Exporter couche vecteur" src="./media/save_as.png"></p>
-<h2 id="outil-danalyse-vecteur">Outil d'analyse vecteur</h2>
-<ul>
-<li>QGIS propose de nombreux algorithmes d'analyse spatiale. <ul>
-<li>Nous allons utiliser l'algorithme <code>Extraire par localisation</code>/<code>Sélection par localisation</code> afin de récupérer seulement les troncons de route qui <code>intersectent</code> la commune.</li>
-<li>Nous souhaitons obtenir une couche des départements Français à l'aide de la couche des communes. Il s'agit d'un regroupement.<ul>
-<li>Que remarque-t-on sur la table attributaire ?</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="la-modification-par-algorithme-de-traitement">La modification par algorithme de traitement</h3>
-<p>QGIS permet maintenant de <strong>modifier directement des géométries</strong> sélectionnées à partir d'un <strong>algorithme de traitement.</strong>. Pour cela:</p>
-<ul>
-<li>Ouvrir la boîte à outils via le menu <strong>Traitement / Boîte à outils</strong></li>
-<li><strong>Sélectionner</strong> un ou plusieurs objets</li>
-<li>Chercher un algorithme dans le panneau <strong>Boîte à outils de traitement</strong> , par exemple <strong>Accrochage de points à la grille</strong></li>
-<li>Activer le bouton jaune <strong>Editer les entités sur place</strong></li>
-<li>Lancer l'algorithme avec valeur <code>500</code> en X et Y et lancer pour tester le traitement.</li>
-<li>On peut toujours revenir en arrière via <strong>CTRL+Z</strong></li>
-</ul>
-<p><img alt="" src="media/23_numerisation_processing.png" title="Numérisation via outil de traitement"></p>
 <h2 id="la-table-attributaire-mise-en-forme-conditionnelle">La table attributaire : mise en forme conditionnelle</h2>
 <p>Pour retrouver plus facilement des objets dans une grande table attributaire, on peut utiliser la fonctionnalité de QGIS de <strong>mise en forme conditionnelle</strong> des champs ou des lignes de la table.</p>
 <p>Le principe est de fournir une ou plusieurs <strong>règles</strong>, via une <strong>expression QGIS</strong>, et d'y associer un <strong>style</strong> de champ ou de ligne. Par exemple <code>@value LIKE 'A%'</code></p>

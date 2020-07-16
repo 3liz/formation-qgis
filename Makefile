@@ -14,5 +14,7 @@ github-pages:
 	@docker run --rm -w /plugin -v $(shell pwd):/plugin etrimaille/pymarkdown extensions.md docs/extensions.html
 	@docker run --rm -w /plugin -v $(shell pwd):/plugin etrimaille/pymarkdown formulaire.md docs/formulaire.html
 	@docker run --rm -w /plugin -v $(shell pwd):/plugin etrimaille/pymarkdown mise_en_page.md docs/mise_en_page.html
+	@docker run --rm -w /plugin -v $(shell pwd):/plugin etrimaille/pymarkdown processing.md docs/processing.html
+	@docker run --rm -w /plugin -v $(shell pwd):/plugin etrimaille/pymarkdown projections.md docs/projections.html
 	@docker run --rm -w /plugin -v $(shell pwd):/plugin etrimaille/pymarkdown source_de_donnees.md docs/source_de_donnees.html
 	@docker run --rm -w /plugin -v $(shell pwd):/plugin etrimaille/pymarkdown symbologie_vecteur.md docs/symbologie_vecteur.html

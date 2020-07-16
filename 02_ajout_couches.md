@@ -40,6 +40,8 @@ au format `QGIS` (extension `.qgs`).
 * Notons que le glisser/déposer fonctionne aussi.
 * Nous pouvons faire un clic droit puis `Propriétés` pour ouvrir la configuration de la couche.
 
+### Encodage
+
 * Si il y a des problèmes d'accents, dans l'onglet `Source`, essayer :
     * `System`, `latin1`, `ISO 8859-1`, `CP-1252`
 * Petites explications sur les encodages : 
@@ -149,23 +151,6 @@ La plugin LayerBoard permet d'obtenir un tableau récapitulatif des couches qui 
 
 Observez les différentes projections.
 
-## Reprojection d'une couche
-
-Note : SCR : Système de Coordonnées de Référence
-
-Pour faire une reprojection de couche, **ne jamais modifier** le SCR dans les propriétés de la couche, onglet `Source`.
-Ceci ne **reprojettera pas** les données dans une autre projection. Ceci **redéfinira** uniquement la projection i.e. 
-ceci indiquera de façon erronée au jeu de données qu'il s'agit d'un autre SCR. 
-Ainsi, n'utilisez cette manipulation **que** pour corriger un jeu de données dont la projection est fausse.
-
-Pour faire une reprojection, faire un clic droit sur la couche puis aller dans le mnu `Exporter`. Dans cette fenêtre,
-vous aller pouvoir définir le SCR de destination.
-
-**Attention**, dans la fenêtre pour exporter les entités, **toujours** utiliser les trois petits points lors de la 
-saisie du nom de fichier !
-
-![Exporter couche vecteur](./media/save_as.png)
-
 ## Enregistrer le projet
 
 * Faire un enregistrement du projet et regarder la taille du fichier.
@@ -179,20 +164,27 @@ le projet en lui même. Ce ne sont que des liens.
 
 Dans les barres d'outils, chercher les outils suivants :
 
-* de `mesure` (longueur, aire, angle) dont l'icône comporte une petite regle.
+* de **mesure** (longueur, aire, angle) dont l'icône comporte une petite règle.
     * Notons pour la mesure de longueur et d'aire la possibilité de choisir entre deux options:
         * `Cartésien`, mesure dans le plan X,Y
-        *  `Ellipsoïdale`, mesure en tenant compte de la rotondité de la Terre
+        * `Ellipsoïdale`, mesure en tenant compte de la rotondité de la Terre
     
-* d'`identification` (d'information) afin d'obtenir des informations sur une entité
+* **d'identification** (d'information) afin d'obtenir des informations sur une entité. Cela liste les attributs : 
+    * de la table attributaire
+    * et les attributs dérivés (longueur, surface, coordonnées etc)
 
-* `table attributaire` : 
+* **table attributaire** : 
     * Remarquons que comme dans un tableur, le contenu des cellules est aligné sur la droite ou sur la gauche :
         * À droite, il s'agit des champs numérique
         * À gauche, les champs qui sont des chaînes de caractères
+    * `F6` permet d'ouvrir la table attributaire, mais attention aux couches lourdes !
+    * `Shift (Maj) + F6`, **S**hift comme sélection pour ouvrir que les entités sélectionnées
+    * `Ctrl + F6` pour les entités visibles
 
-* sélection graphique sur la carte : 
-    * au clic-clic, polygone, main levé, rayon
+* **sélection graphique** sur la carte : 
+    * au clic-clic ou un rectangle
+    * polygone, main levé, rayon
+    * utilisation de **shift** pour faire une sélection multiple
 
 * sélection par valeur qui permet de faire de sélections selon des critères dans la table attributaire,
 **de manière interactive**. Plusieurs modes de sélections sont possibles.

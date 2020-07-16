@@ -12,14 +12,14 @@ Sibling: yes
 
 Documentation : https://docs.qgis.org/3.10/fr/docs/user_manual/working_with_vector/vector_properties.html#labels-properties
 
-QGIS 3 présente une interface unifiée qui liste toutes les options accessibles **dans une seule fenêtre** dans l'onglet `Étiquettes` des propriétés de la couche vecteur :
+QGIS 3 présente une interface unifiée qui liste toutes les options accessibles **dans une seule fenêtre** dans l'onglet 
+`Étiquettes` des propriétés de la couche vecteur :
 
 * un **aperçu** du rendu de l’étiquette
 * une liste de **sous-onglets** pour configurer finement les options
 
 * Nous allons faire un étiquetage simple sur la couche `communes` :
     * Se rendre dans l'onglet `Étiquettes` dans les propriétés de la couche vecteur : 
-
 
 * Choisir : 
     * `Étiquettes simples`
@@ -37,6 +37,7 @@ thèmes:
 * **Tampon** : taille, couleur, transparence
 * **Arrière-plan** : Ajout de n’importe quel fond derrère l’étiquette (forme, SVG, etc.) + paramétrage fin
 * **Ombre** : Définition d’un ombrage (position, décalage, transparence, etc.)
+* **Connecteurs** : permet de générer une flèche entre le point géographique et l'étiquette quand ils sont éloignés
 * **Position** : en fonction du type (polygone, lignes, points), Position et rotation via des colonnes, priorité
 * **Rendu** : seuils d’échelle, paramètres avancés
 
@@ -47,7 +48,7 @@ Chaque paramètre de la configuration peut soit:
 * être choisi de manière classique parmi les **choix proposés**
 * être dynamique via le **choix d’un attribut ou d’une expression**
 
-
+**Certaines options sont spécifiques pour une géométrie.**
 
 ### Le déplacement manuel des étiquettes
 

@@ -18,7 +18,10 @@
 <li><a href="#ajout-de-couches-et-organisation-de-la-legende">Ajout de couches et organisation de la légende</a><ul>
 <li><a href="#documentation">Documentation</a></li>
 <li><a href="#paques-avant-lheure">Pâques avant l'heure</a></li>
-<li><a href="#vecteurs">Vecteurs</a></li>
+<li><a href="#vecteurs">Vecteurs</a><ul>
+<li><a href="#encodage">Encodage</a></li>
+</ul>
+</li>
 <li><a href="#rasters">Rasters</a><ul>
 <li><a href="#fichier-mnt">Fichier MNT</a></li>
 <li><a href="#wms-de-lign">WMS de l'IGN</a></li>
@@ -33,7 +36,6 @@
 <li><a href="#les-vues-cartes">Les vues cartes</a></li>
 <li><a href="#la-vue-3d">La vue 3D</a></li>
 <li><a href="#le-plugin-layerboard">Le plugin Layerboard</a></li>
-<li><a href="#reprojection-dune-couche">Reprojection d'une couche</a></li>
 <li><a href="#enregistrer-le-projet">Enregistrer le projet</a></li>
 <li><a href="#utilisation-des-outils">Utilisation des outils</a></li>
 </ul>
@@ -71,12 +73,11 @@ au format <code>QGIS</code> (extension <code>.qgs</code>).</li>
 </ul>
 </li>
 <li>Notons que le glisser/déposer fonctionne aussi.</li>
-<li>
-<p>Nous pouvons faire un clic droit puis <code>Propriétés</code> pour ouvrir la configuration de la couche.</p>
-</li>
-<li>
-<p>Si il y a des problèmes d'accents, dans l'onglet <code>Source</code>, essayer :</p>
+<li>Nous pouvons faire un clic droit puis <code>Propriétés</code> pour ouvrir la configuration de la couche.</li>
+</ul>
+<h3 id="encodage">Encodage</h3>
 <ul>
+<li>Si il y a des problèmes d'accents, dans l'onglet <code>Source</code>, essayer :<ul>
 <li><code>System</code>, <code>latin1</code>, <code>ISO 8859-1</code>, <code>CP-1252</code></li>
 </ul>
 </li>
@@ -172,17 +173,6 @@ Ajouter des flux provenant de l'IGN en utilisant cette clé gratuite <code>chois
 <p>La plugin LayerBoard permet d'obtenir un tableau récapitulatif des couches qui sont chargées.</p>
 <p><img alt="" src="media/layer_board.png" title="Options localisateur"></p>
 <p>Observez les différentes projections.</p>
-<h2 id="reprojection-dune-couche">Reprojection d'une couche</h2>
-<p>Note : SCR : Système de Coordonnées de Référence</p>
-<p>Pour faire une reprojection de couche, <strong>ne jamais modifier</strong> le SCR dans les propriétés de la couche, onglet <code>Source</code>.
-Ceci ne <strong>reprojettera pas</strong> les données dans une autre projection. Ceci <strong>redéfinira</strong> uniquement la projection i.e. 
-ceci indiquera de façon erronée au jeu de données qu'il s'agit d'un autre SCR. 
-Ainsi, n'utilisez cette manipulation <strong>que</strong> pour corriger un jeu de données dont la projection est fausse.</p>
-<p>Pour faire une reprojection, faire un clic droit sur la couche puis aller dans le mnu <code>Exporter</code>. Dans cette fenêtre,
-vous aller pouvoir définir le SCR de destination.</p>
-<p><strong>Attention</strong>, dans la fenêtre pour exporter les entités, <strong>toujours</strong> utiliser les trois petits points lors de la 
-saisie du nom de fichier !</p>
-<p><img alt="Exporter couche vecteur" src="./media/save_as.png"></p>
 <h2 id="enregistrer-le-projet">Enregistrer le projet</h2>
 <ul>
 <li>Faire un enregistrement du projet et regarder la taille du fichier.</li>
@@ -195,7 +185,7 @@ le projet en lui même. Ce ne sont que des liens.</li>
 <p>Dans les barres d'outils, chercher les outils suivants :</p>
 <ul>
 <li>
-<p>de <code>mesure</code> (longueur, aire, angle) dont l'icône comporte une petite regle.</p>
+<p>de <strong>mesure</strong> (longueur, aire, angle) dont l'icône comporte une petite règle.</p>
 <ul>
 <li>Notons pour la mesure de longueur et d'aire la possibilité de choisir entre deux options:<ul>
 <li><code>Cartésien</code>, mesure dans le plan X,Y</li>
@@ -205,22 +195,31 @@ le projet en lui même. Ce ne sont que des liens.</li>
 </ul>
 </li>
 <li>
-<p>d'<code>identification</code> (d'information) afin d'obtenir des informations sur une entité</p>
+<p><strong>d'identification</strong> (d'information) afin d'obtenir des informations sur une entité. Cela liste les attributs : </p>
+<ul>
+<li>de la table attributaire</li>
+<li>et les attributs dérivés (longueur, surface, coordonnées etc)</li>
+</ul>
 </li>
 <li>
-<p><code>table attributaire</code> : </p>
+<p><strong>table attributaire</strong> : </p>
 <ul>
 <li>Remarquons que comme dans un tableur, le contenu des cellules est aligné sur la droite ou sur la gauche :<ul>
 <li>À droite, il s'agit des champs numérique</li>
 <li>À gauche, les champs qui sont des chaînes de caractères</li>
 </ul>
 </li>
+<li><code>F6</code> permet d'ouvrir la table attributaire, mais attention aux couches lourdes !</li>
+<li><code>Shift (Maj) + F6</code>, <strong>S</strong>hift comme sélection pour ouvrir que les entités sélectionnées</li>
+<li><code>Ctrl + F6</code> pour les entités visibles</li>
 </ul>
 </li>
 <li>
-<p>sélection graphique sur la carte : </p>
+<p><strong>sélection graphique</strong> sur la carte : </p>
 <ul>
-<li>au clic-clic, polygone, main levé, rayon</li>
+<li>au clic-clic ou un rectangle</li>
+<li>polygone, main levé, rayon</li>
+<li>utilisation de <strong>shift</strong> pour faire une sélection multiple</li>
 </ul>
 </li>
 <li>

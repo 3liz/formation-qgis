@@ -8,7 +8,8 @@ Favicon: logo.png
 ## Liens
 
 * Manuel d'utilisation officiel QGIS https://docs.qgis.org/3.10/fr/docs/user_manual/
-* http://www.geoinformations.developpement-durable.gouv.fr/
+* Autres liens utiles :
+    * http://www.geoinformations.developpement-durable.gouv.fr/
 
 ## Données
 
@@ -17,31 +18,34 @@ Dans le dossier `data`, vous pouvez avoir des données comme :
 * IGN:
     * AdminExpress
     * OCS-GE si disponible
-* Osm2Igeo de la région concernée
+* Osm2Igeo
 * Base comparateur de l'INSEE
-* SRTM de la région concernée, si besoin
+* SRTM si besoin
 
 Ces données sont gratuites et téléchargeables, selon une licence. [Lire ici.](./source_de_donnees.md)
 
 ## Contenu
 
 * Présentation des SIG et de QGIS
-    * Rappel de base sur le SIG
+    * Rappel de base sur le SIG (PDF)
     * Le projet QGIS
         * [Association QGIS](https://www.qgis.org/fr/site/getinvolved/governance/index.html) 
-        * [Changelog des versions](https://changelog.qgis.org/en/qgis/)
+        * [Liste des modifications dans les versions](https://changelog.qgis.org/en/qgis/)
         * [Calendrier des versions](https://www.qgis.org/fr/site/getinvolved/development/roadmap.html#release-schedule)
         * [Projet QGIS du calendrier](https://github.com/Gustry/qgis-roadmap-project)
-    * Rappel cartographique
+    * Rappel cartographique (PDF)
     * Rappel sur les projections
+        * PDF
         * https://www.youtube.com/watch?v=kIID5FDi2JQ
         * https://thetruesize.com
-    * Rappel sur les formats en SIG
+    * Rappel sur les formats en SIG (PDF)
 * [Source de données](./source_de_donnees.md)
 * Prise en main de QGIS
     * [Interface de QGIS](./01_interface.md)
     * [Les extensions QGIS](./extensions.md)
     * [Ajouter des couches](./02_ajout_couches.md)
+    * [Les projections](./projections.md)
+        * Enregistrer en tant que nouvelle couche (avec ou sans sélection) et reprojeter
     * [Ajout d'un fichier CSV avec jointure](./04_jointure_attributaire.md)
 * [Les expressions](./03_expressions.md)
     * Infobulle
@@ -54,6 +58,7 @@ Ces données sont gratuites et téléchargeables, selon une licence. [Lire ici.]
     * Graduée, catégorisée, règles, discrétisation
     * Les niveaux de dessins pour un même symbole
 * [Étiquettes](./etiquettes.md)
+* [Processing](./processing.md)
 * [Mise en page](./mise_en_page.md)
     * Faire une carte statique
     * Utilisation des variables

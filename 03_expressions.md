@@ -41,7 +41,7 @@ Similaire à la section précédente, on peut définir l'infobulle. On utilise c
 * Pour activer les infobulles sur la carte, menu `Vue` ▶ `Afficher les infobulles`.
 * Puis retourner dans les propriétés de la couche vecteur, onglet `Infobulle`.
 
-**Rappel basique** sur du HTML pour faire une liste à puce:
+**Rappel succinct** sur du HTML pour faire une liste à puce:
 
 ```html
 <h3>Titre</h3>
@@ -75,7 +75,6 @@ Exemple d'une infobulle QGIS :
 `[% ... %]` permet à QGIS de reconnaître qu'il s'agit d'une expression qu'il faut évaluer au sein d'un autre bloc de texte.
 
 ![Info bulle](./media/maptip.png)
-
 
 ## Requêtage sur une couche vecteur
 
@@ -118,26 +117,6 @@ l'interface graphique afin de construire la requête. Que remarquons-nous sur la
 **Attention**, dans la fenêtre pour exporter les entités, **toujours** utiliser les trois petits points lors de la saisie du nom de fichier !
 
 ![Exporter couche vecteur](./media/save_as.png)
-
-## Outil d'analyse vecteur
-
-* QGIS propose de nombreux algorithmes d'analyse spatiale. 
-    * Nous allons utiliser l'algorithme `Extraire par localisation`/`Sélection par localisation` afin de récupérer seulement les troncons de route qui `intersectent` la commune.
-    * Nous souhaitons obtenir une couche des départements Français à l'aide de la couche des communes. Il s'agit d'un regroupement.
-        * Que remarque-t-on sur la table attributaire ?
-
-### La modification par algorithme de traitement
-
-QGIS permet maintenant de **modifier directement des géométries** sélectionnées à partir d'un **algorithme de traitement.**. Pour cela:
-
-* Ouvrir la boîte à outils via le menu **Traitement / Boîte à outils**
-* **Sélectionner** un ou plusieurs objets
-* Chercher un algorithme dans le panneau **Boîte à outils de traitement** , par exemple **Accrochage de points à la grille**
-* Activer le bouton jaune **Editer les entités sur place**
-* Lancer l'algorithme avec valeur `500` en X et Y et lancer pour tester le traitement.
-* On peut toujours revenir en arrière via **CTRL+Z**
-
-![](media/23_numerisation_processing.png "Numérisation via outil de traitement")
      
 ## La table attributaire : mise en forme conditionnelle
 
