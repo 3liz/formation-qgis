@@ -59,6 +59,7 @@ Ces données sont gratuites et téléchargeables, selon une licence. [Lire ici.]
     * Les niveaux de dessins pour un même symbole
 * [Étiquettes](./etiquettes.md)
 * [Processing](./processing.md)
+* [Couche virtuelle](./couche_virtuelle.md)
 * [Mise en page](./mise_en_page.md)
     * Faire une carte statique
     * Utilisation des variables

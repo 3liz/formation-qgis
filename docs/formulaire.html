@@ -15,18 +15,26 @@
  <article>
  <p><a href="../">Up</a></p>
 <p><a href="./index.html">Back</a></p><div class="toc"><span class="toctitle">Table of content</span><ul>
-<li><a href="#documentation-officielle">Documentation officielle</a></li>
+<li><a href="#documentation">Documentation</a></li>
 <li><a href="#objectif">Objectif</a></li>
 <li><a href="#exercice">Exercice</a><ul>
 <li><a href="#creation-des-tables">Création des tables</a></li>
 <li><a href="#creation-des-formulaires">Création des formulaires</a></li>
+<li><a href="#solution-complete">Solution complète</a></li>
 </ul>
 </li>
 </ul>
 </div>
-<h2 id="documentation-officielle">Documentation officielle</h2>
+<h2 id="documentation">Documentation</h2>
 <ul>
+<li>Les formulaires<ul>
 <li><a href="https://docs.qgis.org/3.10/fr/docs/user_manual/working_with_vector/vector_properties.html#attributes-form-properties">https://docs.qgis.org/3.10/fr/docs/user_manual/working_with_vector/vector_properties.html#attributes-form-properties</a></li>
+</ul>
+</li>
+<li>Les relations 1-n dans QGIS<ul>
+<li><a href="https://docs.qgis.org/3.10/fr/docs/user_manual/working_with_vector/attribute_table.html#creating-one-or-many-to-many-relations">https://docs.qgis.org/3.10/fr/docs/user_manual/working_with_vector/attribute_table.html#creating-one-or-many-to-many-relations</a></li>
+</ul>
+</li>
 </ul>
 <h2 id="objectif">Objectif</h2>
 <p>QGIS permet de faire de masques de saisie lors de la création ou l'édition des données : avoir des menus déroulants, des
@@ -64,11 +72,28 @@ utiliser PostgreSQL ou alors une base de données fichier comme Geopackage.</p>
 </ul>
 </li>
 </ul>
-<p><strong>Dans le cas d'un Geopackage</strong>, il y a déjà le champ <code>fid</code> qui fait office de clé primaire.</p>
-<p><strong>Astuce pour créer les champs</strong>:
-* créer juste le premier champ dans la boite de dialogue de création de couche. Nous utiliserons les outils dans le 
-panneau <code>Table attributaire</code> pour ajouter les autres attributs. Il y a plus de choix.
-* la longueur d'un champ texte correspond à sa limite pour stocker des caractères</p>
+<p>Pour la création des tables :</p>
+<ul>
+<li>
+<p>Dans le cas de l'utilisation d'un Geopackage :</p>
+<ul>
+<li><img alt="" src="./media/layer_toolbar.png"></li>
+<li>Il y a déjà le champ <code>fid</code> qui fait office de clé primaire.</li>
+<li>Astuce pour la création des champs :<ul>
+<li>créer juste le premier champ dans la boite de dialogue de création de couche. Nous utiliserons les outils dans le 
+panneau <code>Table attributaire</code> pour ajouter les autres attributs. Il y a plus de choix.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Dans le cas de l'utilisation de PostGIS : </p>
+<ul>
+<li>Utiliser l'assistant de création de table du DB Manager</li>
+<li>Ou alors du SQL !</li>
+</ul>
+</li>
+</ul>
 <h3 id="creation-des-formulaires">Création des formulaires</h3>
 <p>Dans les propriétés de la couche vecteur en question, onglet <code>Formulaire d'attributs</code>:
 * Couche <code>observateurs</code> : 
@@ -84,6 +109,10 @@ panneau <code>Table attributaire</code> pour ajouter les autres attributs. Il y 
     <code>regexp_match( left("nom_commun", 1), '[A-Z]')</code>
 * Couche <code>observations</code> : 
     * Bonus : une expression pour la date pour éviter une saisie dans le futur</p>
+<h3 id="solution-complete">Solution complète</h3>
+<p>TODO, mettre le lien vers le geopackage
+<a href="https://github.com/Gustry/formation-qgis/raw/master/formulaire.gpkg">https://github.com/Gustry/formation-qgis/raw/master/formulaire.gpkg</a></p>
+<p>Depuis QGIS ▶ <code>Ouvrir depuis...</code> ▶ <code>Geopackage</code></p>
   </article>
   <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.1/highlight.min.js">
   </script>

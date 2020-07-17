@@ -43,12 +43,18 @@ thèmes:
 
 ![](media/12_parametres_etiquettes.png "Paramèters d'étiquettes")
 
+**Certaines options sont spécifiques pour une géométrie.**
+
 Chaque paramètre de la configuration peut soit:
 
 * être choisi de manière classique parmi les **choix proposés**
 * être dynamique via le **choix d’un attribut ou d’une expression**
 
-**Certaines options sont spécifiques pour une géométrie.**
+Quand un icône est jaune, cela veut dire que le **contôle par les données** est actif. Le paramètre dans l'interface
+graphique peut ne pas être pris en compte car il est **peut-être** surchargé au niveau de l'entité. Il est possible de
+désactiver en faisant un clic-droit sur une propriété en jaune.
+
+![](media/data_defined_labels.png)
 
 ### Le déplacement manuel des étiquettes
 
@@ -60,7 +66,7 @@ QGIS 3 permet maintenant de **déplacer les étiquettes manuellement** sans avoi
 * Compacter d'abord les étiquettes: `wordwrap("NOM", 13, '-')`
 * Il faut **absolument** une **clé primaire de type entier** comme **identifiant unique**
 
-**Etapes**
+**Étapes**
 
 * Pour gérer le déplacement, il faut utiliser la **barre d'outils Étiquettes**
 * Choisir l'**échelle**
@@ -83,8 +89,25 @@ Les données sont enregistrées **dans l'archive du projet QGZ**, pour chaque co
 
 ![](media/13_barre_etiquette_et_stockage_auxiliaire.png "Stockage auxiliaire")
 
-* **Bonus**, afficher une information calculée à la volée, comme la superficie de la commune en km² : 
+### Utilisation d'une expression pour construire l'étiquette
+
+Par défaut, nous avons utilisé un champ de notre attributaire pour construire notre étiquette.
+
+Nous souhaiterions désormais vouloir étiquetter en utilisant deux champs : le nom de la commune ET son code INSEE.
+Il faut désormais utiliser le petit epsilon violet, qui comme vu dans la [présentation de l'interface](./01_interface.md)
+fait référence à la notion des **expressions**.
+
+* Pour afficher le nom de la commune avec le code INSEE
+    * Attention aux différents opérateurs `+`, `||` et `concat()` qui permettent tous de concaténer des chaînes, mais
+    attention aux valeurs NULL et aux valeurs mathématiques. On recommande `concat` bien qu'elle soit un peu plus complexe.
+    * Solution `concat("NOM", '\n', "CODE_INSEE")`
+
+* afficher une information calculée à la volée, comme la superficie de la commune en km² : 
     * La superficie en anglais se dit `area`.
-    * La projection de la couche est actuellement en m².
+    * La projection de la couche est actuellement en m, donc la surface est en m².
     * Solution partielle `$area / 1000000`
-    * Solution finale `concat("NOM", ' ', round($area / 1000000, 2), ' km²')`
+    * Solution finale `concat("NOM", '\n', round($area / 1000000, 2), ' km²')`
+
+* changer pour afficher la densité de population
+    * Solution `concat("NOM", '\n', round("POPULATION" / ($area / 1000000, 2)), ' hab/km²')`
+    

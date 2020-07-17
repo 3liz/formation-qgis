@@ -28,13 +28,20 @@ du tableur à notre couche spatiale.</p>
 <ul>
 <li>Préparer un fichier tableur "simple" avec les entêtes des colonnes et les données.<ul>
 <li>Pas d'autres entêtes ou autre texte.</li>
-<li>Il peut y avoir plusieurs feuilles.</li>
+<li>Il peut y avoir plusieurs feuilles, QGIS permet de choisir la feuille.</li>
 </ul>
 </li>
 <li>Charger la table dans QGIS : <ul>
-<li>à l'aide de l'outil <code>Texte délimité</code> si fichier CSV dans le <code>gestionnaire des sources de données</code></li>
+<li>Si fichier CSV :<ul>
+<li>à l'aide de l'outil <code>Texte délimité</code> dans le <code>gestionnaire des sources de données</code></li>
+</ul>
+</li>
+<li>Si fichier ODS, XLS :<ul>
 <li>à l'aide du panneau explorateur</li>
-<li>à l'aide de l'outil <code>Vecteur</code> (!) dans le <code>gestionnaire des sources de données</code></li>
+<li>ou à l'aide de l'outil <code>Vecteur</code> (même si il s'agit d'une table, sans géométrie) dans le 
+<code>gestionnaire des sources de données</code></li>
+</ul>
+</li>
 </ul>
 </li>
 <li>Vérifier qu'il existe bien un champ commun aux deux couches avant de faire la jointure et qu'il peut y avoir une correspondance.</li>
@@ -44,7 +51,8 @@ du tableur à notre couche spatiale.</p>
 </ul>
 <p><img alt="" src="media/jointure_attributaire.png" title="Les statistiques sur une table"></p>
 <ul>
-<li>Afin de conserver définitivement ces données supplémentaires dans la table attributaire, on peut exporter la table (clic droit sur la couche).</li>
+<li>Afin de conserver définitivement ces données supplémentaires dans la table attributaire, on peut exporter la table 
+(clic droit sur la couche, puis exporter). Lire la page sur les <a href="./projections.html">projections</a> pour voir comment exporter.</li>
 </ul>
 <p><em>Note</em>, afin de conserver ces champs qui peuvent être très long, on peut utiliser un geopackage.</p>
   </article>

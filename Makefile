@@ -9,6 +9,7 @@ github-pages:
 	@docker run --rm -w /plugin -v $(shell pwd):/plugin etrimaille/pymarkdown 03_expressions.md docs/03_expressions.html
 	@docker run --rm -w /plugin -v $(shell pwd):/plugin etrimaille/pymarkdown 04_jointure_attributaire.md docs/04_jointure_attributaire.html
 	@docker run --rm -w /plugin -v $(shell pwd):/plugin etrimaille/pymarkdown autres.md docs/autres.html
+	@docker run --rm -w /plugin -v $(shell pwd):/plugin etrimaille/pymarkdown couche_virtuelle.md docs/couche_virtuelle.html
 	@docker run --rm -w /plugin -v $(shell pwd):/plugin etrimaille/pymarkdown etiquettes.md docs/etiquettes.html
 	@docker run --rm -w /plugin -v $(shell pwd):/plugin etrimaille/pymarkdown exercices.md docs/exercices.html
 	@docker run --rm -w /plugin -v $(shell pwd):/plugin etrimaille/pymarkdown extensions.md docs/extensions.html

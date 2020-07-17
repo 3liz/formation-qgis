@@ -6,9 +6,12 @@ Sibling: yes
 
 [TOC]
 
-## Documentation officielle
+## Documentation
 
-* https://docs.qgis.org/3.10/fr/docs/user_manual/working_with_vector/vector_properties.html#attributes-form-properties
+* Les formulaires
+    * https://docs.qgis.org/3.10/fr/docs/user_manual/working_with_vector/vector_properties.html#attributes-form-properties
+* Les relations 1-n dans QGIS
+    * https://docs.qgis.org/3.10/fr/docs/user_manual/working_with_vector/attribute_table.html#creating-one-or-many-to-many-relations
 
 ## Objectif
 
@@ -45,12 +48,18 @@ Nous allons utiliser le modèle de données suivant:
     * Photo : `photo`
     * Remarque : `remarque`
 
-**Dans le cas d'un Geopackage**, il y a déjà le champ `fid` qui fait office de clé primaire.
+Pour la création des tables :
 
-**Astuce pour créer les champs**:
-* créer juste le premier champ dans la boite de dialogue de création de couche. Nous utiliserons les outils dans le 
+* Dans le cas de l'utilisation d'un Geopackage :
+    * ![](./media/layer_toolbar.png)
+    * Il y a déjà le champ `fid` qui fait office de clé primaire.
+    * Astuce pour la création des champs :
+        * créer juste le premier champ dans la boite de dialogue de création de couche. Nous utiliserons les outils dans le 
 panneau `Table attributaire` pour ajouter les autres attributs. Il y a plus de choix.
-* la longueur d'un champ texte correspond à sa limite pour stocker des caractères
+
+* Dans le cas de l'utilisation de PostGIS : 
+    * Utiliser l'assistant de création de table du DB Manager
+    * Ou alors du SQL !
 
 ### Création des formulaires
 
@@ -68,3 +77,10 @@ Dans les propriétés de la couche vecteur en question, onglet `Formulaire d'att
     `regexp_match( left("nom_commun", 1), '[A-Z]')`
 * Couche `observations` : 
     * Bonus : une expression pour la date pour éviter une saisie dans le futur
+    
+### Solution complète
+
+TODO, mettre le lien vers le geopackage
+https://github.com/Gustry/formation-qgis/raw/master/formulaire.gpkg
+
+Depuis QGIS ▶ `Ouvrir depuis...` ▶ `Geopackage`

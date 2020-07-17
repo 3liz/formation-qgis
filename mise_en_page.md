@@ -10,7 +10,7 @@ Sibling: yes
 
 Anciennement **composeur d'impression** dans QGIS 2
 
-## Documentation officielle
+## Documentation
 
 * https://docs.qgis.org/3.10/fr/docs/user_manual/print_composer/index.html
 
