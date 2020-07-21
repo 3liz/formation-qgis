@@ -12,6 +12,11 @@ Il est courant d'avoir une couche spatiale et d'avoir un autre fichier type tabl
 des informations complémentaires à propos de cette couche spatiale. Nous souhaiterions donc ajouter ces informations 
 du tableur à notre couche spatiale.
 
+**Important**, une jointure attributaire fait en ce que l'on appelle une jointure de relation **1-1**. Une ligne dans le
+fichier tableur correspond une ligne dans la couche des communes. On souhaite pouvoir "étendre" la table attributaire
+de la couche communes. Pour une relation de type **1-n** (plusieurs lignes du fichier tableur pour une ligne de la couche
+commune), il faut regarder du côté des relations QGIS dans le chapitre sur les [formulaires](./formulaire.md).
+
 Lien vers la documentation : 
 https://docs.qgis.org/3.10/fr/docs/user_manual/working_with_vector/vector_properties.html#joins-properties
 

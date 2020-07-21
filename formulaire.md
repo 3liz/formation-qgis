@@ -21,6 +21,10 @@ cases à cocher, des zones de textes en lecture seule...
 Pour cela, nous allons réaliser une petite base de données pour de la saisie d'observations faunistiques. Nous pouvons
 utiliser PostgreSQL ou alors une base de données fichier comme Geopackage.
 
+Nous allons obtenir des relations **1-n**, par exemple, à une commune, nous avons plusieurs observations. De même, un
+observateur possède 0 ou plusieurs observations, mais une observation appartient à un seul observateur. QGIS permet de
+définir des relations entre les tables.
+
 ## Exercice
 
 ### Création des tables
@@ -60,6 +64,14 @@ panneau `Table attributaire` pour ajouter les autres attributs. Il y a plus de c
 * Dans le cas de l'utilisation de PostGIS : 
     * Utiliser l'assistant de création de table du DB Manager
     * Ou alors du SQL !
+
+### Création des relations
+
+Menu `Projet` ▶ `Propriétés` ▶ `Relations`, nous pouvons créer ici les relations **1-n** entre les tables.
+
+Par convention personnel, je nomme les relations suivant le modèle `parent_enfant`, par exemple `commune_observation`.
+
+![](./media/relations.png)
 
 ### Création des formulaires
 
