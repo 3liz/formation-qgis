@@ -82,3 +82,6 @@ On peut par exemple appliquer un ombrage sur les symboles ponctuels.
 
 ![](media/activer_effets.png "Rendu groupe de points")
 
+## Les effets
+
+TODO

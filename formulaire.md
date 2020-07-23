@@ -90,6 +90,10 @@ Dans les propriétés de la couche vecteur en question, onglet `Formulaire d'att
 * Couche `observations` : 
     * Bonus : une expression pour la date pour éviter une saisie dans le futur
     
+### Les champs virtuels
+
+TODO
+    
 ### Solution complète
 
 TODO, mettre le lien vers le geopackage
