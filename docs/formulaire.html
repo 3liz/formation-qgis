@@ -104,20 +104,28 @@ panneau <code>Table attributaire</code> pour ajouter les autres attributs. Il y 
 <p>Par convention personnel, je nomme les relations suivant le modèle <code>parent_enfant</code>, par exemple <code>commune_observation</code>.</p>
 <p><img alt="" src="./media/relations.png"></p>
 <h3 id="creation-des-formulaires">Création des formulaires</h3>
-<p>Dans les propriétés de la couche vecteur en question, onglet <code>Formulaire d'attributs</code>:
-* Couche <code>observateurs</code> : 
-    * Mode formulaire : <code>Génération automatique</code>
-    * Mettre un alias sur les champs, language humain
-    * Mettre le bon outil d'édition pour les champs : <code>cachée</code> ou <code>texte</code>
-    * Mettre les contraintes et les renforcer
-* Couche <code>especes</code> : 
-    * Même mode de formulaire
-    * Alias
-    * Configurer aussi l'outil d'édition, avec l'unicité sur le nom de l'espèce
-    * Bonus : utiliser une expression pour vérifier que la première lettre est bien une majuscule.
-    <code>regexp_match( left("nom_commun", 1), '[A-Z]')</code>
-* Couche <code>observations</code> : 
-    * Bonus : une expression pour la date pour éviter une saisie dans le futur</p>
+<p>Dans les propriétés de la couche vecteur en question, onglet <code>Formulaire d'attributs</code>:</p>
+<ul>
+<li>Couche <code>observateurs</code> : <ul>
+<li>Mode formulaire : <code>Génération automatique</code></li>
+<li>Mettre un alias sur les champs, language humain</li>
+<li>Mettre le bon outil d'édition pour les champs : <code>cachée</code> ou <code>texte</code></li>
+<li>Mettre les contraintes et les renforcer</li>
+</ul>
+</li>
+<li>Couche <code>especes</code> : <ul>
+<li>Même mode de formulaire</li>
+<li>Alias</li>
+<li>Configurer aussi l'outil d'édition, avec l'unicité sur le nom de l'espèce</li>
+<li>Bonus : utiliser une expression pour vérifier que la première lettre est bien une majuscule.
+<code>regexp_match( left("nom_commun", 1), '[A-Z]')</code></li>
+</ul>
+</li>
+<li>Couche <code>observations</code> : <ul>
+<li>Bonus : une expression pour la date pour éviter une saisie dans le futur</li>
+</ul>
+</li>
+</ul>
 <h3 id="les-champs-virtuels">Les champs virtuels</h3>
 <p>Sur la couche communes, on peut ajouter un champ virtuel afin de compter le nombre d'observations par commune : </p>
 <p><code>relation_aggregate(

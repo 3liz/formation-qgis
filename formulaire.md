@@ -76,6 +76,7 @@ Par convention personnel, je nomme les relations suivant le modèle `parent_enfa
 ### Création des formulaires
 
 Dans les propriétés de la couche vecteur en question, onglet `Formulaire d'attributs`:
+
 * Couche `observateurs` : 
     * Mode formulaire : `Génération automatique`
     * Mettre un alias sur les champs, language humain
