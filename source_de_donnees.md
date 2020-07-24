@@ -16,7 +16,7 @@ Sibling: yes
   * IGN
 * [Géoportail de l'urbanisme](https://www.geoportail-urbanisme.gouv.fr/)
 * OpenStreeMap
-    * [GeoFabrik](http://download.geofabrik.de) : extraction régulière de données OpenStreetMap
+    * [GeoFabrik](https://download.geofabrik.de) : extraction régulière de données OpenStreetMap
     * [Datawax Osm2Igeo](https://www.data.data-wax.com/?dir=OSM2IGEO) : extraction des données OSM
     * Extension QGIS QuickOSM
     

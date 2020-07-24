@@ -4,7 +4,7 @@
  <head>
   <meta charset="utf-8"/>
   <title>Mise en page</title>
-  <link href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.1/styles/github.min.css" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.1/styles/github.min.css" rel="stylesheet"/>
   <link href="https://3liz.github.io/remarkable.css" rel="stylesheet"/>
   <link href="logo.png" rel="icon" type="image/png" >
  </head>
@@ -112,17 +112,19 @@ via des expressions.</li>
 </ul>
 <p><img alt="" src="media/data_defined_atlas.png" title="Data defined"></p>
 <p>Pour la couleur de bordure :</p>
-<p><code>sql
-CASE 
+<pre><code class="sql">CASE 
 WHEN @atlas_featureid = $id THEN 'red'
 ELSE 'black'
-END</code></p>
+END
+</code></pre>
+
 <p>Pour la largeur de bordure :</p>
-<p><code>sql
-CASE 
+<pre><code class="sql">CASE 
 WHEN @atlas_featureid = $id THEN 1
 ELSE 0.2
-END</code></p>
+END
+</code></pre>
+
 <p><em>Note</em>, ces icônes deviennent jaune lorsqu'il y a une expression.</p>
 <h3 id="generer-un-rapport">Générer un rapport</h3>
 <p>Documentation : <a href="https://docs.qgis.org/3.10/fr/docs/user_manual/print_composer/create_reports.html">https://docs.qgis.org/3.10/fr/docs/user_manual/print_composer/create_reports.html</a></p>
@@ -152,7 +154,7 @@ Concrétement en guise d'exemple, à l'échelle d'une région, nous pouvons ité
 <p><strong>Astuce</strong> : on peut importer un modèle de mise en page dans un rapport.</p>
 <p><img alt="" src="media/28_composeur_rapport.png" title="Composeur, rapports"></p>
   </article>
-  <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.1/highlight.min.js">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.1/highlight.min.js">
   </script>
   <script>
    hljs.initHighlightingOnLoad();

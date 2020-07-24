@@ -4,7 +4,7 @@
  <head>
   <meta charset="utf-8"/>
   <title>Formulaire</title>
-  <link href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.1/styles/github.min.css" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.1/styles/github.min.css" rel="stylesheet"/>
   <link href="https://3liz.github.io/remarkable.css" rel="stylesheet"/>
   <link href="logo.png" rel="icon" type="image/png" >
  </head>
@@ -128,24 +128,30 @@ panneau <code>Table attributaire</code> pour ajouter les autres attributs. Il y 
 </ul>
 <h3 id="les-champs-virtuels">Les champs virtuels</h3>
 <p>Sur la couche communes, on peut ajouter un champ virtuel afin de compter le nombre d'observations par commune : </p>
-<p><code>relation_aggregate(
+<pre><code>relation_aggregate(
     relation:='observation_commune',
     aggregate:='count',
-    expression:="fid"
-)</code></p>
+    expression:=&quot;fid&quot;
+)
+</code></pre>
+
 <p>Bonus, on peut ajouter une mise en forme conditionnelle</p>
 <p><img alt="" src="./media/table_attributaire_condition.png"></p>
-<p>Rouge si
-<code>@value =  minimum(  "obs" )</code></p>
-<p>Vert si
-<code>@value =  maximum(  "obs" )</code></p>
+<p>Rouge si</p>
+<pre><code>@value =  minimum(  &quot;obs&quot; )
+</code></pre>
+
+<p>Vert si</p>
+<pre><code>@value =  maximum(  &quot;obs&quot; )
+</code></pre>
+
 <h3 id="solution-complete">Solution complète</h3>
 <p><img alt="" src="./media/interface_observations_faunistiques.png"></p>
 <p>TODO, mettre le lien vers le geopackage
 <a href="https://github.com/Gustry/formation-qgis/raw/master/formulaire.gpkg">https://github.com/Gustry/formation-qgis/raw/master/formulaire.gpkg</a></p>
 <p>Depuis QGIS ▶ <code>Ouvrir depuis...</code> ▶ <code>Geopackage</code></p>
   </article>
-  <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.1/highlight.min.js">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.1/highlight.min.js">
   </script>
   <script>
    hljs.initHighlightingOnLoad();

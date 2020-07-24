@@ -4,7 +4,7 @@
  <head>
   <meta charset="utf-8"/>
   <title>Expression</title>
-  <link href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.1/styles/github.min.css" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.1/styles/github.min.css" rel="stylesheet"/>
   <link href="https://3liz.github.io/remarkable.css" rel="stylesheet"/>
   <link href="logo.png" rel="icon" type="image/png" >
  </head>
@@ -60,15 +60,16 @@ caractère <code>:</code> et le code INSEE de la commune.<ul>
 <li>Puis retourner dans les propriétés de la couche vecteur, onglet <code>Infobulle</code>.</li>
 </ul>
 <p><strong>Rappel succinct</strong> sur du HTML pour faire une liste à puce:</p>
-<p><code>html
-&lt;h3&gt;Titre&lt;/h3&gt;
+<pre><code class="html">&lt;h3&gt;Titre&lt;/h3&gt;
 &lt;p&gt;Paragraphe&lt;/p&gt;
 &lt;ul&gt;
     &lt;li&gt;Une&lt;/li&gt;
     &lt;li&gt;liste&lt;/li&gt;
     &lt;li&gt;à&lt;/li&gt;
     &lt;li&gt;puce&lt;/li&gt;
-&lt;/ul&gt;</code></p>
+&lt;/ul&gt;
+</code></pre>
+
 <ul>
 <li>Les balises <code>&lt;h1&gt;&lt;/h1&gt;</code>, <code>&lt;h2&gt;&lt;/h2&gt;</code>, <code>&lt;hX&gt;&lt;/hX&gt;</code> représentent des titres, en commençant par le plus important. En anglais <strong>header</strong>.</li>
 <li><code>&lt;p&gt;&lt;/p&gt;</code> est un paragraphe</li>
@@ -78,12 +79,13 @@ caractère <code>:</code> et le code INSEE de la commune.<ul>
 </ul>
 <p>Il est possible de personnaliser l'afffichage de l'infobulle à l'aide de CSS.</p>
 <p>Exemple d'une infobulle QGIS : </p>
-<p><code>html
-&lt;ul&gt;
-    &lt;li&gt;[% "NOM_COM" %]&lt;/li&gt;
-    &lt;li&gt;[% "INSEE_COM" %]&lt;/li&gt;
-    &lt;li&gt;[% "NOM_DEP" %]&lt;/li&gt;
-&lt;/ul&gt;</code></p>
+<pre><code class="html">&lt;ul&gt;
+    &lt;li&gt;[% &quot;NOM_COM&quot; %]&lt;/li&gt;
+    &lt;li&gt;[% &quot;INSEE_COM&quot; %]&lt;/li&gt;
+    &lt;li&gt;[% &quot;NOM_DEP&quot; %]&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+
 <p><code>[% ... %]</code> permet à QGIS de reconnaître qu'il s'agit d'une expression qu'il faut évaluer au sein d'un autre bloc de texte.</p>
 <p><img alt="Info bulle" src="./media/maptip.png"></p>
 <h2 id="requetage-sur-une-couche-vecteur">Requêtage sur une couche vecteur</h2>
@@ -158,7 +160,7 @@ Il permet la mise à jour d'un champ existant ou alors de créer un nouveau cham
 <p>Il fonctionne à l'aide d'une couche vecteur en entrée ainsi que d'un champ de cette couche ou une expression.</p>
 <p><img alt="" src="media/statistique.png" title="Les statistiques sur une table"></p>
   </article>
-  <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.1/highlight.min.js">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.1/highlight.min.js">
   </script>
   <script>
    hljs.initHighlightingOnLoad();

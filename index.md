@@ -93,7 +93,7 @@ Ces données sont gratuites et téléchargeables, selon une licence. [Lire ici.]
     * Faire un rapport
 * [Création de données](./formulaire.md)
     * Création des tables
-    * Les relations 1-n ente les tables
+    * Les relations 1-n entre les tables
     * Les formulaires avec les masques de saisies
     * Les champs virtuels
 * DataPlotly
