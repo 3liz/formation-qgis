@@ -92,9 +92,34 @@ Dans les propriétés de la couche vecteur en question, onglet `Formulaire d'att
     
 ### Les champs virtuels
 
-TODO
+Sur la couche communes, on peut ajouter un champ virtuel afin de compter le nombre d'observations par commune : 
+
+```
+relation_aggregate(
+	relation:='observation_commune',
+	aggregate:='count',
+	expression:="fid"
+)
+```
+
+Bonus, on peut ajouter une mise en forme conditionnelle
+
+![](./media/table_attributaire_condition.png)
+
+
+Rouge si
+```
+@value =  minimum(  "obs" )
+```
+
+Vert si
+```
+@value =  maximum(  "obs" )
+```
     
 ### Solution complète
+
+![](./media/interface_observations_faunistiques.png)
 
 TODO, mettre le lien vers le geopackage
 https://github.com/Gustry/formation-qgis/raw/master/formulaire.gpkg

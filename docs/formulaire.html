@@ -119,8 +119,20 @@ panneau <code>Table attributaire</code> pour ajouter les autres attributs. Il y 
 * Couche <code>observations</code> : 
     * Bonus : une expression pour la date pour éviter une saisie dans le futur</p>
 <h3 id="les-champs-virtuels">Les champs virtuels</h3>
-<p>TODO</p>
+<p>Sur la couche communes, on peut ajouter un champ virtuel afin de compter le nombre d'observations par commune : </p>
+<p><code>relation_aggregate(
+    relation:='observation_commune',
+    aggregate:='count',
+    expression:="fid"
+)</code></p>
+<p>Bonus, on peut ajouter une mise en forme conditionnelle</p>
+<p><img alt="" src="./media/table_attributaire_condition.png"></p>
+<p>Rouge si
+<code>@value =  minimum(  "obs" )</code></p>
+<p>Vert si
+<code>@value =  maximum(  "obs" )</code></p>
 <h3 id="solution-complete">Solution complète</h3>
+<p><img alt="" src="./media/interface_observations_faunistiques.png"></p>
 <p>TODO, mettre le lien vers le geopackage
 <a href="https://github.com/Gustry/formation-qgis/raw/master/formulaire.gpkg">https://github.com/Gustry/formation-qgis/raw/master/formulaire.gpkg</a></p>
 <p>Depuis QGIS ▶ <code>Ouvrir depuis...</code> ▶ <code>Geopackage</code></p>
