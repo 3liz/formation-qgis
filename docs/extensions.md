@@ -1,10 +1,4 @@
----
-Title: Extensions
-Favicon: logo.png
-Sibling: yes
-...
-
-[TOC]
+# Les extensions
 
 QGIS, par défaut permet beaucoup de fonctionnalités.
 Mais il est possible de rajouter des fonctionnalités supplémentaires en y installant des extensions.

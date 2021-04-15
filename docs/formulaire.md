@@ -1,10 +1,4 @@
----
-Title: Formulaire
-Favicon: logo.png
-Sibling: yes
-...
-
-[TOC]
+# Les formulaires
 
 ## Documentation
 

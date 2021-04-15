@@ -1,11 +1,3 @@
----
-Title: Couche virtuelle
-Favicon: logo.png
-Sibling: yes
-...
-
-[TOC]
-
 # Faire une couche virtuelle
 
 À partir de la couche commune, surfacique, nous souhaitons obtenir une couche ponctuelle.

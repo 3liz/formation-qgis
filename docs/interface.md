@@ -1,12 +1,6 @@
----
-Title: Interface de QGIS
-Favicon: logo.png
-Sibling: yes
-...
+# Interface
 
-[TOC]
-
-## Documentation
+## Liens
 
 * [Interface de QGIS](https://docs.qgis.org/3.10/fr/docs/user_manual/introduction/qgis_gui.html)
 
@@ -17,10 +11,9 @@ L'interface de QGIS se compose de plusieurs :
 * barre d'outils : `Vue` ▶ `Barre d'outils`
 * panneaux : `Vue` ▶ `Panneaux`
 
-On peut aussi y accèder depuis un clic droit sur un emplacement vide dans une barre d'outils.
+On peut aussi y accéder depuis un clic droit sur un emplacement vide dans une barre d'outils.
 
 ![Interface de QGIS](./media/interface.png)
-
 
 ## Astuces
 
@@ -38,7 +31,7 @@ On peut aussi y accèder depuis un clic droit sur un emplacement vide dans une b
 
 ## Propriétés
 
-Dans QGIS, il existe plusieurs niveaux pour définir les propriétés:
+Dans QGIS, il existe plusieurs niveaux pour définir les propriétés :
 
 * au niveau général de QGIS
 * du projet en cours

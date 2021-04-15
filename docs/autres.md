@@ -1,11 +1,3 @@
----
-Title: Autres
-Favicon: logo.png
-Sibling: yes
-...
-
-[TOC]
-
 # Autres
 
 ## La barre de recherche:

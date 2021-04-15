@@ -1,11 +1,3 @@
----
-Title: Exercices
-Favicon: logo.png
-Sibling: yes
-...
-
-[TOC]
-
 # Théorème des quatre couleurs
 
 https://fr.wikipedia.org/wiki/Th%C3%A9or%C3%A8me_des_quatre_couleurs
@@ -22,8 +14,4 @@ ayant toute une frontière (et non simplement un point) en commun reçoivent tou
 
 ![Carte](./media/carte_5_couleurs.png)
 
-Au final, nous ne souhaitons une nouvelle couche.
- 
-## Étapes
-
-1. En utilisant, le menu 
+Au final, nous ne souhaitons pas une nouvelle couche.

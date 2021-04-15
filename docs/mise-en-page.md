@@ -1,12 +1,4 @@
----
-Title: Mise en page
-Favicon: logo.png
-Sibling: yes
-...
-
-[TOC]
-
-# Mise en page d'une carte
+# Mise en page
 
 Anciennement **composeur d'impression** dans QGIS 2
 
@@ -87,7 +79,7 @@ Documentation : https://docs.qgis.org/3.10/fr/docs/user_manual/print_composer/cr
 * On peut utiliser des **expressions QGIS** dans les **Étiquettes**, dans les filtres, dans les propriétés configurables 
 via des expressions.
   * Par exemple, on souhaite factoriser le nom de l'organisation:
-    * Faire une variable au [niveau global de QGIS](./01_interface.md) dans l'onglet `Variables`
+    * Faire une variable au [niveau global de QGIS](./interface.md) dans l'onglet `Variables`
     * Modifier une étiquette pour utiliser cette `variable` dans la fenêtre des expressions pour l'utiliser.
 * On peut contrôler le style de l'objet courant (la commune) via une expression dans la symbologie d'une couche à l'aide des icônes à droite : 
 

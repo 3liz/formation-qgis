@@ -1,11 +1,3 @@
----
-Title: Symbologie vecteur
-Favicon: logo.png
-Sibling: yes
-...
-
-[TOC]
-
 # La symbologie vecteur
 
 ## Les différents types de symbologie

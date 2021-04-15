@@ -1,11 +1,3 @@
----
-Title: Les couches
-Favicon: logo.png
-Sibling: yes
-...
-
-[TOC]
-
 # Ajout de couches et organisation de la légende
 
 ## Documentation
@@ -141,7 +133,6 @@ La **vue 3D** permet de draper des données vectorielles ou raster par dessus un
 Elle peut aussi représenter des données qui ont une composante d'altitude (Z).
 
 ![](media/07_vue_3D.png "Vue 3D")
-
 
 ## L'extension Layerboard
 

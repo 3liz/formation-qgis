@@ -1,11 +1,3 @@
----
-Title: Processing
-Favicon: logo.png
-Sibling: yes
-...
-
-[TOC]
-
 # Processing
 
 ## Outil d'analyse vecteur

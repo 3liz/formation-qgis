@@ -1,12 +1,4 @@
----
-Title: Projections
-Favicon: logo.png
-Sibling: yes
-...
-
-[TOC]
-
-# Gestion de la projection dans QGIS
+# Les projections
 
 ## Les couches et le projet
 

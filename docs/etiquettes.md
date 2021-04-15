@@ -1,14 +1,6 @@
----
-Title: Étiquettes
-Favicon: logo.png
-Sibling: yes
-...
+# Les étiquettes
 
-[TOC]
-
-## La gestion des étiquettes
-
-### Rappel des fonctionnalités
+## Rappel des fonctionnalités
 
 Documentation : https://docs.qgis.org/3.10/fr/docs/user_manual/working_with_vector/vector_properties.html#labels-properties
 
@@ -56,7 +48,7 @@ désactiver en faisant un clic-droit sur une propriété en jaune.
 
 ![](media/data_defined_labels.png)
 
-### Le déplacement manuel des étiquettes
+## Le déplacement manuel des étiquettes
 
 QGIS 3 permet maintenant de **déplacer les étiquettes manuellement** sans avoir besoin de créer de couches spécifiques, ou d'utiliser le plugin **Easy Custom Labelling**
 
@@ -89,12 +81,12 @@ Les données sont enregistrées **dans l'archive du projet QGZ**, pour chaque co
 
 ![](media/13_barre_etiquette_et_stockage_auxiliaire.png "Stockage auxiliaire")
 
-### Utilisation d'une expression pour construire l'étiquette
+## Utilisation d'une expression pour construire l'étiquette
 
 Par défaut, nous avons utilisé un champ de notre attributaire pour construire notre étiquette.
 
 Nous souhaiterions désormais vouloir étiquetter en utilisant deux champs : le nom de la commune ET son code INSEE.
-Il faut désormais utiliser le petit epsilon violet, qui comme vu dans la [présentation de l'interface](./01_interface.md)
+Il faut désormais utiliser le petit epsilon violet, qui comme vu dans la [présentation de l'interface](./interface.md)
 fait référence à la notion des **expressions**.
 
 * Pour afficher le nom de la commune avec le code INSEE
@@ -110,4 +102,3 @@ fait référence à la notion des **expressions**.
 
 * changer pour afficher la densité de population
     * Solution `concat("NOM", '\n', round("POPULATION" / ($area / 1000000, 2)), ' hab/km²')`
-    

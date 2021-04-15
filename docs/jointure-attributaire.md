@@ -1,11 +1,3 @@
----
-Title: Jointure
-Favicon: logo.png
-Sibling: yes
-...
-
-[TOC]
-
 # Faire une jointure attributaire
 
 Il est courant d'avoir une couche spatiale et d'avoir un autre fichier type tableur avec

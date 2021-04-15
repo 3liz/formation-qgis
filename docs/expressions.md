@@ -1,10 +1,4 @@
----
-Title: Expression
-Favicon: logo.png
-Sibling: yes
-...
-
-[TOC]
+# Les expressions
 
 Les expressions sont omniprésentes dans QGIS. Il est important de les maîtriser un minimum si vous voulez pleinement
 exploiter QGIS.
@@ -114,7 +108,8 @@ l'interface graphique afin de construire la requête. Que remarquons-nous sur la
 * On peut enregistrer la sélection de la commune dans une nouvelle couche de données en faisant un clic-droit sur la couche puis `Exporter`.
 * Choisir un format pour l'export, par exemple `ESRI Shapefile`. On peut aussi choisir de faire une reprojection des données.
 
-**Attention**, dans la fenêtre pour exporter les entités, **toujours** utiliser les trois petits points lors de la saisie du nom de fichier !
+!!! danger
+    **Attention**, dans la fenêtre pour exporter les entités, **toujours** utiliser les trois petits points lors de la saisie du nom de fichier !
 
 ![Exporter couche vecteur](./media/save_as.png)
      

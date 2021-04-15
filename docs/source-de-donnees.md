@@ -1,12 +1,4 @@
----
-Title: Données
-Favicon: logo.png
-Sibling: yes
-...
-
-[TOC]
-
-## Quelques liens pour des données disponibles sur Internet
+# Des données
 
 * [IGN](https://geoservices.ign.fr/documentation/diffusion/telechargement-donnees-libres.html)
 * [INSEE](https://www.insee.fr/fr/statistiques/2521169)
@@ -19,4 +11,3 @@ Sibling: yes
     * [GeoFabrik](https://download.geofabrik.de) : extraction régulière de données OpenStreetMap
     * [Datawax Osm2Igeo](https://www.data.data-wax.com/?dir=OSM2IGEO) : extraction des données OSM
     * Extension QGIS QuickOSM
-    
