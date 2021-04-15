@@ -10,7 +10,7 @@ de la couche communes. Pour une relation de type **1-n** (plusieurs lignes du fi
 commune), il faut regarder du côté des relations QGIS dans le chapitre sur les [formulaires](./formulaire.md).
 
 Lien vers la documentation : 
-https://docs.qgis.org/3.10/fr/docs/user_manual/working_with_vector/vector_properties.html#joins-properties
+https://docs.qgis.org/latest/fr/docs/user_manual/working_with_vector/vector_properties.html#joins-properties
 
 Les étapes : 
 

@@ -4,7 +4,7 @@ Anciennement **composeur d'impression** dans QGIS 2
 
 ## Documentation
 
-* https://docs.qgis.org/3.10/fr/docs/user_manual/print_composer/index.html
+* https://docs.qgis.org/latest/fr/docs/user_manual/print_composer/index.html
 
 ## Rappel sur les éléments d'une carte
 
@@ -50,7 +50,7 @@ et une seconde page pour la table attributaire et des images.
 ### Encore plus loin avec les expressions
 
 Utiliser des expressions avec du texte dans les impressions : 
-https://docs.qgis.org/3.10/en/docs/user_manual/print_composer/composer_items/composer_label.html#exploring-expressions-in-a-label-item
+https://docs.qgis.org/latest/en/docs/user_manual/print_composer/composer_items/composer_label.html#exploring-expressions-in-a-label-item
 
 ## Générer un atlas
 
@@ -72,7 +72,7 @@ passer d'une commune à l'autre
 
 ![](media/27_composeur_atlas.png "Composeur: atlas")
 
-Documentation : https://docs.qgis.org/3.10/fr/docs/user_manual/print_composer/create_output.html#generate-an-atlas
+Documentation : https://docs.qgis.org/latest/fr/docs/user_manual/print_composer/create_output.html#generate-an-atlas
 
 **NB:** 
 
@@ -108,7 +108,7 @@ END
 
 ### Générer un rapport
 
-Documentation : https://docs.qgis.org/3.10/fr/docs/user_manual/print_composer/create_reports.html
+Documentation : https://docs.qgis.org/latest/fr/docs/user_manual/print_composer/create_reports.html
 
 QGIS 3 ajoute un nouvel outil pour gérer finement un document à imprimer, via un objet qui s'appelle **Rapport**, qui permet :
 

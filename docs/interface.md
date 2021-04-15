@@ -2,7 +2,7 @@
 
 ## Liens
 
-* [Interface de QGIS](https://docs.qgis.org/3.10/fr/docs/user_manual/introduction/qgis_gui.html)
+* [Interface de QGIS](https://docs.qgis.org/latest/fr/docs/user_manual/introduction/qgis_gui.html)
 
 ## Fenêtre principale
 

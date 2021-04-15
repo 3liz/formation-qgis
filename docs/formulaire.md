@@ -3,9 +3,9 @@
 ## Documentation
 
 * Les formulaires
-    * https://docs.qgis.org/3.10/fr/docs/user_manual/working_with_vector/vector_properties.html#attributes-form-properties
+    * https://docs.qgis.org/latest/fr/docs/user_manual/working_with_vector/vector_properties.html#attributes-form-properties
 * Les relations 1-n dans QGIS
-    * https://docs.qgis.org/3.10/fr/docs/user_manual/working_with_vector/attribute_table.html#creating-one-or-many-to-many-relations
+    * https://docs.qgis.org/latest/fr/docs/user_manual/working_with_vector/attribute_table.html#creating-one-or-many-to-many-relations
 
 ## Objectif
 

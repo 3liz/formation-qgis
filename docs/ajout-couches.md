@@ -2,8 +2,8 @@
 
 ## Documentation
 
-* https://docs.qgis.org/3.10/fr/docs/user_manual/managing_data_source/index.html
-* https://docs.qgis.org/3.10/fr/docs/user_manual/introduction/general_tools.html#label-legend
+* https://docs.qgis.org/latest/fr/docs/user_manual/managing_data_source/index.html
+* https://docs.qgis.org/latest/fr/docs/user_manual/introduction/general_tools.html#label-legend
 
 ## Pâques avant l'heure
 

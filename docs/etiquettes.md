@@ -2,7 +2,7 @@
 
 ## Rappel des fonctionnalités
 
-Documentation : https://docs.qgis.org/3.10/fr/docs/user_manual/working_with_vector/vector_properties.html#labels-properties
+Documentation : https://docs.qgis.org/latest/fr/docs/user_manual/working_with_vector/vector_properties.html#labels-properties
 
 QGIS 3 présente une interface unifiée qui liste toutes les options accessibles **dans une seule fenêtre** dans l'onglet 
 `Étiquettes` des propriétés de la couche vecteur :

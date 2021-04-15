@@ -2,7 +2,7 @@
 
 ## Liens
 
-* Manuel d'utilisation officiel QGIS https://docs.qgis.org/3.10/fr/docs/user_manual/
+* Manuel d'utilisation officiel QGIS https://docs.qgis.org/latest/fr/docs/user_manual/
 * Autres liens utiles :
     * http://www.geoinformations.developpement-durable.gouv.fr/
 
