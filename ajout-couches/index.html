@@ -1,0 +1,1095 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Formation QGIS">
+      
+      
+      
+        <meta name="author" content="3Liz">
+      
+      
+        <link rel="canonical" href="https://docs.3liz.org/formation-qgis/ajout-couches/">
+      
+      <link rel="icon" href="../logo.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.1">
+    
+    
+      
+        <title>Ajouter des couches - Formation QGIS</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.9299cb39.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ef6f36e2.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#4cae4f">
+        
+      
+    
+    
+    
+      
+    
+    
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/default.min.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="deep-orange">
+  
+    
+    <script>function __prefix(e){return new URL("..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ajout-de-couches-et-organisation-de-la-legende" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Formation QGIS" class="md-header__button md-logo" aria-label="Formation QGIS" data-md-component="logo">
+      
+  <img src="../logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Formation QGIS
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Ajouter des couches
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/3liz/formation-qgis/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Formation QGIS" class="md-nav__button md-logo" aria-label="Formation QGIS" data-md-component="logo">
+      
+  <img src="../logo.png" alt="logo">
+
+    </a>
+    Formation QGIS
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/3liz/formation-qgis/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        docs.3liz.org
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Accueil
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../source-de-donnees/" class="md-nav__link">
+        Données
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../interface/" class="md-nav__link">
+        Interface
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../extensions/" class="md-nav__link">
+        Extensions
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Ajouter des couches
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Ajouter des couches
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#documentation" class="md-nav__link">
+    Documentation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#paques-avant-lheure" class="md-nav__link">
+    Pâques avant l'heure
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vecteurs" class="md-nav__link">
+    Vecteurs
+  </a>
+  
+    <nav class="md-nav" aria-label="Vecteurs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#encodage" class="md-nav__link">
+    Encodage
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rasters" class="md-nav__link">
+    Rasters
+  </a>
+  
+    <nav class="md-nav" aria-label="Rasters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fichier-mnt" class="md-nav__link">
+    Fichier MNT
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wms-de-lign" class="md-nav__link">
+    WMS de l'IGN
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-laide-dun-plugin" class="md-nav__link">
+    À l'aide d'un plugin
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-laide-du-panneau-explorateur" class="md-nav__link">
+    À l'aide du panneau explorateur
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#manipulation-de-la-legende" class="md-nav__link">
+    Manipulation de la légende
+  </a>
+  
+    <nav class="md-nav" aria-label="Manipulation de la légende">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#utiliser-les-themes-de-couches" class="md-nav__link">
+    Utiliser les thèmes de couches
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#les-vues-cartes" class="md-nav__link">
+    Les vues cartes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#la-vue-3d" class="md-nav__link">
+    La vue 3D
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lextension-layerboard" class="md-nav__link">
+    L'extension Layerboard
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enregistrer-le-projet" class="md-nav__link">
+    Enregistrer le projet
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilisation-des-outils" class="md-nav__link">
+    Utilisation des outils
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../projections/" class="md-nav__link">
+        Projections
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../jointure-attributaire/" class="md-nav__link">
+        Jointure avec CSV
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../expressions/" class="md-nav__link">
+        Expressions
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../symbologie-vecteur/" class="md-nav__link">
+        Symbologie vecteur
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../etiquettes/" class="md-nav__link">
+        Étiquettes
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../processing/" class="md-nav__link">
+        Processing
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../couche-virtuelle/" class="md-nav__link">
+        Couche virtuelle
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mise-en-page/" class="md-nav__link">
+        Mise en page
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../formulaire/" class="md-nav__link">
+        Création de données
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../autres/" class="md-nav__link">
+        Autres
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../exercices/" class="md-nav__link">
+        Exercices
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#documentation" class="md-nav__link">
+    Documentation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#paques-avant-lheure" class="md-nav__link">
+    Pâques avant l'heure
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vecteurs" class="md-nav__link">
+    Vecteurs
+  </a>
+  
+    <nav class="md-nav" aria-label="Vecteurs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#encodage" class="md-nav__link">
+    Encodage
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rasters" class="md-nav__link">
+    Rasters
+  </a>
+  
+    <nav class="md-nav" aria-label="Rasters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fichier-mnt" class="md-nav__link">
+    Fichier MNT
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wms-de-lign" class="md-nav__link">
+    WMS de l'IGN
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-laide-dun-plugin" class="md-nav__link">
+    À l'aide d'un plugin
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-laide-du-panneau-explorateur" class="md-nav__link">
+    À l'aide du panneau explorateur
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#manipulation-de-la-legende" class="md-nav__link">
+    Manipulation de la légende
+  </a>
+  
+    <nav class="md-nav" aria-label="Manipulation de la légende">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#utiliser-les-themes-de-couches" class="md-nav__link">
+    Utiliser les thèmes de couches
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#les-vues-cartes" class="md-nav__link">
+    Les vues cartes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#la-vue-3d" class="md-nav__link">
+    La vue 3D
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lextension-layerboard" class="md-nav__link">
+    L'extension Layerboard
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enregistrer-le-projet" class="md-nav__link">
+    Enregistrer le projet
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilisation-des-outils" class="md-nav__link">
+    Utilisation des outils
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/3liz/formation-qgis/edit/master/docs/ajout-couches.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                <h1 id="ajout-de-couches-et-organisation-de-la-legende">Ajout de couches et organisation de la légende<a class="headerlink" href="#ajout-de-couches-et-organisation-de-la-legende" title="Permanent link">#</a></h1>
+<h2 id="documentation">Documentation<a class="headerlink" href="#documentation" title="Permanent link">#</a></h2>
+<ul>
+<li><a href="https://docs.qgis.org/latest/fr/docs/user_manual/managing_data_source/index.html">https://docs.qgis.org/latest/fr/docs/user_manual/managing_data_source/index.html</a></li>
+<li><a href="https://docs.qgis.org/latest/fr/docs/user_manual/introduction/general_tools.html#label-legend">https://docs.qgis.org/latest/fr/docs/user_manual/introduction/general_tools.html#label-legend</a></li>
+</ul>
+<h2 id="paques-avant-lheure">Pâques avant l'heure<a class="headerlink" href="#paques-avant-lheure" title="Permanent link">#</a></h2>
+<p>Dans certains logiciels, il existe des oeufs de Pâques (Easter Egg).
+Nous allons utiliser l'un d'entre eux pour ajouter notre première couche dans QGIS.
+Taper <code>world</code> dans la barre des coordonnées en bas et regardons l'utilisation de la barre d'outils de navigation.</p>
+<p><img alt="Navigation" src="../media/navigation_toolbar.png" /></p>
+<h2 id="vecteurs">Vecteurs<a class="headerlink" href="#vecteurs" title="Permanent link">#</a></h2>
+<p><img alt="Ouverture couche vecteur" src="../media/layer_toolbar.png" /></p>
+<ul>
+<li>À l'aide de l'icône <code>plus</code> dans la barre d'outil ci-dessus <code>Source de données</code>, ajoutons une couche <code>Vecteur</code> de type
+<code>Fichier</code>. <ul>
+<li><code>H_OSM_ADMINISTRATIF / COMMUNE.shp</code></li>
+</ul>
+</li>
+<li><em>Pour info</em>, dans les barres d'outils, les étoiles jaunes signifient la création de nouvelle couche. 
+Dans notre cas, nous souhaitons donc bien l'ajout d'une couche existante.</li>
+<li>Enregistrer le projet <code>Projet</code> -&gt; <code>Enregistrer sous...</code> et mettez le <strong>dans</strong> le dossier <code>data</code> contenant les données. 
+au format <code>QGIS</code> (extension <code>.qgs</code>).</li>
+<li>Désormais, l'aide du panneau <code>Explorateur</code>, dans <code>Dossier du projet</code> :<ul>
+<li>Charger <code>A_OSM_RESEAU_ROUTIER / ROUTE.shp</code></li>
+<li>Charger <code>F_OSM_VEGETATION / ZONE_VEGETATION.shp</code></li>
+<li>Charger <code>H_OSM_ADMINISTRATIF / CHEF_LIEU.shp</code></li>
+<li>Charger <code>I_OSM_ZONE_ACTIVITE / PAI_INDUSTRIEL_COMMERCIAL.shp</code></li>
+</ul>
+</li>
+<li>Notons que le glisser/déposer fonctionne aussi.</li>
+<li>Nous pouvons faire un clic droit puis <code>Propriétés</code> pour ouvrir la configuration de la couche.</li>
+</ul>
+<h3 id="encodage">Encodage<a class="headerlink" href="#encodage" title="Permanent link">#</a></h3>
+<ul>
+<li>Si il y a des problèmes d'accents, dans l'onglet <code>Source</code>, essayer :<ul>
+<li><code>System</code>, <code>latin1</code>, <code>ISO 8859-1</code>, <code>CP-1252</code></li>
+</ul>
+</li>
+<li>
+<p>Petites explications sur les encodages : </p>
+<ul>
+<li><code>Unicode</code> :  jeu de caractères codés dit « universel » qui permet de remplacer les pages de codes nationales. 
+Comprend un répertoire très étendu de caractères compatible avec tous les alphabets. 
+Il est en évolution constante (une version en juin 2014) avec plus de 100 000 caractères.</li>
+<li><code>UTF-8</code> est le codage international le plus utilisé (en particulier sur le web) compatible avec Unicode.
+Il est supporté par tous les navigateurs web et par tous les systèmes d’exploitation récents. L’internationalisation
+et la portabilité 
+font naturellement recommander ce codage (Permet de représenter des caractères qui n’existent pas en latin-1). </li>
+<li><code>ISO 8859-1</code> ou <code>Latin-1</code> : principalement utilisé par Windows pour les pays occidentaux, il intègre de nombreux 
+caractères spéciaux comme é, è, à, ç, É, etc, mais pas €,œ.</li>
+<li><code>CP-1252</code>  ou <code>WIN 1252</code> : extension d’ISO 8859-1 ; initié dans les années 1990, il ajoute quelques caractères 
+particuliers à Latin-1 comme €,œ, etc.</li>
+<li><code>ISO-8859-15</code> (ou latin9) est également très proche. Il ajoute au 88959-1 entre autres le caractère de l'euro (€) 
+et les caractères Œ, œ et Ÿ qui manquaient pour l'écriture du français, les caractères Š et š qui manquaient pour 
+l'écriture du tchèque. Il enlève en échange quelques caractères peu utilisés. </li>
+</ul>
+</li>
+<li>
+<p>Source : <a href="http://www.geoinformations.developpement-durable.gouv.fr/qgis-encodage-des-fichiers-shp-et-recommandations-a2908.html">http://www.geoinformations.developpement-durable.gouv.fr/qgis-encodage-des-fichiers-shp-et-recommandations-a2908.html</a></p>
+</li>
+</ul>
+<h2 id="rasters">Rasters<a class="headerlink" href="#rasters" title="Permanent link">#</a></h2>
+<h3 id="fichier-mnt">Fichier MNT<a class="headerlink" href="#fichier-mnt" title="Permanent link">#</a></h3>
+<p><strong>Pour rappel</strong>, un fichier MNT veut dire Modèle Numérique de Terrain, c'est à dire un fichier comportant des informations
+sur l'altitude.</p>
+<ul>
+<li>À l'aide du bouton <code>Source de données</code>,  ajouter la couche de type <code>Raster</code> contenu dans le dossier <code>srtm</code>.</li>
+</ul>
+<h3 id="wms-de-lign">WMS de l'IGN<a class="headerlink" href="#wms-de-lign" title="Permanent link">#</a></h3>
+<ul>
+<li>À l'aide du bouton <code>Source de données</code>,  ajouter une connexion <code>WMS</code>:<ul>
+<li>Nom : <code>IGN WMTS</code></li>
+<li>URL : <code>https://wxs.ign.fr/choisirgeoportail/geoportail/wmts?SERVICE=WMTS&amp;REQUEST=GETCAPABILITIES</code>
+Ajouter des flux provenant de l'IGN en utilisant cette clé gratuite <code>choisirgeoportail</code>.</li>
+<li>Pour votre information : <a href="https://geoservices.ign.fr/blog/2018/09/06/acces_geoportail_sans_compte.html">https://geoservices.ign.fr/blog/2018/09/06/acces_geoportail_sans_compte.html</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="a-laide-dun-plugin">À l'aide d'un plugin<a class="headerlink" href="#a-laide-dun-plugin" title="Permanent link">#</a></h3>
+<ul>
+<li>À l'aide de l'extension <code>QuickMapServices</code> dans le gestionnaire des extensions Python.</li>
+<li>L'autre extension historique <code>OpenLayers</code> n'est pas forcément recommandée, surtout lors de l'impression.</li>
+<li>Dans sa configuration, cliquer sur le bouton <code>Obtenir le pack des contributeurs</code>.</li>
+</ul>
+<h3 id="a-laide-du-panneau-explorateur">À l'aide du panneau explorateur<a class="headerlink" href="#a-laide-du-panneau-explorateur" title="Permanent link">#</a></h3>
+<ul>
+<li>Une couche de l'IGN</li>
+<li>Une couche XYZ</li>
+</ul>
+<p><img alt="Panneau explorateur" src="../media/panneau_explorateur.png" /></p>
+<h2 id="manipulation-de-la-legende">Manipulation de la légende<a class="headerlink" href="#manipulation-de-la-legende" title="Permanent link">#</a></h2>
+<p>Dans le panneau à gauche, vous remarquez la légende, avec sa barre d'outils.</p>
+<p><img alt="Panneau explorateur" src="../media/panneau_legende.png" /></p>
+<p>Ce panneau nous permet de faire plusieurs actions:
+* ré-ordonner les couches avec une ordre logique : ponctuel, linéaire, polygone, raster
+* masquer/afficher des couches
+* faire des groupes</p>
+<h3 id="utiliser-les-themes-de-couches">Utiliser les thèmes de couches<a class="headerlink" href="#utiliser-les-themes-de-couches" title="Permanent link">#</a></h3>
+<p>Un <strong>thème de couche</strong> est caractérisé par un <strong>nom</strong> et permet de sauvegarder:</p>
+<ul>
+<li>l'<strong>état des couches cochées</strong> dans la légende</li>
+<li>les <strong>styles actifs</strong> de chaque couche</li>
+</ul>
+<p><strong>Étapes</strong>:</p>
+<ul>
+<li><strong>Cocher/décocher</strong> les couches pour obtenir le réglage souhaité</li>
+<li>Cliquer sur le bouton <strong>oeil</strong> de la barre d'outil au-dessus du panneau <strong>Couches</strong></li>
+<li>Choisir l'item <strong>Ajouter un thème</strong></li>
+<li>Choisir <strong>un nom</strong> et valider</li>
+</ul>
+<p><img alt="" src="../media/06_ajouter_un_theme.png" title="Ajouter un thème" /></p>
+<p>Une fois un ou plusieurs thèmes enregistrés, on peut basculer facilement de l'un à autre thème via le bouton <strong>oeil</strong>.</p>
+<p>Les thèmes peuvent être utilisés pour gérer les couches affichées <strong>dans chaque vue</strong>, ainsi que dans chaque carte de 
+<strong>chaque composeur d'impression</strong>.</p>
+<h2 id="les-vues-cartes">Les vues cartes<a class="headerlink" href="#les-vues-cartes" title="Permanent link">#</a></h2>
+<p>QGIS3 propose d'afficher plusieurs canevas, appelés <strong>vues carte</strong>, au lieu d'une seule carte centrale.</p>
+<ul>
+<li>Menu <strong>Vue / Nouvelle vue cartographique</strong></li>
+<li>On peut la faire <strong>glisser dans l'interface</strong>, par exemple dans le panneau de droite</li>
+<li>Par défaut, elle se comporte comme la carte principale: les <strong>mêmes couches sont visibles</strong></li>
+</ul>
+<p><img alt="" src="../media/05_nouvelle_vue_carte.png" title="Nouvelle vue carte" /></p>
+<h2 id="la-vue-3d">La vue 3D<a class="headerlink" href="#la-vue-3d" title="Permanent link">#</a></h2>
+<p>La <strong>vue 3D</strong> permet de draper des données vectorielles ou raster par dessus un <strong>modèle numérique de terrain</strong> (MNT)</p>
+<p>Elle peut aussi représenter des données qui ont une composante d'altitude (Z).</p>
+<p><img alt="" src="../media/07_vue_3D.png" title="Vue 3D" /></p>
+<h2 id="lextension-layerboard">L'extension Layerboard<a class="headerlink" href="#lextension-layerboard" title="Permanent link">#</a></h2>
+<p>L'extension LayerBoard permet d'obtenir un tableau récapitulatif des couches qui sont chargées.</p>
+<p><img alt="" src="../media/layer_board.png" title="Options localisateur" /></p>
+<p>Observez les différentes projections.</p>
+<h2 id="enregistrer-le-projet">Enregistrer le projet<a class="headerlink" href="#enregistrer-le-projet" title="Permanent link">#</a></h2>
+<ul>
+<li>Faire un enregistrement du projet et regarder la taille du fichier.</li>
+<li>Si le fichier comporte l'extension <code>QGS</code>, vérifiez le contenu du fichier. 
+Un projet ne contient aucune données géographiques. <strong>Les données géographiques</strong> ne sont pas incluses dans 
+le projet en lui même. Ce ne sont que des liens.</li>
+</ul>
+<h2 id="utilisation-des-outils">Utilisation des outils<a class="headerlink" href="#utilisation-des-outils" title="Permanent link">#</a></h2>
+<p><img alt="Sélection" src="../media/vector_toolbar.png" /></p>
+<p>Dans les barres d'outils, chercher les outils suivants :</p>
+<ul>
+<li>
+<p>de <strong>mesure</strong> (longueur, aire, angle) dont l'icône comporte une petite règle.</p>
+<ul>
+<li>Notons pour la mesure de longueur et d'aire la possibilité de choisir entre deux options:<ul>
+<li><code>Cartésien</code>, mesure dans le plan X,Y</li>
+<li><code>Ellipsoïdale</code>, mesure en tenant compte de la rotondité de la Terre</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>d'identification</strong> (d'information) afin d'obtenir des informations sur une entité. Cela liste les attributs : </p>
+<ul>
+<li>de la table attributaire</li>
+<li>et les attributs dérivés (longueur, surface, coordonnées etc)</li>
+</ul>
+</li>
+<li>
+<p><strong>table attributaire</strong> : </p>
+<ul>
+<li>Remarquons que comme dans un tableur, le contenu des cellules est aligné sur la droite ou sur la gauche :<ul>
+<li>À droite, il s'agit des champs numérique</li>
+<li>À gauche, les champs qui sont des chaînes de caractères</li>
+</ul>
+</li>
+<li><code>F6</code> permet d'ouvrir la table attributaire, mais attention aux couches lourdes !</li>
+<li><code>Shift (Maj) + F6</code>, <strong>S</strong>hift comme sélection pour ouvrir que les entités sélectionnées</li>
+<li><code>Ctrl + F6</code> pour les entités visibles</li>
+</ul>
+</li>
+<li>
+<p><strong>sélection graphique</strong> sur la carte : </p>
+<ul>
+<li>au clic-clic ou un rectangle</li>
+<li>polygone, main levé, rayon</li>
+<li>utilisation de <strong>shift</strong> pour faire une sélection multiple</li>
+</ul>
+</li>
+<li>
+<p>sélection par valeur qui permet de faire de sélections selon des critères dans la table attributaire,
+<strong>de manière interactive</strong>. Plusieurs modes de sélections sont possibles.</p>
+</li>
+</ul>
+<p><img alt="Sélection par valeur" src="../media/select_by_value.png" /></p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg>
+          </a>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        <a href="../extensions/" class="md-footer__link md-footer__link--prev" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Extensions
+            </div>
+          </div>
+        </a>
+      
+      
+        <a href="../projections/" class="md-footer__link md-footer__link--next" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Projections
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            <span class="copyleft">&copy;</span> 3Liz
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+  <div class="md-footer-social">
+    
+      
+      
+        
+        
+      
+      <a href="https://twitter.com/3LIZ_news" target="_blank" rel="noopener" title="twitter.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+      </a>
+    
+      
+      
+        
+        
+      
+      <a href="https://www.linkedin.com/company/3liz" target="_blank" rel="noopener" title="www.linkedin.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+      </a>
+    
+      
+      
+        
+        
+      
+      <a href="https://github.com/3liz/" target="_blank" rel="noopener" title="github.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+      </a>
+    
+      
+      
+        
+        
+      
+      <a href="https://hub.docker.com/u/3liz" target="_blank" rel="noopener" title="hub.docker.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path d="M349.9 236.3h-66.1v-59.4h66.1v59.4zm0-204.3h-66.1v60.7h66.1V32zm78.2 144.8H362v59.4h66.1v-59.4zm-156.3-72.1h-66.1v60.1h66.1v-60.1zm78.1 0h-66.1v60.1h66.1v-60.1zm276.8 100c-14.4-9.7-47.6-13.2-73.1-8.4-3.3-24-16.7-44.9-41.1-63.7l-14-9.3-9.3 14c-18.4 27.8-23.4 73.6-3.7 103.8-8.7 4.7-25.8 11.1-48.4 10.7H2.4c-8.7 50.8 5.8 116.8 44 162.1 37.1 43.9 92.7 66.2 165.4 66.2 157.4 0 273.9-72.5 328.4-204.2 21.4.4 67.6.1 91.3-45.2 1.5-2.5 6.6-13.2 8.5-17.1l-13.3-8.9zm-511.1-27.9h-66v59.4h66.1v-59.4zm78.1 0h-66.1v59.4h66.1v-59.4zm78.1 0h-66.1v59.4h66.1v-59.4zm-78.1-72.1h-66.1v60.1h66.1v-60.1z"/></svg>
+      </a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs.sticky", "navigation.top"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../assets/javascripts/workers/search.fe42c31b.min.js", "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.7353b375.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@8.6.4/dist/mermaid.min.js"></script>
+      
+    
+  </body>
+</html>
