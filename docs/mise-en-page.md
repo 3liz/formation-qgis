@@ -74,7 +74,7 @@ passer d'une commune à l'autre
 
 Documentation : https://docs.qgis.org/latest/fr/docs/user_manual/print_composer/create_output.html#generate-an-atlas
 
-**NB:** 
+### Utilisation des expressions
 
 * On peut utiliser des **expressions QGIS** dans les **Étiquettes**, dans les filtres, dans les propriétés configurables 
 via des expressions.
@@ -104,7 +104,8 @@ ELSE 0.2
 END
 ```
 
-*Note*, ces icônes deviennent jaune lorsqu'il y a une expression.
+!!! info
+    Ces icônes deviennent jaune lorsqu'il y a une expression.
 
 ### Générer un rapport
 

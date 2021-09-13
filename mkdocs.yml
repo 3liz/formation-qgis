@@ -5,6 +5,7 @@ site_url: https://docs.3liz.org/formation-qgis/
 repo_url: https://github.com/3liz/formation-qgis/
 copyright: '<span class="copyleft">&copy;</span> 3Liz'
 
+docs_dir: docs
 site_dir: build
 
 nav:
@@ -26,8 +27,11 @@ nav:
     - Autres: autres.md
     - Exercices: exercices.md
 
+plugins:
+  - search
+  - git-revision-date-localized
+
 markdown_extensions:
-  # - git-revision-date:
   - toc:
       permalink: "#"
   - meta:
@@ -59,7 +63,7 @@ theme:
   font: false
   icon:
     repo: fontawesome/brands/github-alt
-  language: 'en'
+  language: 'fr'
   logo: logo.png
   favicon: logo.png
   palette:
@@ -67,7 +71,7 @@ theme:
     primary: green
     scheme: default
   features:
-    # - navigation.tabs
+    - navigation.tabs
     - navigation.tabs.sticky
     - navigation.top
 
@@ -84,3 +88,6 @@ extra:
 
     - icon: fontawesome/brands/docker
       link: https://hub.docker.com/u/3liz
+
+    - icon: fontawesome/brands/youtube
+      link: https://www.youtube.com/channel/UCYYW2CTWR_84kB6pt2zCWbQ
