@@ -177,6 +177,15 @@ Dans les barres d'outils, chercher les outils suivants :
     * polygone, main levé, rayon
     * utilisation de **shift** pour faire une sélection multiple
 
+!!! tip "Astuce pour une sélection des points intersectant un polygone"
+    Avec une couche ponctuelle et polygonale :
+
+      1. Sélectionner la couche de point dans la légende
+      2. Utilisez l'outil de **sélection graphique par polygone**
+      3. Clic-droit sur un polygone
+      4. Dans le menu contextuel, choisir la couche polygonale
+      5. L'ensemble des points intersectant le polygone en question est sélectionné
+
 * sélection par valeur qui permet de faire de sélections selon des critères dans la table attributaire,
 **de manière interactive**. Plusieurs modes de sélections sont possibles.
 
