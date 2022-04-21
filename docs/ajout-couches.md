@@ -166,7 +166,7 @@ Dans les barres d'outils, chercher les outils suivants :
 
 * **table attributaire** : 
     * Remarquons que comme dans un tableur, le contenu des cellules est aligné sur la droite ou sur la gauche :
-        * À droite, il s'agit des champs numérique
+        * À droite, il s'agit des champs numériques
         * À gauche, les champs qui sont des chaînes de caractères
     * `F6` permet d'ouvrir la table attributaire, mais attention aux couches lourdes !
     * `Shift (Maj) + F6`, **S**hift comme sélection pour ouvrir que les entités sélectionnées
