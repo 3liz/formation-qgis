@@ -15,7 +15,7 @@ Dans le dossier `data` de la clé USB/FTP, vous pouvez avoir des données comme 
     * OCS-GE si disponible
     * BD Topo (désormais ouverte)
 * Osm2Igeo
-* Base comparateur de l'INSEE
+* Base comparatrice de l'INSEE
 * SRTM si besoin
 
 Ces données sont gratuites et téléchargeables, selon une licence. [Lire ici.](./source-de-donnees.md)
@@ -93,5 +93,5 @@ Ces données sont gratuites et téléchargeables, selon une licence. [Lire ici.]
     * Les formulaires avec les masques de saisies
     * Les champs virtuels
 * DataPlotly
-    * Faire des graphique dans l'interface QGIS
+    * Faire des graphiques dans l'interface QGIS
     * Ajouter des graphiques dans un atlas

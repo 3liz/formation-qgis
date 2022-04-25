@@ -10,8 +10,8 @@ ayant toute une frontière (et non simplement un point) en commun reçoivent tou
 
 ## Objectif
 
-**Ajouter** à une couche **existante** les informations pour réaliser ce genre cartographique:
+**Ajouter** à une couche **existante** les informations pour réaliser ce genre cartographique :
 
 ![Carte](./media/carte_5_couleurs.png)
 
-Au final, nous ne souhaitons pas une nouvelle couche.
+Finalement, nous ne souhaitons pas une nouvelle couche.

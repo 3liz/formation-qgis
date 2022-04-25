@@ -23,7 +23,7 @@ définir des relations entre les tables.
 
 ### Création des tables
 
-Nous allons utiliser le modèle de données suivant:
+Nous allons utiliser le modèle de données suivant :
 
 * Table `especes`, non spatiale
     * ID
@@ -39,7 +39,7 @@ Nous allons utiliser le modèle de données suivant:
     * ID
     * Date : `date`
     * Espèce : `espece_id`, pour stocker l'identifiant de l'espèce
-    * Observateur : `observateur_id`, poru stocker l'identifiant de l'observateur
+    * Observateur : `observateur_id`, pour stocker l'identifiant de l'observateur
     * Genre (liste fermé) : `genre`
     * Nombre : `nombre`
     * En groupe : `en_groupe`, type booléen
@@ -63,7 +63,7 @@ panneau `Table attributaire` pour ajouter les autres attributs. Il y a plus de c
 
 Menu `Projet` ▶ `Propriétés` ▶ `Relations`, nous pouvons créer ici les relations **1-n** entre les tables.
 
-Par convention personnel, je nomme les relations suivant le modèle `parent_enfant`, par exemple `commune_observation`.
+Par convention personnelle, je nomme les relations suivant le modèle `parent_enfant`, par exemple `commune_observation`.
 
 ![](./media/relations.png)
 
@@ -73,7 +73,7 @@ Dans les propriétés de la couche vecteur en question, onglet `Formulaire d'att
 
 * Couche `observateurs` : 
     * Mode formulaire : `Génération automatique`
-    * Mettre un alias sur les champs, language humain
+    * Mettre un alias sur les champs, langage humain
     * Mettre le bon outil d'édition pour les champs : `cachée` ou `texte`
     * Mettre les contraintes et les renforcer
 * Couche `especes` : 
@@ -87,7 +87,7 @@ Dans les propriétés de la couche vecteur en question, onglet `Formulaire d'att
     
 ### Les champs virtuels
 
-Sur la couche communes, on peut ajouter un champ virtuel afin de compter le nombre d'observations par commune : 
+Sur la couche des communes, on peut ajouter un champ virtuel afin de compter le nombre d'observations par commune : 
 
 ```
 relation_aggregate(

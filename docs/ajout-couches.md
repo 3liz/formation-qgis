@@ -7,7 +7,7 @@
 
 ## Pâques avant l'heure
 
-Dans certains logiciels, il existe des oeufs de Pâques (Easter Egg).
+Dans certains logiciels, il existe des œufs de Pâques (Easter Egg).
 Nous allons utiliser l'un d'entre eux pour ajouter notre première couche dans QGIS.
 Taper `world` dans la barre des coordonnées en bas et regardons l'utilisation de la barre d'outils de navigation.
 
@@ -22,7 +22,7 @@ Taper `world` dans la barre des coordonnées en bas et regardons l'utilisation d
     * `H_OSM_ADMINISTRATIF / COMMUNE.shp`
 * *Pour info*, dans les barres d'outils, les étoiles jaunes signifient la création de nouvelle couche. 
 Dans notre cas, nous souhaitons donc bien l'ajout d'une couche existante.
-* Enregistrer le projet `Projet` -> `Enregistrer sous...` et mettez le **dans** le dossier `data` contenant les données. 
+* Enregistrer le projet `Projet` -> `Enregistrer sous...` et mettez-le **dans** le dossier `data` contenant les données. 
 au format `QGIS` (extension `.qgs`).
 * Désormais, l'aide du panneau `Explorateur`, dans `Dossier du projet` :
     * Charger `A_OSM_RESEAU_ROUTIER / ROUTE.shp`
@@ -37,7 +37,7 @@ au format `QGIS` (extension `.qgs`).
 * Si il y a des problèmes d'accents, dans l'onglet `Source`, essayer :
     * `System`, `latin1`, `ISO 8859-1`, `CP-1252`
 * Petites explications sur les encodages : 
-    * `Unicode` :  jeu de caractères codés dit « universel » qui permet de remplacer les pages de codes nationales. 
+    * `Unicode` : jeu de caractères codés dit « universel » qui permet de remplacer les pages de codes nationales. 
     Comprend un répertoire très étendu de caractères compatible avec tous les alphabets. 
     Il est en évolution constante (une version en juin 2014) avec plus de 100 000 caractères.
     * `UTF-8` est le codage international le plus utilisé (en particulier sur le web) compatible avec Unicode.
@@ -58,14 +58,14 @@ au format `QGIS` (extension `.qgs`).
 
 ### Fichier MNT
 
-**Pour rappel**, un fichier MNT veut dire Modèle Numérique de Terrain, c'est à dire un fichier comportant des informations
+**Pour rappel**, un fichier MNT veut dire Modèle Numérique de Terrain, c'est-à-dire un fichier comportant des informations
 sur l'altitude.
 
-* À l'aide du bouton `Source de données`,  ajouter la couche de type `Raster` contenu dans le dossier `srtm`.
+* À l'aide du bouton `Source de données`, ajouter la couche de type `Raster` contenu dans le dossier `srtm`.
 
 ### WMS de l'IGN
 
-* À l'aide du bouton `Source de données`,  ajouter une connexion `WMS`:
+* À l'aide du bouton `Source de données`, ajouter une connexion `WMS`:
     * Nom : `IGN WMTS`
     * URL : `https://wxs.ign.fr/choisirgeoportail/geoportail/wmts?SERVICE=WMTS&REQUEST=GETCAPABILITIES`
     Ajouter des flux provenant de l'IGN en utilisant cette clé gratuite `choisirgeoportail`.
@@ -90,14 +90,14 @@ Dans le panneau à gauche, vous remarquez la légende, avec sa barre d'outils.
 
 ![Panneau explorateur](media/panneau_legende.png)
 
-Ce panneau nous permet de faire plusieurs actions:
-* ré-ordonner les couches avec une ordre logique : ponctuel, linéaire, polygone, raster
+Ce panneau nous permet de faire plusieurs actions :
+* réordonner les couches avec un ordre logique : ponctuel, linéaire, polygone, raster
 * masquer/afficher des couches
 * faire des groupes
 
 ### Utiliser les thèmes de couches
 
-Un **thème de couche** est caractérisé par un **nom** et permet de sauvegarder:
+Un **thème de couche** est caractérisé par un **nom** et permet de sauvegarder :
 
 * l'**état des couches cochées** dans la légende
 * les **styles actifs** de chaque couche
@@ -105,30 +105,30 @@ Un **thème de couche** est caractérisé par un **nom** et permet de sauvegarde
 **Étapes**:
 
 * **Cocher/décocher** les couches pour obtenir le réglage souhaité
-* Cliquer sur le bouton **oeil** de la barre d'outil au-dessus du panneau **Couches**
+* Cliquer sur le bouton **œil** de la barre d'outil au-dessus du panneau **Couches**
 * Choisir l'item **Ajouter un thème**
 * Choisir **un nom** et valider
 
 ![](media/06_ajouter_un_theme.png "Ajouter un thème")
 
-Une fois un ou plusieurs thèmes enregistrés, on peut basculer facilement de l'un à autre thème via le bouton **oeil**.
+Une fois un ou plusieurs thèmes enregistrés, on peut basculer facilement de l'un à autre thème via le bouton **œil**.
 
 Les thèmes peuvent être utilisés pour gérer les couches affichées **dans chaque vue**, ainsi que dans chaque carte de 
 **chaque composeur d'impression**.
 
 ## Les vues cartes
 
-QGIS3 propose d'afficher plusieurs canevas, appelés **vues carte**, au lieu d'une seule carte centrale.
+QGIS3 propose d'afficher plusieurs canevas, appelés **vues cartes**, au lieu d'une seule carte centrale.
 
 * Menu **Vue / Nouvelle vue cartographique**
 * On peut la faire **glisser dans l'interface**, par exemple dans le panneau de droite
-* Par défaut, elle se comporte comme la carte principale: les **mêmes couches sont visibles**
+* Par défaut, elle se comporte comme la carte principale : les **mêmes couches sont visibles**
 
 ![](media/05_nouvelle_vue_carte.png "Nouvelle vue carte")
 
 ## La vue 3D
 
-La **vue 3D** permet de draper des données vectorielles ou raster par dessus un **modèle numérique de terrain** (MNT)
+La **vue 3D** permet de draper des données vectorielles ou raster par-dessus un **modèle numérique de terrain** (MNT)
 
 Elle peut aussi représenter des données qui ont une composante d'altitude (Z).
 
@@ -146,8 +146,8 @@ Observez les différentes projections.
 
 * Faire un enregistrement du projet et regarder la taille du fichier.
 * Si le fichier comporte l'extension `QGS`, vérifiez le contenu du fichier. 
-Un projet ne contient aucune données géographiques. **Les données géographiques** ne sont pas incluses dans 
-le projet en lui même. Ce ne sont que des liens.
+Un projet ne contient aucunes données géographiques. **Les données géographiques** ne sont pas incluses dans 
+le projet en lui-même. Ce ne sont que des liens.
 
 ## Utilisation des outils
 
@@ -156,8 +156,8 @@ le projet en lui même. Ce ne sont que des liens.
 Dans les barres d'outils, chercher les outils suivants :
 
 * de **mesure** (longueur, aire, angle) dont l'icône comporte une petite règle.
-    * Notons pour la mesure de longueur et d'aire la possibilité de choisir entre deux options:
-        * `Cartésien`, mesure dans le plan X,Y
+    * Notons pour la mesure de longueur et d'aire la possibilité de choisir entre deux options :
+        * `Cartésien`, mesure dans le plan X, Y
         * `Ellipsoïdale`, mesure en tenant compte de la rotondité de la Terre
     
 * **d'identification** (d'information) afin d'obtenir des informations sur une entité. Cela liste les attributs : 

@@ -6,7 +6,7 @@ du tableur à notre couche spatiale.
 
 **Important**, une jointure attributaire fait en ce que l'on appelle une jointure de relation **1-1**. Une ligne dans le
 fichier tableur correspond une ligne dans la couche des communes. On souhaite pouvoir "étendre" la table attributaire
-de la couche communes. Pour une relation de type **1-n** (plusieurs lignes du fichier tableur pour une ligne de la couche
+de la couche des communes. Pour une relation de type **1-n** (plusieurs lignes du fichier tableur pour une ligne de la couche
 commune), il faut regarder du côté des relations QGIS dans le chapitre sur les [formulaires](./formulaire.md).
 
 Lien vers la documentation : 
@@ -22,7 +22,7 @@ Les étapes :
         * à l'aide de l'outil `Texte délimité` dans le `gestionnaire des sources de données`
     * Si fichier ODS, XLS :
         * à l'aide du panneau explorateur
-        * ou à l'aide de l'outil `Vecteur` (même si il s'agit d'une table, sans géométrie) dans le 
+        * ou à l'aide de l'outil `Vecteur` (même s'il s'agit d'une table, sans géométrie) dans le 
         `gestionnaire des sources de données`
 * Vérifier qu'il existe bien un champ commun aux deux couches avant de faire la jointure et qu'il peut y avoir une correspondance.
 * Si ce n'est pas le cas, faire les modifications nécessaires à l'aide de la calculatrice de champ.

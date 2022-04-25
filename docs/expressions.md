@@ -16,7 +16,7 @@ Par exemple, sur une couche commune, on peut mettre le nom du champ :
     1. Dans le panneau du milieu, aller dans `Champs et Valeurs` et double-cliquer sur le nom du champ `NOM_COM`.
     1. Remarquer l'ajout dans le panneau à gauche de l'expression suivante `"NOM_COM"`.
     1. Cliquer sur OK
-    1. Cette expression est équivalente à la première, mais elle est plus correct syntaxiquement.
+    1. Cette expression est équivalente à la première, mais elle est plus correcte syntaxiquement.
     
 **Il faut retenir** que le nom des champs sont entre guillemet double `""`.
 
@@ -24,7 +24,7 @@ Par exemple, sur une couche commune, on peut mettre le nom du champ :
 caractère ` : ` et le code INSEE de la commune.
     * Effacer le contenu à gauche
     * Dans le panneau du milieu, aller dans `Champs et Valeurs` et double-cliquer sur le nom du champ `NOM_COM`.
-    * Contrairement aux noms des champs qui sont entre guillement double `""`, les chaînes de caractères sont entre guillement simple `''`
+    * Contrairement aux noms des champs qui sont entre guillemet double `""`, les chaînes de caractères sont entre guillemet simple `''`
     * Pour concaténer, on peut utiliser `||`, `+` ou la fonction `concat()`
     * Une solution possible `concat("NOM_COM", ' : ', "INSEE_COM")`
 
@@ -35,7 +35,7 @@ Similaire à la section précédente, on peut définir l'infobulle. On utilise c
 * Pour activer les infobulles sur la carte, menu `Vue` ▶ `Afficher les infobulles`.
 * Puis retourner dans les propriétés de la couche vecteur, onglet `Infobulle`.
 
-**Rappel succinct** sur du HTML pour faire une liste à puce:
+**Rappel succinct** sur du HTML pour faire une liste à puce :
 
 ```html
 <h3>Titre</h3>
@@ -54,7 +54,7 @@ Similaire à la section précédente, on peut définir l'infobulle. On utilise c
 * `<ol></ol>` est une liste ordonnée. En anglais **ordered list**.
 * `<li></li>` est un élément dans une liste. En anglais **list item**.
 
-Il est possible de personnaliser l'afffichage de l'infobulle à l'aide de CSS.
+Il est possible de personnaliser l'affichage de l'infobulle à l'aide de CSS.
 
 Exemple d'une infobulle QGIS : 
 
@@ -72,7 +72,7 @@ Exemple d'une infobulle QGIS :
 
 ## Requêtage sur une couche vecteur
 
-* La couche commune comportent de nombreuses entités. On peut le voir graphiquement sur le canevas de la carte, 
+* La couche commune comporte de nombreuses entités. On peut le voir graphiquement sur le canevas de la carte, 
 mais aussi en ouvrant sa table attributaire.
 
 ![Barre outil vecteur](./media/vector_toolbar.png)
@@ -82,8 +82,8 @@ mais aussi en ouvrant sa table attributaire.
     * Un nouveau panneau s'ouvre présentant les résultats.
 * Depuis cette barre d'outils, ouvrir la `table attributaire`.
     * Comme dans un tableur, les données textes sont à gauche, les données numériques sont à droite.
-    * Faire le tour de cette nouvelles boîte de dialogue.
-* *Pour info*, le jaune dans les icônes représentent très souvent la notion de sélection dans QGIS.
+    * Faire le tour de cette nouvelle boîte de dialogue.
+* *Pour info*, le jaune dans les icônes représente très souvent la notion de sélection dans QGIS.
 * Utilisons l'outil de sélection à l'aide de la souris et affichons les entités sélectionnées dans la table.
 * Utilisons l'icône avec un carré jaune et un epsilon (le `ε`) afin de construire une expression de sélection.
     * Cette icône se trouve dans la barre d'outils ci-dessus de la fenêtre principale
@@ -91,13 +91,13 @@ mais aussi en ouvrant sa table attributaire.
 
 * On souhaite pouvoir sélectionner le(s) entité(s) qui répondent au critère `"CODE_INSEE" = '70550'`, pour cela utiliser 
 l'interface graphique afin de construire la requête. Que remarquons-nous sur la structure de l'expression ?
-    * Les nom des champs sont entre `""`
+    * Les nomS des champs sont entre `""`
     * Les chaînes de caractères dans les cellules sont entre `''`.
 * On souhaite désormais toutes les communes dont :
     * le code INSEE commence par `70` à l'aide de l'opérateur `like` :
-        * Le pourcentage permet de faire un caractère "joker" remplacant n'importe quelle chaîne de caractères
+        * Le pourcentage permet de faire un caractère "joker" remplaçant n'importe quelle chaîne de caractères
             * Solution : `"CODE_INSEE" like '70%'`
-        * la population est inférieur à 1000 habitants : 
+        * la population est inférieure à 1000 habitants : 
         * Les populations sont au format texte et non nombre entier : `to_int`
             * Solution : `to_int( "POPUL" ) < 1000`
     * les communes du `70` et du `25`

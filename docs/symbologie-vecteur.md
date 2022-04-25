@@ -12,7 +12,7 @@ dans cette colonne. Exemple la catégorie d'une route, on a un ensemble détermi
 * **Graduée** : on crée des classes avec des bornes min et max sur un champ ou une expression. Tous les objets dont la valeur
 est comprise entre ces bornes auront le même symbole. Exemple la population d'une commune, il y a autant de valeurs possibles que de communes.
 On ne peut pas connaître à l'avance les différentes valeurs du champ. Pour la réalisation de ces bornes, il existe plusieurs modes : 
-    * Intervalle égale
+    * Intervalle égal
     * Quantile (nombre égale)
     * Ruptures naturelles (jenks). Les bornes de classes sont identifiées parmi celles qui regroupent le mieux des valeurs similaires et optimisent les différences entre les classes. Les entités sont réparties en classes dont les limites sont définies aux endroits où se trouvent de grandes différences dans les valeurs de données. 
     * Écart-type
@@ -23,13 +23,13 @@ On ne peut pas connaître à l'avance les différentes valeurs du champ. Pour la
 
 * **Déplacement de points** : QGIS déplace les symboles dans un cercle ou une grille autour des points superposés
 
-* **Groupes de points** on groupe les points dans des cercles dont l'affichage dépend du nombre de points ou d'une expresssion
+* **Groupes de points** : On groupe les points dans des cercles dont l'affichage dépend du nombre de points ou d'une expression
 
-* **Cartes de chaleur** on crée un raster issu de l'interpolation des valeurs des points
+* **Cartes de chaleur** : On crée un raster issu de l'interpolation des valeurs des points
 
-* **Polygones inversés**: On représente le remplissage du polygone à son extérieur (effet de masque)
+* **Polygones inversés** : On représente le remplissage du polygone à son extérieur (effet de masque)
 
-* **2.5D**: Rendu pseudo-3D avec effet de perspective
+* **2.5D** : Rendu pseudo-3D avec effet de perspective
 
 Groupe de points : 
 
@@ -69,7 +69,7 @@ Le résultat est bien meilleur :
 
 ## Activer un effet sur un symbole
 
-QGIS permet d'activer des effets qui sont appliqués pour modifier le symbole finale.
+QGIS permet d'activer des effets qui sont appliqués pour modifier le symbole final.
 On peut par exemple appliquer un ombrage sur les symboles ponctuels.
 
 ![](media/activer_effets.png "Rendu groupe de points")

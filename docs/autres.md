@@ -2,7 +2,7 @@
 
 ## La barre de recherche:
 
-QGIS 3 propose un nouvel **outil de recherche** par **autocomplétion** intégré dans la barre de statut, **en bas à gauche**. QGIS permet de rechercher parmi:
+QGIS3 propose un nouvel **outil de recherche** par **autocomplétion** intégré dans la barre de statut, **en bas à gauche**. QGIS permet de rechercher parmi :
 
 * Actions
 * Calculatrice
@@ -24,6 +24,6 @@ la couche, onglet **Affichage**
 
 ![](media/10_couche_display.png "Afficher le nom")
 
-On lance la recherche via **CTRL+K** ou en cliquant dans le champ, puis on peut taper un **code pour filtrer la recherche** (ex: af), et enfin le **terme recherché**. On valide avec **Entrée** pour afficher l'item trouvé.
+On lance la recherche via **CTRL+K** ou en cliquant dans le champ, puis on peut taper un **code pour filtrer la recherche** (ex : af), et enfin le **terme recherché**. On valide avec **Entrée** pour afficher l'item trouvé.
 
 ![](media/11_barre_recherche_exemple.png "Barre de recherche")
