@@ -853,7 +853,7 @@ le nom d'une entité.</p>
 <li>Dans le panneau du milieu, aller dans <code>Champs et Valeurs</code> et double-cliquer sur le nom du champ <code>NOM_COM</code>.</li>
 <li>Remarquer l'ajout dans le panneau à gauche de l'expression suivante <code>"NOM_COM"</code>.</li>
 <li>Cliquer sur OK</li>
-<li>Cette expression est équivalente à la première, mais elle est plus correct syntaxiquement.</li>
+<li>Cette expression est équivalente à la première, mais elle est plus correcte syntaxiquement.</li>
 </ol>
 </li>
 </ul>
@@ -863,7 +863,7 @@ le nom d'une entité.</p>
 caractère <code>:</code> et le code INSEE de la commune.<ul>
 <li>Effacer le contenu à gauche</li>
 <li>Dans le panneau du milieu, aller dans <code>Champs et Valeurs</code> et double-cliquer sur le nom du champ <code>NOM_COM</code>.</li>
-<li>Contrairement aux noms des champs qui sont entre guillement double <code>""</code>, les chaînes de caractères sont entre guillement simple <code>''</code></li>
+<li>Contrairement aux noms des champs qui sont entre guillemet double <code>""</code>, les chaînes de caractères sont entre guillemet simple <code>''</code></li>
 <li>Pour concaténer, on peut utiliser <code>||</code>, <code>+</code> ou la fonction <code>concat()</code></li>
 <li>Une solution possible <code>concat("NOM_COM", ' : ', "INSEE_COM")</code></li>
 </ul>
@@ -875,15 +875,15 @@ caractère <code>:</code> et le code INSEE de la commune.<ul>
 <li>Pour activer les infobulles sur la carte, menu <code>Vue</code> ▶ <code>Afficher les infobulles</code>.</li>
 <li>Puis retourner dans les propriétés de la couche vecteur, onglet <code>Infobulle</code>.</li>
 </ul>
-<p><strong>Rappel succinct</strong> sur du HTML pour faire une liste à puce:</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<p><strong>Rappel succinct</strong> sur du HTML pour faire une liste à puce :</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
 <span class="normal">5</span>
 <span class="normal">6</span>
 <span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span>Titre<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span>Titre<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Paragraphe<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Une<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
@@ -891,8 +891,7 @@ caractère <code>:</code> et le code INSEE de la commune.<ul>
     <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>à<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>puce<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
-</code></pre></div>
-</td></tr></table>
+</code></pre></div></td></tr></table></div>
 <ul>
 <li>Les balises <code>&lt;h1&gt;&lt;/h1&gt;</code>, <code>&lt;h2&gt;&lt;/h2&gt;</code>, <code>&lt;hX&gt;&lt;/hX&gt;</code> représentent des titres, en commençant par le plus important. En anglais <strong>header</strong>.</li>
 <li><code>&lt;p&gt;&lt;/p&gt;</code> est un paragraphe</li>
@@ -900,24 +899,23 @@ caractère <code>:</code> et le code INSEE de la commune.<ul>
 <li><code>&lt;ol&gt;&lt;/ol&gt;</code> est une liste ordonnée. En anglais <strong>ordered list</strong>.</li>
 <li><code>&lt;li&gt;&lt;/li&gt;</code> est un élément dans une liste. En anglais <strong>list item</strong>.</li>
 </ul>
-<p>Il est possible de personnaliser l'afffichage de l'infobulle à l'aide de CSS.</p>
+<p>Il est possible de personnaliser l'affichage de l'infobulle à l'aide de CSS.</p>
 <p>Exemple d'une infobulle QGIS : </p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>[% &quot;NOM_COM&quot; %]<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>[% &quot;INSEE_COM&quot; %]<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>[% &quot;NOM_DEP&quot; %]<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
-</code></pre></div>
-</td></tr></table>
+</code></pre></div></td></tr></table></div>
 <p><code>[% ... %]</code> permet à QGIS de reconnaître qu'il s'agit d'une expression qu'il faut évaluer au sein d'un autre bloc de texte.</p>
 <p><img alt="Info bulle" src="../media/maptip.png" /></p>
 <h2 id="requetage-sur-une-couche-vecteur">Requêtage sur une couche vecteur<a class="headerlink" href="#requetage-sur-une-couche-vecteur" title="Permanent link">#</a></h2>
 <ul>
-<li>La couche commune comportent de nombreuses entités. On peut le voir graphiquement sur le canevas de la carte, 
+<li>La couche commune comporte de nombreuses entités. On peut le voir graphiquement sur le canevas de la carte, 
 mais aussi en ouvrant sa table attributaire.</li>
 </ul>
 <p><img alt="Barre outil vecteur" src="../media/vector_toolbar.png" /></p>
@@ -929,10 +927,10 @@ mais aussi en ouvrant sa table attributaire.</li>
 </li>
 <li>Depuis cette barre d'outils, ouvrir la <code>table attributaire</code>.<ul>
 <li>Comme dans un tableur, les données textes sont à gauche, les données numériques sont à droite.</li>
-<li>Faire le tour de cette nouvelles boîte de dialogue.</li>
+<li>Faire le tour de cette nouvelle boîte de dialogue.</li>
 </ul>
 </li>
-<li><em>Pour info</em>, le jaune dans les icônes représentent très souvent la notion de sélection dans QGIS.</li>
+<li><em>Pour info</em>, le jaune dans les icônes représente très souvent la notion de sélection dans QGIS.</li>
 <li>Utilisons l'outil de sélection à l'aide de la souris et affichons les entités sélectionnées dans la table.</li>
 <li>
 <p>Utilisons l'icône avec un carré jaune et un epsilon (le <code>ε</code>) afin de construire une expression de sélection.</p>
@@ -945,17 +943,17 @@ mais aussi en ouvrant sa table attributaire.</li>
 <p>On souhaite pouvoir sélectionner le(s) entité(s) qui répondent au critère <code>"CODE_INSEE" = '70550'</code>, pour cela utiliser 
 l'interface graphique afin de construire la requête. Que remarquons-nous sur la structure de l'expression ?</p>
 <ul>
-<li>Les nom des champs sont entre <code>""</code></li>
+<li>Les nomS des champs sont entre <code>""</code></li>
 <li>Les chaînes de caractères dans les cellules sont entre <code>''</code>.</li>
 </ul>
 </li>
 <li>On souhaite désormais toutes les communes dont :<ul>
 <li>le code INSEE commence par <code>70</code> à l'aide de l'opérateur <code>like</code> :<ul>
-<li>Le pourcentage permet de faire un caractère "joker" remplacant n'importe quelle chaîne de caractères<ul>
+<li>Le pourcentage permet de faire un caractère "joker" remplaçant n'importe quelle chaîne de caractères<ul>
 <li>Solution : <code>"CODE_INSEE" like '70%'</code></li>
 </ul>
 </li>
-<li>la population est inférieur à 1000 habitants : </li>
+<li>la population est inférieure à 1000 habitants : </li>
 <li>Les populations sont au format texte et non nombre entier : <code>to_int</code><ul>
 <li>Solution : <code>to_int( "POPUL" ) &lt; 1000</code></li>
 </ul>
@@ -997,7 +995,7 @@ Il permet la mise à jour d'un champ existant ou alors de créer un nouveau cham
 <div class="md-source-date">
   <small>
     
-      Dernière mise à jour: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">April 15, 2021</span>
+      Dernière mise à jour: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">April 25, 2022</span>
       
     
   </small>

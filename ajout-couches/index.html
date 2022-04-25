@@ -1008,7 +1008,7 @@
 <li><a href="https://docs.qgis.org/latest/fr/docs/user_manual/introduction/general_tools.html#label-legend">https://docs.qgis.org/latest/fr/docs/user_manual/introduction/general_tools.html#label-legend</a></li>
 </ul>
 <h2 id="paques-avant-lheure">Pâques avant l'heure<a class="headerlink" href="#paques-avant-lheure" title="Permanent link">#</a></h2>
-<p>Dans certains logiciels, il existe des oeufs de Pâques (Easter Egg).
+<p>Dans certains logiciels, il existe des œufs de Pâques (Easter Egg).
 Nous allons utiliser l'un d'entre eux pour ajouter notre première couche dans QGIS.
 Taper <code>world</code> dans la barre des coordonnées en bas et regardons l'utilisation de la barre d'outils de navigation.</p>
 <p><img alt="Navigation" src="../media/navigation_toolbar.png" /></p>
@@ -1022,7 +1022,7 @@ Taper <code>world</code> dans la barre des coordonnées en bas et regardons l'ut
 </li>
 <li><em>Pour info</em>, dans les barres d'outils, les étoiles jaunes signifient la création de nouvelle couche. 
 Dans notre cas, nous souhaitons donc bien l'ajout d'une couche existante.</li>
-<li>Enregistrer le projet <code>Projet</code> -&gt; <code>Enregistrer sous...</code> et mettez le <strong>dans</strong> le dossier <code>data</code> contenant les données. 
+<li>Enregistrer le projet <code>Projet</code> -&gt; <code>Enregistrer sous...</code> et mettez-le <strong>dans</strong> le dossier <code>data</code> contenant les données. 
 au format <code>QGIS</code> (extension <code>.qgs</code>).</li>
 <li>Désormais, l'aide du panneau <code>Explorateur</code>, dans <code>Dossier du projet</code> :<ul>
 <li>Charger <code>A_OSM_RESEAU_ROUTIER / ROUTE.shp</code></li>
@@ -1043,7 +1043,7 @@ au format <code>QGIS</code> (extension <code>.qgs</code>).</li>
 <li>
 <p>Petites explications sur les encodages : </p>
 <ul>
-<li><code>Unicode</code> :  jeu de caractères codés dit « universel » qui permet de remplacer les pages de codes nationales. 
+<li><code>Unicode</code> : jeu de caractères codés dit « universel » qui permet de remplacer les pages de codes nationales. 
 Comprend un répertoire très étendu de caractères compatible avec tous les alphabets. 
 Il est en évolution constante (une version en juin 2014) avec plus de 100 000 caractères.</li>
 <li><code>UTF-8</code> est le codage international le plus utilisé (en particulier sur le web) compatible avec Unicode.
@@ -1065,14 +1065,14 @@ l'écriture du tchèque. Il enlève en échange quelques caractères peu utilis�
 </ul>
 <h2 id="rasters">Rasters<a class="headerlink" href="#rasters" title="Permanent link">#</a></h2>
 <h3 id="fichier-mnt">Fichier MNT<a class="headerlink" href="#fichier-mnt" title="Permanent link">#</a></h3>
-<p><strong>Pour rappel</strong>, un fichier MNT veut dire Modèle Numérique de Terrain, c'est à dire un fichier comportant des informations
+<p><strong>Pour rappel</strong>, un fichier MNT veut dire Modèle Numérique de Terrain, c'est-à-dire un fichier comportant des informations
 sur l'altitude.</p>
 <ul>
-<li>À l'aide du bouton <code>Source de données</code>,  ajouter la couche de type <code>Raster</code> contenu dans le dossier <code>srtm</code>.</li>
+<li>À l'aide du bouton <code>Source de données</code>, ajouter la couche de type <code>Raster</code> contenu dans le dossier <code>srtm</code>.</li>
 </ul>
 <h3 id="wms-de-lign">WMS de l'IGN<a class="headerlink" href="#wms-de-lign" title="Permanent link">#</a></h3>
 <ul>
-<li>À l'aide du bouton <code>Source de données</code>,  ajouter une connexion <code>WMS</code>:<ul>
+<li>À l'aide du bouton <code>Source de données</code>, ajouter une connexion <code>WMS</code>:<ul>
 <li>Nom : <code>IGN WMTS</code></li>
 <li>URL : <code>https://wxs.ign.fr/choisirgeoportail/geoportail/wmts?SERVICE=WMTS&amp;REQUEST=GETCAPABILITIES</code>
 Ajouter des flux provenant de l'IGN en utilisant cette clé gratuite <code>choisirgeoportail</code>.</li>
@@ -1095,12 +1095,12 @@ Ajouter des flux provenant de l'IGN en utilisant cette clé gratuite <code>chois
 <h2 id="manipulation-de-la-legende">Manipulation de la légende<a class="headerlink" href="#manipulation-de-la-legende" title="Permanent link">#</a></h2>
 <p>Dans le panneau à gauche, vous remarquez la légende, avec sa barre d'outils.</p>
 <p><img alt="Panneau explorateur" src="../media/panneau_legende.png" /></p>
-<p>Ce panneau nous permet de faire plusieurs actions:
-* ré-ordonner les couches avec une ordre logique : ponctuel, linéaire, polygone, raster
+<p>Ce panneau nous permet de faire plusieurs actions :
+* réordonner les couches avec un ordre logique : ponctuel, linéaire, polygone, raster
 * masquer/afficher des couches
 * faire des groupes</p>
 <h3 id="utiliser-les-themes-de-couches">Utiliser les thèmes de couches<a class="headerlink" href="#utiliser-les-themes-de-couches" title="Permanent link">#</a></h3>
-<p>Un <strong>thème de couche</strong> est caractérisé par un <strong>nom</strong> et permet de sauvegarder:</p>
+<p>Un <strong>thème de couche</strong> est caractérisé par un <strong>nom</strong> et permet de sauvegarder :</p>
 <ul>
 <li>l'<strong>état des couches cochées</strong> dans la légende</li>
 <li>les <strong>styles actifs</strong> de chaque couche</li>
@@ -1108,24 +1108,24 @@ Ajouter des flux provenant de l'IGN en utilisant cette clé gratuite <code>chois
 <p><strong>Étapes</strong>:</p>
 <ul>
 <li><strong>Cocher/décocher</strong> les couches pour obtenir le réglage souhaité</li>
-<li>Cliquer sur le bouton <strong>oeil</strong> de la barre d'outil au-dessus du panneau <strong>Couches</strong></li>
+<li>Cliquer sur le bouton <strong>œil</strong> de la barre d'outil au-dessus du panneau <strong>Couches</strong></li>
 <li>Choisir l'item <strong>Ajouter un thème</strong></li>
 <li>Choisir <strong>un nom</strong> et valider</li>
 </ul>
 <p><img alt="" src="../media/06_ajouter_un_theme.png" title="Ajouter un thème" /></p>
-<p>Une fois un ou plusieurs thèmes enregistrés, on peut basculer facilement de l'un à autre thème via le bouton <strong>oeil</strong>.</p>
+<p>Une fois un ou plusieurs thèmes enregistrés, on peut basculer facilement de l'un à autre thème via le bouton <strong>œil</strong>.</p>
 <p>Les thèmes peuvent être utilisés pour gérer les couches affichées <strong>dans chaque vue</strong>, ainsi que dans chaque carte de 
 <strong>chaque composeur d'impression</strong>.</p>
 <h2 id="les-vues-cartes">Les vues cartes<a class="headerlink" href="#les-vues-cartes" title="Permanent link">#</a></h2>
-<p>QGIS3 propose d'afficher plusieurs canevas, appelés <strong>vues carte</strong>, au lieu d'une seule carte centrale.</p>
+<p>QGIS3 propose d'afficher plusieurs canevas, appelés <strong>vues cartes</strong>, au lieu d'une seule carte centrale.</p>
 <ul>
 <li>Menu <strong>Vue / Nouvelle vue cartographique</strong></li>
 <li>On peut la faire <strong>glisser dans l'interface</strong>, par exemple dans le panneau de droite</li>
-<li>Par défaut, elle se comporte comme la carte principale: les <strong>mêmes couches sont visibles</strong></li>
+<li>Par défaut, elle se comporte comme la carte principale : les <strong>mêmes couches sont visibles</strong></li>
 </ul>
 <p><img alt="" src="../media/05_nouvelle_vue_carte.png" title="Nouvelle vue carte" /></p>
 <h2 id="la-vue-3d">La vue 3D<a class="headerlink" href="#la-vue-3d" title="Permanent link">#</a></h2>
-<p>La <strong>vue 3D</strong> permet de draper des données vectorielles ou raster par dessus un <strong>modèle numérique de terrain</strong> (MNT)</p>
+<p>La <strong>vue 3D</strong> permet de draper des données vectorielles ou raster par-dessus un <strong>modèle numérique de terrain</strong> (MNT)</p>
 <p>Elle peut aussi représenter des données qui ont une composante d'altitude (Z).</p>
 <p><img alt="" src="../media/07_vue_3D.png" title="Vue 3D" /></p>
 <h2 id="lextension-layerboard">L'extension Layerboard<a class="headerlink" href="#lextension-layerboard" title="Permanent link">#</a></h2>
@@ -1136,8 +1136,8 @@ Ajouter des flux provenant de l'IGN en utilisant cette clé gratuite <code>chois
 <ul>
 <li>Faire un enregistrement du projet et regarder la taille du fichier.</li>
 <li>Si le fichier comporte l'extension <code>QGS</code>, vérifiez le contenu du fichier. 
-Un projet ne contient aucune données géographiques. <strong>Les données géographiques</strong> ne sont pas incluses dans 
-le projet en lui même. Ce ne sont que des liens.</li>
+Un projet ne contient aucunes données géographiques. <strong>Les données géographiques</strong> ne sont pas incluses dans 
+le projet en lui-même. Ce ne sont que des liens.</li>
 </ul>
 <h2 id="utilisation-des-outils">Utilisation des outils<a class="headerlink" href="#utilisation-des-outils" title="Permanent link">#</a></h2>
 <p><img alt="Sélection" src="../media/vector_toolbar.png" /></p>
@@ -1146,8 +1146,8 @@ le projet en lui même. Ce ne sont que des liens.</li>
 <li>
 <p>de <strong>mesure</strong> (longueur, aire, angle) dont l'icône comporte une petite règle.</p>
 <ul>
-<li>Notons pour la mesure de longueur et d'aire la possibilité de choisir entre deux options:<ul>
-<li><code>Cartésien</code>, mesure dans le plan X,Y</li>
+<li>Notons pour la mesure de longueur et d'aire la possibilité de choisir entre deux options :<ul>
+<li><code>Cartésien</code>, mesure dans le plan X, Y</li>
 <li><code>Ellipsoïdale</code>, mesure en tenant compte de la rotondité de la Terre</li>
 </ul>
 </li>
@@ -1206,7 +1206,7 @@ le projet en lui même. Ce ne sont que des liens.</li>
 <div class="md-source-date">
   <small>
     
-      Dernière mise à jour: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">April 21, 2022</span>
+      Dernière mise à jour: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">April 25, 2022</span>
       
     
   </small>

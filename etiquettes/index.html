@@ -786,7 +786,7 @@
                 <h1 id="les-etiquettes">Les étiquettes<a class="headerlink" href="#les-etiquettes" title="Permanent link">#</a></h1>
 <h2 id="rappel-des-fonctionnalites">Rappel des fonctionnalités<a class="headerlink" href="#rappel-des-fonctionnalites" title="Permanent link">#</a></h2>
 <p>Documentation : <a href="https://docs.qgis.org/latest/fr/docs/user_manual/working_with_vector/vector_properties.html#labels-properties">https://docs.qgis.org/latest/fr/docs/user_manual/working_with_vector/vector_properties.html#labels-properties</a></p>
-<p>QGIS 3 présente une interface unifiée qui liste toutes les options accessibles <strong>dans une seule fenêtre</strong> dans l'onglet 
+<p>QGIS3 présente une interface unifiée qui liste toutes les options accessibles <strong>dans une seule fenêtre</strong> dans l'onglet 
 <code>Étiquettes</code> des propriétés de la couche vecteur :</p>
 <ul>
 <li>un <strong>aperçu</strong> du rendu de l’étiquette</li>
@@ -813,30 +813,30 @@
 <li>Définir des seuils de visibilités dans l'onglet <code>Rendu</code>.</li>
 </ul>
 <p>Le moteur d’étiquetage de QGIS est riche en fonctionnalités. L’interface regroupe les différentes options par
-thèmes:</p>
+thèmes :</p>
 <ul>
 <li><strong>Texte</strong> : Police, Taille, casse, etc.</li>
 <li><strong>Formatage</strong> : Retour à la ligne, alignement, formatage des nombres décimaux</li>
 <li><strong>Tampon</strong> : taille, couleur, transparence</li>
-<li><strong>Arrière-plan</strong> : Ajout de n’importe quel fond derrère l’étiquette (forme, SVG, etc.) + paramétrage fin</li>
+<li><strong>Arrière-plan</strong> : Ajout de n’importe quel fond derriere l’étiquette (forme, SVG, etc.) + paramétrage fin</li>
 <li><strong>Ombre</strong> : Définition d’un ombrage (position, décalage, transparence, etc.)</li>
 <li><strong>Connecteurs</strong> : permet de générer une flèche entre le point géographique et l'étiquette quand ils sont éloignés</li>
 <li><strong>Position</strong> : en fonction du type (polygone, lignes, points), Position et rotation via des colonnes, priorité</li>
 <li><strong>Rendu</strong> : seuils d’échelle, paramètres avancés</li>
 </ul>
-<p><img alt="" src="../media/12_parametres_etiquettes.png" title="Paramèters d'étiquettes" /></p>
+<p><img alt="" src="../media/12_parametres_etiquettes.png" title="Paramètres d'étiquettes" /></p>
 <p><strong>Certaines options sont spécifiques pour une géométrie.</strong></p>
-<p>Chaque paramètre de la configuration peut soit:</p>
+<p>Chaque paramètre de la configuration peut soit :</p>
 <ul>
 <li>être choisi de manière classique parmi les <strong>choix proposés</strong></li>
 <li>être dynamique via le <strong>choix d’un attribut ou d’une expression</strong></li>
 </ul>
-<p>Quand un icône est jaune, cela veut dire que le <strong>contôle par les données</strong> est actif. Le paramètre dans l'interface
-graphique peut ne pas être pris en compte car il est <strong>peut-être</strong> surchargé au niveau de l'entité. Il est possible de
+<p>Quand une icône est jaune, cela veut dire que le <strong>contrôle par les données</strong> est actif. Le paramètre dans l'interface
+graphique peut ne pas être pris en compte, car il est <strong>peut-être</strong> surchargé au niveau de l'entité. Il est possible de
 désactiver en faisant un clic-droit sur une propriété en jaune.</p>
 <p><img alt="" src="../media/data_defined_labels.png" /></p>
 <h2 id="le-deplacement-manuel-des-etiquettes">Le déplacement manuel des étiquettes<a class="headerlink" href="#le-deplacement-manuel-des-etiquettes" title="Permanent link">#</a></h2>
-<p>QGIS 3 permet maintenant de <strong>déplacer les étiquettes manuellement</strong> sans avoir besoin de créer de couches spécifiques, ou d'utiliser le plugin <strong>Easy Custom Labelling</strong></p>
+<p>QGIS3 permet maintenant de <strong>déplacer les étiquettes manuellement</strong> sans avoir besoin de créer de couches spécifiques, ou d'utiliser le plugin <strong>Easy Custom Labelling</strong></p>
 <p><strong>Notes</strong> </p>
 <ul>
 <li>Un déplacement manuel d'étiquette n'est <strong>valable que pour une échelle fixe</strong> !</li>
@@ -848,22 +848,22 @@ désactiver en faisant un clic-droit sur une propriété en jaune.</p>
 <li>Pour gérer le déplacement, il faut utiliser la <strong>barre d'outils Étiquettes</strong></li>
 <li>Choisir l'<strong>échelle</strong></li>
 <li>Cocher <strong>Mettre en surbrillance les Étiquettes et les Diagrammes épinglés</strong></li>
-<li>Cocher l'outil <strong>Déplacer les Etiquettes et les Diagrammes</strong></li>
+<li>Cocher l'outil <strong>Déplacer les Étiquettes et les Diagrammes</strong></li>
 <li>Au 1er clic sur la carte, une fenêtre demande de choisir l'<strong>identifiant unique de la couche</strong></li>
 </ul>
-<p><img alt="" src="../media/13_barre_etiquette_et_stockage_auxiliaire.png" title="Etiquettes: barre et identifiant unique" /></p>
+<p><img alt="" src="../media/13_barre_etiquette_et_stockage_auxiliaire.png" title="Étiquettes: barre et identifiant unique" /></p>
 <p>Vous pouvez ensuite utiliser cet outil <strong>Déplacer les étiquettes et les diagrammes</strong> en cliquant sur l'étiquette et en la faisant <strong>glisser à l'endroit désiré</strong>. Les étiquettes déplacées apparaissent <strong>avec un fond bleu</strong></p>
 <p>D'autres outils permettent de <strong>tracer un rectangle autour des entités choisies</strong> et</p>
 <ul>
-<li><strong>épingler/désépingler</strong> les étiquettes: on les réinitialise,</li>
-<li><strong>masquer/afficher</strong> les étiquettes: icône <strong>oeil</strong></li>
+<li><strong>épingler/désépingler</strong> les étiquettes : on les réinitialise,</li>
+<li><strong>masquer/afficher</strong> les étiquettes : icône <strong>œil</strong></li>
 </ul>
-<p>On peut aussi manuellement <strong>pivoter</strong> chaque étiquette, ou <strong>modifier toutes les propriétés</strong> d'une étiquette.</p>
+<p>On peut aussi manuellement <strong>pivoter</strong> chaque étiquette ou <strong>modifier toutes les propriétés</strong> d'une étiquette.</p>
 <p>Les données sont enregistrées <strong>dans l'archive du projet QGZ</strong>, pour chaque couche. On peut voir les paramètres dans les propriétés de la couche, onglet <strong>Stockage auxiliaire</strong>.</p>
 <p><img alt="" src="../media/13_barre_etiquette_et_stockage_auxiliaire.png" title="Stockage auxiliaire" /></p>
 <h2 id="utilisation-dune-expression-pour-construire-letiquette">Utilisation d'une expression pour construire l'étiquette<a class="headerlink" href="#utilisation-dune-expression-pour-construire-letiquette" title="Permanent link">#</a></h2>
 <p>Par défaut, nous avons utilisé un champ de notre attributaire pour construire notre étiquette.</p>
-<p>Nous souhaiterions désormais vouloir étiquetter en utilisant deux champs : le nom de la commune ET son code INSEE.
+<p>Nous souhaiterions désormais vouloir étiqueter en utilisant deux champs : le nom de la commune ET son code INSEE.
 Il faut désormais utiliser le petit epsilon violet, qui comme vu dans la <a href="../interface/">présentation de l'interface</a>
 fait référence à la notion des <strong>expressions</strong>.</p>
 <ul>
@@ -899,7 +899,7 @@ attention aux valeurs NULL et aux valeurs mathématiques. On recommande <code>co
 <div class="md-source-date">
   <small>
     
-      Dernière mise à jour: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">April 15, 2021</span>
+      Dernière mise à jour: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">April 25, 2022</span>
       
     
   </small>

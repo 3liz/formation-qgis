@@ -887,7 +887,7 @@ observateur possède 0 ou plusieurs observations, mais une observation appartien
 définir des relations entre les tables.</p>
 <h2 id="exercice">Exercice<a class="headerlink" href="#exercice" title="Permanent link">#</a></h2>
 <h3 id="creation-des-tables">Création des tables<a class="headerlink" href="#creation-des-tables" title="Permanent link">#</a></h3>
-<p>Nous allons utiliser le modèle de données suivant:</p>
+<p>Nous allons utiliser le modèle de données suivant :</p>
 <ul>
 <li>Table <code>especes</code>, non spatiale<ul>
 <li>ID</li>
@@ -907,7 +907,7 @@ définir des relations entre les tables.</p>
 <li>ID</li>
 <li>Date : <code>date</code></li>
 <li>Espèce : <code>espece_id</code>, pour stocker l'identifiant de l'espèce</li>
-<li>Observateur : <code>observateur_id</code>, poru stocker l'identifiant de l'observateur</li>
+<li>Observateur : <code>observateur_id</code>, pour stocker l'identifiant de l'observateur</li>
 <li>Genre (liste fermé) : <code>genre</code></li>
 <li>Nombre : <code>nombre</code></li>
 <li>En groupe : <code>en_groupe</code>, type booléen</li>
@@ -940,14 +940,14 @@ panneau <code>Table attributaire</code> pour ajouter les autres attributs. Il y 
 </ul>
 <h3 id="creation-des-relations">Création des relations<a class="headerlink" href="#creation-des-relations" title="Permanent link">#</a></h3>
 <p>Menu <code>Projet</code> ▶ <code>Propriétés</code> ▶ <code>Relations</code>, nous pouvons créer ici les relations <strong>1-n</strong> entre les tables.</p>
-<p>Par convention personnel, je nomme les relations suivant le modèle <code>parent_enfant</code>, par exemple <code>commune_observation</code>.</p>
+<p>Par convention personnelle, je nomme les relations suivant le modèle <code>parent_enfant</code>, par exemple <code>commune_observation</code>.</p>
 <p><img alt="" src="../media/relations.png" /></p>
 <h3 id="creation-des-formulaires">Création des formulaires<a class="headerlink" href="#creation-des-formulaires" title="Permanent link">#</a></h3>
 <p>Dans les propriétés de la couche vecteur en question, onglet <code>Formulaire d'attributs</code>:</p>
 <ul>
 <li>Couche <code>observateurs</code> : <ul>
 <li>Mode formulaire : <code>Génération automatique</code></li>
-<li>Mettre un alias sur les champs, language humain</li>
+<li>Mettre un alias sur les champs, langage humain</li>
 <li>Mettre le bon outil d'édition pour les champs : <code>cachée</code> ou <code>texte</code></li>
 <li>Mettre les contraintes et les renforcer</li>
 </ul>
@@ -966,28 +966,25 @@ panneau <code>Table attributaire</code> pour ajouter les autres attributs. Il y 
 </li>
 </ul>
 <h3 id="les-champs-virtuels">Les champs virtuels<a class="headerlink" href="#les-champs-virtuels" title="Permanent link">#</a></h3>
-<p>Sur la couche communes, on peut ajouter un champ virtuel afin de compter le nombre d'observations par commune : </p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<p>Sur la couche des communes, on peut ajouter un champ virtuel afin de compter le nombre d'observations par commune : </p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>relation_aggregate(
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>relation_aggregate(
     relation:=&#39;observation_commune&#39;,
     aggregate:=&#39;count&#39;,
     expression:=&quot;fid&quot;
 )
-</code></pre></div>
-</td></tr></table>
+</code></pre></div></td></tr></table></div>
 <p>Bonus, on peut ajouter une mise en forme conditionnelle</p>
 <p><img alt="" src="../media/table_attributaire_condition.png" /></p>
 <p>Rouge si
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>@value =  minimum(  &quot;obs&quot; )
-</code></pre></div>
-</td></tr></table></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>@value =  minimum(  &quot;obs&quot; )
+</code></pre></div></td></tr></table></div></p>
 <p>Vert si
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>@value =  maximum(  &quot;obs&quot; )
-</code></pre></div>
-</td></tr></table></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>@value =  maximum(  &quot;obs&quot; )
+</code></pre></div></td></tr></table></div></p>
 <h3 id="solution-complete">Solution complète<a class="headerlink" href="#solution-complete" title="Permanent link">#</a></h3>
 <p><img alt="" src="../media/interface_observations_faunistiques.png" /></p>
 <p>TODO, mettre le lien vers le geopackage
@@ -1001,7 +998,7 @@ panneau <code>Table attributaire</code> pour ajouter les autres attributs. Il y 
 <div class="md-source-date">
   <small>
     
-      Dernière mise à jour: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">April 15, 2021</span>
+      Dernière mise à jour: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">April 25, 2022</span>
       
     
   </small>
