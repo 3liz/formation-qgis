@@ -67,9 +67,9 @@ sur l'altitude.
 
 * À l'aide du bouton `Source de données`, ajouter une connexion `WMS`:
     * Nom : `IGN WMTS`
-    * URL : `https://wxs.ign.fr/choisirgeoportail/geoportail/wmts?SERVICE=WMTS&REQUEST=GETCAPABILITIES`
-    Ajouter des flux provenant de l'IGN en utilisant cette clé gratuite `choisirgeoportail`.
-    * Pour votre information : https://geoservices.ign.fr/blog/2018/09/06/acces_geoportail_sans_compte.html
+    * URL : `https://wxs.ign.fr/decouverte/geoportail/wmts?SERVICE=WMTS&REQUEST=GetCapabilities`
+    Ajouter des flux provenant de l'IGN en utilisant cette clé gratuite `decouverte`.
+    * Pour votre information : https://geoservices.ign.fr/services-web
     
 ### À l'aide d'un plugin
 
