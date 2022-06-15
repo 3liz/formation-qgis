@@ -134,9 +134,9 @@ Elle peut aussi représenter des données qui ont une composante d'altitude (Z).
 
 ![](media/07_vue_3D.png "Vue 3D")
 
-## L'extension Layerboard
+## L'extension Layer Board
 
-L'extension LayerBoard permet d'obtenir un tableau récapitulatif des couches qui sont chargées.
+L'extension Layer Board permet d'obtenir un tableau récapitulatif des couches qui sont chargées.
 
 ![](media/layer_board.png "Options localisateur")
 

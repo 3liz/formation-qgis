@@ -22,9 +22,15 @@ Notons les fonds suivants qui peuvent être intéressant (et légaux avec une si
     * Les fonds **OSM** avec **Humanitarian**, **Monochrome**, **OpenTopoMap**...
     * Les fonds **Mapsurfer**
 * **DataPlotLy**, permet de faire des graphiques dans l'interface principale et aussi de les exporter dans les PDF
-* **LayerBoard**, petit plugin pour avoir une vue d'ensemble des couches : les différentes projections, les encodages etc
+* **Layer Board**, petit plugin pour avoir une vue d'ensemble des couches : les différentes projections, les encodages etc.
+  Il faut écrire `Layer board` avec un espace pour le trouver.
 * **QGIS Resources Sharing**, permet d'accéder à des librairies de styles, icônes etc
-* **QuickOSM, pour télécharger localement de la donnée OSM
+* **QuickOSM**, pour télécharger localement de la donnée OSM
 * **French locator filter**, pour faire de la saisie d'une adresse en utilisant https://geo.api.gouv.fr/adresse
 * **Spreadsheet Layers**, même si QGIS permet efficacement d'ouvrir un fichier ODS ou XLS et de pouvoir sélectionner une
 feuille en particulier, il est parfois intéressant d'utiliser cette extension
+
+## Partage de style
+
+Avec le QGIS Resources Sharing, il existe le [style hub](https://plugins.qgis.org/styles/?order_by=-upload_date&&is_gallery=true)
+pour télécharger des styles.
