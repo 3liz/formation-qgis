@@ -857,10 +857,16 @@ le nom d'une entité.</p>
 </ol>
 </li>
 </ul>
-<p><strong>Il faut retenir</strong> que le nom des champs sont entre guillemet double <code>""</code>.</p>
+<p><strong>Il faut retenir</strong> que :</p>
 <ul>
-<li>retournons dans la fenêtre des expressions. Nous souhaitons dorénavant afficher le nom de la commune, la chaîne de
-caractère <code>:</code> et le code INSEE de la commune.<ul>
+<li>le nom d'un champ est entre guillemet double <code>""</code>.</li>
+<li>
+<p>une chaîne de caractère entre guillemet simple <code>'</code>.</p>
+</li>
+<li>
+<p>retournons dans la fenêtre des expressions. Nous souhaitons dorénavant afficher le nom de la commune, la chaîne de
+caractère <code>:</code> et le code INSEE de la commune.</p>
+<ul>
 <li>Effacer le contenu à gauche</li>
 <li>Dans le panneau du milieu, aller dans <code>Champs et Valeurs</code> et double-cliquer sur le nom du champ <code>NOM_COM</code>.</li>
 <li>Contrairement aux noms des champs qui sont entre guillemet double <code>""</code>, les chaînes de caractères sont entre guillemet simple <code>''</code></li>
@@ -869,6 +875,10 @@ caractère <code>:</code> et le code INSEE de la commune.<ul>
 </ul>
 </li>
 </ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Pensez bien à lire la documentation de ces fonctions de concaténations, surtout sur la gestion des valeurs <code>NULL</code>.</p>
+</div>
 <h2 id="les-infobulles">Les infobulles<a class="headerlink" href="#les-infobulles" title="Permanent link">#</a></h2>
 <p>Similaire à la section précédente, on peut définir l'infobulle. On utilise cette fois-ci du HTML pour la mise en forme.</p>
 <ul>
@@ -943,7 +953,7 @@ mais aussi en ouvrant sa table attributaire.</li>
 <p>On souhaite pouvoir sélectionner le(s) entité(s) qui répondent au critère <code>"CODE_INSEE" = '70550'</code>, pour cela utiliser 
 l'interface graphique afin de construire la requête. Que remarquons-nous sur la structure de l'expression ?</p>
 <ul>
-<li>Les nomS des champs sont entre <code>""</code></li>
+<li>Les noms des champs sont entre <code>""</code></li>
 <li>Les chaînes de caractères dans les cellules sont entre <code>''</code>.</li>
 </ul>
 </li>

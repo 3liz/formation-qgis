@@ -675,6 +675,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#legende" class="md-nav__link">
+    Légende
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -692,6 +699,19 @@
   <a href="#utilisation-des-expressions" class="md-nav__link">
     Utilisation des expressions
   </a>
+  
+    <nav class="md-nav" aria-label="Utilisation des expressions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#decouper-a-lentite-de-latlas" class="md-nav__link">
+    Découper à l'entité de l'atlas
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -814,6 +834,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#legende" class="md-nav__link">
+    Légende
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -831,6 +858,19 @@
   <a href="#utilisation-des-expressions" class="md-nav__link">
     Utilisation des expressions
   </a>
+  
+    <nav class="md-nav" aria-label="Utilisation des expressions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#decouper-a-lentite-de-latlas" class="md-nav__link">
+    Découper à l'entité de l'atlas
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -864,7 +904,8 @@
                 
                 
                 <h1 id="mise-en-page">Mise en page<a class="headerlink" href="#mise-en-page" title="Permanent link">#</a></h1>
-<p>Anciennement <strong>composeur d'impression</strong> dans QGIS 2</p>
+<p>Anciennement <strong>composeur d'impression</strong> dans QGIS 2, cela s'appelle désormais une <strong>mise en page</strong>. Mais l'ancien terme 
+reste encore présent sur des resources en lignes, tutoriels etc.</p>
 <h2 id="documentation">Documentation<a class="headerlink" href="#documentation" title="Permanent link">#</a></h2>
 <ul>
 <li><a href="https://docs.qgis.org/latest/fr/docs/user_manual/print_composer/index.html">https://docs.qgis.org/latest/fr/docs/user_manual/print_composer/index.html</a></li>
@@ -914,6 +955,10 @@ et une seconde page pour la table attributaire et des images.</p>
 <h3 id="encore-plus-loin-avec-les-expressions">Encore plus loin avec les expressions<a class="headerlink" href="#encore-plus-loin-avec-les-expressions" title="Permanent link">#</a></h3>
 <p>Utiliser des expressions avec du texte dans les impressions : 
 <a href="https://docs.qgis.org/latest/en/docs/user_manual/print_composer/composer_items/composer_label.html#exploring-expressions-in-a-label-item">https://docs.qgis.org/latest/en/docs/user_manual/print_composer/composer_items/composer_label.html#exploring-expressions-in-a-label-item</a></p>
+<h3 id="legende">Légende<a class="headerlink" href="#legende" title="Permanent link">#</a></h3>
+<div class="admonition tip">
+<p class="admonition-title">On peut <a href="https://plugins.qgis.org/styles/types/Legend%20Patch/">obtenir des modèles pour les symboles d'une légende</a>.</p>
+</div>
 <h2 id="generer-un-atlas">Générer un atlas<a class="headerlink" href="#generer-un-atlas" title="Permanent link">#</a></h2>
 <p>Pour le moment, nous n'avons fait qu'une carte statique. Imaginons désormais que nous souhaiterions faire une collection 
 de PDF, une par commune de notre département.</p>
@@ -966,6 +1011,9 @@ via des expressions.</li>
 <p class="admonition-title">Info</p>
 <p>Ces icônes deviennent jaune lorsqu'il y a une expression.</p>
 </div>
+<h4 id="decouper-a-lentite-de-latlas">Découper à l'entité de l'atlas<a class="headerlink" href="#decouper-a-lentite-de-latlas" title="Permanent link">#</a></h4>
+<p>Désormais, depuis quelques versions de QGIS, on peut désormais demander de couper la carte par rapport à l'entité courante de l'atlas.</p>
+<p><img alt="Clip atlas feature" src="../media/layout-clip-atlas-feature.png" title="Clip atlas feature" /></p>
 <h3 id="generer-un-rapport">Générer un rapport<a class="headerlink" href="#generer-un-rapport" title="Permanent link">#</a></h3>
 <p>Documentation : <a href="https://docs.qgis.org/latest/fr/docs/user_manual/print_composer/create_reports.html">https://docs.qgis.org/latest/fr/docs/user_manual/print_composer/create_reports.html</a></p>
 <p>QGIS3 ajoute un nouvel outil pour gérer finement un document à imprimer, via un objet qui s'appelle <strong>Rapport</strong>, qui permet :</p>
@@ -993,6 +1041,16 @@ Concrètement en guise d'exemple, à l'échelle d'une région, nous pouvons ité
 <p><strong>Inconvénient</strong> : on ne peut pas filtrer sur les couches des sections de groupes de champs.</p>
 <p><strong>Astuce</strong> : on peut importer un modèle de mise en page dans un rapport.</p>
 <p><img alt="" src="../media/28_composeur_rapport.png" title="Composeur, rapports" /></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">if</span><span class="p">(</span>
+    <span class="n">bounds_width</span><span class="p">(</span> <span class="nd">@atlas_geometry</span> <span class="p">)</span>  <span class="o">&lt;</span>  <span class="n">bounds_height</span><span class="p">(</span> <span class="nd">@atlas_geometry</span> <span class="p">),</span>
+    <span class="mi">80</span><span class="p">,</span>
+    <span class="mi">120</span>
+<span class="p">)</span>
+</code></pre></div></td></tr></table></div>
                 
               
               
