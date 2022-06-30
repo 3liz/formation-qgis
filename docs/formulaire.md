@@ -116,7 +116,4 @@ Vert si
 
 ![](./media/interface_observations_faunistiques.png)
 
-TODO, mettre le lien vers le geopackage
-https://github.com/Gustry/formation-qgis/raw/master/formulaire.gpkg
-
-Depuis QGIS ▶ `Ouvrir depuis...` ▶ `Geopackage`
+[Télécharger le GPKG](./formulaire.gpkg) puis dans QGIS ▶ Menu `Projet` ▶ `Ouvrir depuis...` ▶ `Geopackage`

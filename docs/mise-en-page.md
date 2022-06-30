@@ -1,6 +1,7 @@
 # Mise en page
 
-Anciennement **composeur d'impression** dans QGIS 2
+Anciennement **composeur d'impression** dans QGIS 2, cela s'appelle désormais une **mise en page**. Mais l'ancien terme 
+reste encore présent sur des resources en lignes, tutoriels etc.
 
 ## Documentation
 
@@ -51,6 +52,10 @@ et une seconde page pour la table attributaire et des images.
 
 Utiliser des expressions avec du texte dans les impressions : 
 https://docs.qgis.org/latest/en/docs/user_manual/print_composer/composer_items/composer_label.html#exploring-expressions-in-a-label-item
+
+### Légende
+
+!!! tip "On peut [obtenir des modèles pour les symboles d'une légende](https://plugins.qgis.org/styles/types/Legend%20Patch/)."
 
 ## Générer un atlas
 
@@ -107,6 +112,12 @@ END
 !!! info
     Ces icônes deviennent jaune lorsqu'il y a une expression.
 
+#### Découper à l'entité de l'atlas
+
+Désormais, depuis quelques versions de QGIS, on peut désormais demander de couper la carte par rapport à l'entité courante de l'atlas.
+
+![Clip atlas feature](media/layout-clip-atlas-feature.png "Clip atlas feature")
+
 ### Générer un rapport
 
 Documentation : https://docs.qgis.org/latest/fr/docs/user_manual/print_composer/create_reports.html
@@ -138,3 +149,11 @@ Concrètement en guise d'exemple, à l'échelle d'une région, nous pouvons ité
 **Astuce** : on peut importer un modèle de mise en page dans un rapport.
 
 ![](media/28_composeur_rapport.png "Composeur, rapports")
+
+```python
+if(
+	bounds_width( @atlas_geometry )  <  bounds_height( @atlas_geometry ),
+	80,
+	120
+)
+```

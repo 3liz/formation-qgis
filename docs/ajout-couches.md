@@ -134,6 +134,8 @@ Elle peut aussi représenter des données qui ont une composante d'altitude (Z).
 
 ![](media/07_vue_3D.png "Vue 3D")
 
+!!! tip "On peut [obtenir des modèles 3D](https://plugins.qgis.org/wavefronts/?order_by=-upload_date&&is_gallery=true) pour objets."
+
 ## L'extension Layer Board
 
 L'extension Layer Board permet d'obtenir un tableau récapitulatif des couches qui sont chargées.

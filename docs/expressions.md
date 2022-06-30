@@ -18,7 +18,10 @@ Par exemple, sur une couche commune, on peut mettre le nom du champ :
     1. Cliquer sur OK
     1. Cette expression est équivalente à la première, mais elle est plus correcte syntaxiquement.
     
-**Il faut retenir** que le nom des champs sont entre guillemet double `""`.
+**Il faut retenir** que :
+
+* le nom d'un champ est entre guillemet double `""`.
+* une chaîne de caractère entre guillemet simple `'`.
 
 * retournons dans la fenêtre des expressions. Nous souhaitons dorénavant afficher le nom de la commune, la chaîne de
 caractère ` : ` et le code INSEE de la commune.
@@ -27,6 +30,9 @@ caractère ` : ` et le code INSEE de la commune.
     * Contrairement aux noms des champs qui sont entre guillemet double `""`, les chaînes de caractères sont entre guillemet simple `''`
     * Pour concaténer, on peut utiliser `||`, `+` ou la fonction `concat()`
     * Une solution possible `concat("NOM_COM", ' : ', "INSEE_COM")`
+
+!!! tip
+    Pensez bien à lire la documentation de ces fonctions de concaténations, surtout sur la gestion des valeurs `NULL`.
 
 ## Les infobulles
 
@@ -91,7 +97,7 @@ mais aussi en ouvrant sa table attributaire.
 
 * On souhaite pouvoir sélectionner le(s) entité(s) qui répondent au critère `"CODE_INSEE" = '70550'`, pour cela utiliser 
 l'interface graphique afin de construire la requête. Que remarquons-nous sur la structure de l'expression ?
-    * Les nomS des champs sont entre `""`
+    * Les noms des champs sont entre `""`
     * Les chaînes de caractères dans les cellules sont entre `''`.
 * On souhaite désormais toutes les communes dont :
     * le code INSEE commence par `70` à l'aide de l'opérateur `like` :
